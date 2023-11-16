@@ -1,23 +1,22 @@
 import { useState } from 'react'
-import './App.css'
+import './App.scss'
+import { NavBar } from './components/NavBar'
 
 function App() {
-	const [count, setCount] = useState(0)
+	let fakecontent: JSX.Element[] = []
+	for (let i = 0; i < 100; i++) {
+		fakecontent.push(
+			<div className='fakecontent'>
+				Fake content! Fake content! Fake content! Fake content! Fake
+				content! Fake content!
+			</div>
+		)
+	}
 
 	return (
 		<>
-			<h1>Vite + React</h1>
-			<div className='card'>
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className='read-the-docs'>
-				Click on the Vite and React logos to learn more
-			</p>
+			<NavBar />
+			{fakecontent}
 		</>
 	)
 }
