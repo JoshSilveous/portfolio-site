@@ -16,6 +16,12 @@
 		height: 165px;
 		overflow: hidden;
 		transition: height 0.2s ease;
+		h1 span {
+			display: inline-block;
+			min-width: 15px;
+			opacity: 0%;
+			animation: 1s ease-out 0s 1 fadeDown forwards;
+		}
 	}
 	&:not(.fullscreen) {
 		.splash-info {
@@ -31,5 +37,47 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		.anchor-link {
+			opacity: 0%;
+			&:nth-child(1) {
+				animation: 1s ease-out 0s 1 fadeUp forwards;
+			}
+			&:nth-child(2) {
+				animation: 1s ease-out 0.2s 1 fadeUp forwards;
+			}
+			&:nth-child(3) {
+				animation: 1s ease-out 0.4s 1 fadeUp forwards;
+			}
+			&:nth-child(4) {
+				animation: 1s ease-out 0.6s 1 fadeUp forwards;
+			}
+			&:nth-child(5) {
+				animation: 1s ease-out 0.8s 1 fadeUp forwards;
+			}
+		}
 	}
+}
+
+@keyframes fadeUp {
+	0% {
+		transform: translateY(20px);
+		opacity: 0%;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 100%;
+	}
+}
+@keyframes fadeDown {
+	0% {
+		transform: translateY(-20px);
+		opacity: 0%;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 100%;
+	}
+}
+@keyframes shimmer {
+	// create a gradient shimmer effect that'll loop
 }

@@ -6,7 +6,7 @@ function App() {
 	let fakecontent: JSX.Element[] = []
 	for (let i = 0; i < 100; i++) {
 		fakecontent.push(
-			<div className='fakecontent'>
+			<div key={i} className='fakecontent'>
 				Fake content! Fake content! Fake content! Fake content! Fake
 				content! Fake content!
 			</div>
