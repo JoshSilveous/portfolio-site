@@ -22,14 +22,17 @@
 			opacity: 0%;
 			animation: 1s ease-out 0s 1 fadeDown forwards;
 		}
+		.spacer:nth-of-type(1) {
+			height: 16px;
+		}
+		.spacer:nth-of-type(2) {
+			height: 32px;
+		}
 		p {
 			text-align: left;
 			white-space: pre-wrap;
-			height: 0px;
-			transition: height 2s ease;
-			&.height-animation-triggered {
-				height: 340px;
-			}
+			margin-bottom: 100px;
+			margin: 0px;
 			span {
 				opacity: 0%;
 				display: inline-block;
@@ -49,13 +52,19 @@
 	}
 
 	.anchor-container {
-		margin-top: 20px;
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
 		.anchor-link {
 			opacity: 0%;
 			animation: 1s ease-out 0s 1 fadeDown forwards;
+			transition: scale 0.2s ease, text-shadow 0.2s ease;
+			cursor: pointer;
+			user-select: none;
+			&:hover {
+				scale: 120%;
+				text-shadow: 0 0 20px white, 0 0 30px white;
+			}
 		}
 	}
 }

@@ -1,5 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import { stringToSpanCharArray, stringToSpanWordArray } from '../functions'
+import {
+	animateHeightOpening,
+	stringToSpanCharArray,
+	stringToSpanWordArray,
+} from '../functions'
 import './NavBar.scss'
 export function NavBar() {
 	const [isFullscreen, setIsFullscreen] = useState(true)
@@ -34,24 +38,30 @@ export function NavBar() {
 		'in massa tempor nec. Fermentum et sollicitudin ac orci ' +
 		'phasellus egestas tellus. Nisl tincidunt eget nullam non ' +
 		'nisi est sit amet facilisis.'
-	const testRef = useRef<HTMLParagraphElement>(null)
+	const spacer1Ref = useRef<HTMLDivElement>(null)
+	const spacer2Ref = useRef<HTMLDivElement>(null)
+	const paragraphRef = useRef<HTMLParagraphElement>(null)
+	const anchorContainerRef = useRef<HTMLDivElement>(null)
 	useEffect(() => {
-		const timeoutID = setTimeout(() => {
-			testRef.current!.classList.add('height-animation-triggered')
-			clearTimeout(timeoutID)
-		}, 2000)
+		if (window.getComputedStyle(spacer1Ref.current!).height !== '0px') {
+			animateHeightOpening(spacer1Ref.current!, 2000)
+		}
+		animateHeightOpening(spacer2Ref.current!, 2000)
+		animateHeightOpening(paragraphRef.current!, 2000)
+		animateHeightOpening(anchorContainerRef.current!, 2000)
 	}, [])
 
-	console.log(stringToSpanWordArray(splashParagraph))
 	return (
 		<div className={`navbar ${isFullscreen ? 'fullscreen' : ''}`}>
 			<div className='splash-info'>
 				<h1>{stringToSpanCharArray('Joshua Silveous', 0, 0.05)}</h1>
-				<p ref={testRef}>
+				<div className='spacer' ref={spacer1Ref} />
+				<p ref={paragraphRef}>
 					{stringToSpanWordArray(splashParagraph, 2, 0.015)}
 				</p>
+				<div className='spacer' ref={spacer2Ref} />
 			</div>
-			<div className='anchor-container'>
+			<div className='anchor-container' ref={anchorContainerRef}>
 				<div className='anchor-link' style={{ animationDelay: '4.8s' }}>
 					Example A
 				</div>
