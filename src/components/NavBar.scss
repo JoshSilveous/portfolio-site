@@ -13,14 +13,25 @@
 
 	.splash-info {
 		text-align: center;
-		height: 165px;
+		height: 500px;
 		overflow: hidden;
 		transition: height 0.2s ease;
+		width: 60%;
 		h1 span {
 			display: inline-block;
 			min-width: 15px;
 			opacity: 0%;
 			animation: 1s ease-out 0s 1 fadeDown forwards;
+		}
+		p {
+			text-align: left;
+			white-space: pre-wrap;
+			span {
+				opacity: 0%;
+				display: inline-block;
+				min-width: 4.39px;
+				animation: 1s ease-out 0s 1 fadeDown forwards;
+			}
 		}
 	}
 	&:not(.fullscreen) {
@@ -61,20 +72,24 @@
 @keyframes fadeUp {
 	0% {
 		transform: translateY(20px);
+		filter: blur(3px);
 		opacity: 0%;
 	}
 	100% {
 		transform: translateY(0);
+		filter: blur(0px);
 		opacity: 100%;
 	}
 }
 @keyframes fadeDown {
 	0% {
 		transform: translateY(-20px);
+		filter: blur(3px);
 		opacity: 0%;
 	}
 	100% {
 		transform: translateY(0);
+		filter: blur(0px);
 		opacity: 100%;
 	}
 }
