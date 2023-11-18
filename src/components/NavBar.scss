@@ -1,5 +1,4 @@
 .navbar {
-	height: 80px;
 	width: 100vw;
 	transition: height 0.4s ease;
 	background: rgb(178, 175, 230);
@@ -25,7 +24,7 @@
 		text-align: center;
 		overflow: hidden;
 		transition: height 0.4s ease;
-		width: 60%;
+		max-width: 600px;
 		h1 span {
 			display: inline-block;
 			min-width: 15px;
@@ -50,15 +49,6 @@
 				animation: 1s ease-out 0s 1 fadeDown forwards;
 			}
 		}
-	}
-	&:not(.fullscreen) {
-		.splash-info {
-			height: 0px;
-		}
-	}
-
-	&.fullscreen {
-		height: 100vh;
 	}
 
 	.anchor-container {

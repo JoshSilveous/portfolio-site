@@ -14,6 +14,12 @@ export function animateHeightOpening(
             `
 			// after `delay` milliseconds, set the height
 			element.style.height = maxHeight + 'px'
+
+			const cleanupTimeout = setTimeout(() => {
+				element.style.height = ''
+				clearTimeout(cleanupTimeout)
+			}, speed * 1000)
+
 			clearTimeout(delayTimeout)
 		}, delay)
 	}
