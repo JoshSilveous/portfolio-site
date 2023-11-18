@@ -43,38 +43,36 @@ export function NavBar() {
 	const paragraphRef = useRef<HTMLParagraphElement>(null)
 	const anchorContainerRef = useRef<HTMLDivElement>(null)
 	useEffect(() => {
-		if (window.getComputedStyle(spacer1Ref.current!).height !== '0px') {
-			animateHeightOpening(spacer1Ref.current!, 2000)
-		}
-		animateHeightOpening(spacer2Ref.current!, 2000)
-		animateHeightOpening(paragraphRef.current!, 2000)
-		animateHeightOpening(anchorContainerRef.current!, 2000)
+		animateHeightOpening(spacer1Ref.current!, 2500)
+		animateHeightOpening(spacer2Ref.current!, 2500)
+		animateHeightOpening(paragraphRef.current!, 2500)
+		animateHeightOpening(anchorContainerRef.current!, 2500)
 	}, [])
 
 	return (
 		<div className={`navbar ${isFullscreen ? 'fullscreen' : ''}`}>
 			<div className='splash-info'>
-				<h1>{stringToSpanCharArray('Joshua Silveous', 0, 0.05)}</h1>
+				<h1>{stringToSpanCharArray('Joshua Silveous', 0.5, 0.05)}</h1>
 				<div className='spacer' ref={spacer1Ref} />
 				<p ref={paragraphRef}>
-					{stringToSpanWordArray(splashParagraph, 2, 0.015)}
+					{stringToSpanWordArray(splashParagraph, 2.5, 0.015)}
 				</p>
 				<div className='spacer' ref={spacer2Ref} />
 			</div>
 			<div className='anchor-container' ref={anchorContainerRef}>
-				<div className='anchor-link' style={{ animationDelay: '4.8s' }}>
+				<div className='anchor-link' style={{ animationDelay: '5.3s' }}>
 					Example A
 				</div>
-				<div className='anchor-link' style={{ animationDelay: '4.6s' }}>
+				<div className='anchor-link' style={{ animationDelay: '5.5s' }}>
 					Example B
 				</div>
-				<div className='anchor-link' style={{ animationDelay: '4.4s' }}>
+				<div className='anchor-link' style={{ animationDelay: '5.7s' }}>
 					Example C
 				</div>
-				<div className='anchor-link' style={{ animationDelay: '4.6s' }}>
+				<div className='anchor-link' style={{ animationDelay: '5.9s' }}>
 					Example D
 				</div>
-				<div className='anchor-link' style={{ animationDelay: '4.8s' }}>
+				<div className='anchor-link' style={{ animationDelay: '6.1s' }}>
 					Example E
 				</div>
 			</div>

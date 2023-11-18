@@ -1,8 +1,8 @@
 .navbar {
 	height: 80px;
 	width: 100vw;
-	transition: height 0.2s ease;
-	background-color: red;
+	transition: height 0.4s ease;
+	background: rgb(178, 175, 230);
 	position: fixed;
 	display: flex;
 	flex-direction: column;
@@ -10,11 +10,21 @@
 	justify-content: center;
 	padding: 0px 40px;
 	box-sizing: border-box;
+	background: linear-gradient(
+		135deg,
+		rgba(148, 237, 255, 1) 0%,
+		rgb(77, 77, 206) 30%,
+		rgba(9, 9, 121, 1) 70%,
+		rgba(2, 0, 36, 1) 100%
+	);
+	background-size: 400% 400%;
+	animation: backgroundGradientLoad 4s ease-in-out 0s 1,
+		backgroundGradientIdle 10s ease-in-out 4s infinite;
 
 	.splash-info {
 		text-align: center;
 		overflow: hidden;
-		transition: height 0.2s ease;
+		transition: height 0.4s ease;
 		width: 60%;
 		h1 span {
 			display: inline-block;
@@ -26,7 +36,7 @@
 			height: 16px;
 		}
 		.spacer:nth-of-type(2) {
-			height: 32px;
+			height: 48px;
 		}
 		p {
 			text-align: left;
@@ -55,6 +65,7 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		max-width: 700px;
 		.anchor-link {
 			opacity: 0%;
 			animation: 1s ease-out 0s 1 fadeDown forwards;
@@ -65,7 +76,30 @@
 				scale: 120%;
 				text-shadow: 0 0 20px white, 0 0 30px white;
 			}
+			&:active {
+				scale: 110%;
+				text-shadow: 0 0 15px white, 0 0 25px white;
+			}
 		}
+	}
+}
+@keyframes backgroundGradientLoad {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+@keyframes backgroundGradientIdle {
+	0% {
+		background-position: 100% 50%;
+	}
+	50% {
+		background-position: 60% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
 	}
 }
 
