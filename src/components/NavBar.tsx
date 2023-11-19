@@ -38,10 +38,17 @@ export function NavBar() {
 	useEffect(() => {
 		if (window.scrollY === 0) {
 			// Initial load animation if fullscreen
+			document.body.style.overflow = 'hidden'
+
 			animateHeightOpening(spacer1Ref.current!, 2500)
 			animateHeightOpening(spacer2Ref.current!, 2500)
 			animateHeightOpening(paragraphRef.current!, 2500)
 			animateHeightOpening(anchorContainerRef.current!, 2500)
+
+			const thisTimeout = setTimeout(() => {
+				document.body.style.overflow = ''
+				clearTimeout(thisTimeout)
+			}, 7100)
 		} else {
 			// If not loaded fullscreen, shorten the animation delay for the links in the NavBar.
 			let animDelay = 1
@@ -59,13 +66,13 @@ export function NavBar() {
 			const loadHeightFixTimeout = setTimeout(() => {
 				navbarRef.current!.style.transition = ''
 				clearTimeout(loadHeightFixTimeout)
-			}, 10)
+			}, 50)
 		}
 	}, [])
 
 	// Handling splashInfo height changes
 	useEffect(() => {
-		if (!isFullscreen) {
+		if (window.scrollY !== 0) {
 			/* If user is exiting fullscreen, switch the splash-info div's height to 
 			a `px` value instead of auto, then quickly change it to `0px`.
 			This allows the height animation to play. */
