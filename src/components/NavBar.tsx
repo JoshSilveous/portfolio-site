@@ -111,19 +111,19 @@ export function NavBar() {
 			</div>
 			<div className='anchor-container' ref={anchorContainerRef}>
 				<div className='anchor-link' style={{ animationDelay: '5.3s' }}>
-					Example A
+					About Me
 				</div>
 				<div className='anchor-link' style={{ animationDelay: '5.5s' }}>
-					Example B
+					Skills
 				</div>
 				<div className='anchor-link' style={{ animationDelay: '5.7s' }}>
-					Example C
+					Projects
 				</div>
 				<div className='anchor-link' style={{ animationDelay: '5.9s' }}>
-					Example D
+					Experience
 				</div>
 				<div className='anchor-link' style={{ animationDelay: '6.1s' }}>
-					Example E
+					Contact Info
 				</div>
 			</div>
 		</div>
