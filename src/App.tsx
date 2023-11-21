@@ -1,23 +1,13 @@
-import { useState } from 'react'
 import './App.scss'
 import { NavBar } from './components/NavBar'
+import { Main } from './components/Main'
 
 function App() {
-	let fakecontent: JSX.Element[] = []
-	for (let i = 0; i < 100; i++) {
-		fakecontent.push(
-			<div key={i} className='fakecontent'>
-				Fake content! Fake content! Fake content! Fake content! Fake
-				content! Fake content!
-			</div>
-		)
-	}
-
 	return (
-		<>
+		<div className='app'>
 			<NavBar />
-			{fakecontent}
-		</>
+			<Main />
+		</div>
 	)
 }
 

@@ -5,3 +5,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
 }
+
+.app {
+	display: flex;
+	flex-direction: column;
+}
