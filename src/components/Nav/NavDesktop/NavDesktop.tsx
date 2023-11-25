@@ -4,9 +4,9 @@ import {
 	stringToSpanCharArray,
 	stringToSpanWordArray,
 } from '../../../functions'
-import './NavBar.scss'
+import './NavDesktop.scss'
 import { SPLASH_PARAGRAPH } from '../../SPLASH_PARAGRAPH'
-export function NavBar() {
+export function NavDesktop() {
 	const spacer1Ref = useRef<HTMLDivElement>(null)
 	const spacer2Ref = useRef<HTMLDivElement>(null)
 	const paragraphRef = useRef<HTMLParagraphElement>(null)

@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+	.navbar {
+		display: none !important;
+	}
+}
+
 .navbar {
 	width: 100vw;
 	transition: height 0.4s ease;
