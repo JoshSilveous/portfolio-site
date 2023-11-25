@@ -3,9 +3,9 @@ import {
 	animateHeightOpening,
 	stringToSpanCharArray,
 	stringToSpanWordArray,
-} from '../functions'
+} from '../../../functions'
 import './NavBar.scss'
-import { SPLASH_PARAGRAPH } from './SPLASH_PARAGRAPH'
+import { SPLASH_PARAGRAPH } from '../../SPLASH_PARAGRAPH'
 export function NavBar() {
 	const spacer1Ref = useRef<HTMLDivElement>(null)
 	const spacer2Ref = useRef<HTMLDivElement>(null)
