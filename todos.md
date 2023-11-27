@@ -1,2 +1,2 @@
-- [ ] Add NavBar for mobile
+- [ ] Fill out NavBar for mobile
 - [ ] Fill out sections
