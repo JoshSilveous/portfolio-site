@@ -1,2 +1,4 @@
 - [ ] Fill out NavBar for mobile
 - [ ] Fill out sections
+- [ ] Fix bug with NavBar-Desktop Loading Animation
+    - Color switches abruptly
