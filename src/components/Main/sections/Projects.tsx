@@ -1,4 +1,21 @@
 import './sections.scss'
 export function Projects() {
-	return <div className='projects'>Projects!</div>
+	return (
+		<div className='projects'>
+			<h1>Projects</h1>
+			<p>
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+			</p>
+		</div>
+	)
 }
