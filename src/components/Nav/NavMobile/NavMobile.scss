@@ -40,3 +40,40 @@
 		background-position: 20% 50%;
 	}
 }
+.navbar-mobile {
+	margin-top: 10px;
+	border-radius: 0px 20px 20px 0px;
+	position: fixed;
+	height: 75px;
+	width: 75px;
+	background: linear-gradient(
+		135deg,
+		rgba(148, 237, 255, 1) 0%,
+		rgb(77, 77, 206) 30%,
+		rgba(9, 9, 121, 1) 70%,
+		rgba(2, 0, 36, 1) 100%
+	);
+	background-size: 400% 400%;
+	animation: backgroundGradientIdle 10s ease-in-out 4s infinite;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.menu-icon-container {
+		color: white;
+		height: 60px;
+		width: 60px;
+	}
+}
+
+@keyframes backgroundGradientIdle {
+	0% {
+		background-position: 20% 50%;
+	}
+	50% {
+		background-position: 60% 50%;
+	}
+	100% {
+		background-position: 20% 50%;
+	}
+}
