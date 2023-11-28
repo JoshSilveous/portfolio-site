@@ -1,13 +1,13 @@
-@media (max-width: 768px) {
-	.navbar {
+@media (max-width: 480px) {
+	.navbar-desktop {
 		display: none !important;
 	}
 }
 
-.navbar {
+.navbar-desktop {
 	width: 100vw;
 	transition: height 0.4s ease;
-	background: rgb(178, 175, 230);
+	background: rgba(9, 9, 121, 1);
 	position: fixed;
 	display: flex;
 	flex-direction: column;
