@@ -97,7 +97,7 @@ export function NavDesktop() {
 
 	return (
 		<div
-			className='navbar'
+			className='navbar-desktop'
 			style={{ height: isFullscreen ? '100vh' : '80px' }}
 			ref={navbarRef}
 		>
