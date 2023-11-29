@@ -5,35 +5,33 @@ import {
 } from '../../../functions'
 import { SPLASH_PARAGRAPH } from '../../SPLASH_PARAGRAPH'
 import './Navbar.scss'
+import { transitionHeightClosedToOpen } from '../../../functions'
 
 export function Navbar() {
 	const [isFullscreen, setIsFullscreen] = useState(true)
-	const testRef = useRef<HTMLParagraphElement>(null)
+	const paragraphRef = useRef<HTMLParagraphElement>(null)
+	const anchorContainerRef = useRef<HTMLParagraphElement>(null)
 
 	const NAME = stringToSpanCharArray('Joshua Silveous', 0.5, 0.05)
 	const PARAGRAPH = stringToSpanWordArray(SPLASH_PARAGRAPH, 2.5, 0.015)
 
 	useEffect(() => {
-		const elem = testRef.current!
-		const defaultHeight = elem.scrollHeight
-		console.log('offsetHeight:', elem.offsetHeight)
-		console.log('scrollHeight:', elem.scrollHeight)
-		console.log('clientHeight:', elem.clientHeight)
-		console.log('style.height:', elem.style.height)
-		console.log('style.maxHeight:', elem.style.maxHeight)
-		console.log('style.minHeight:', elem.style.minHeight)
-		console.log('style.lineHeight:', elem.style.lineHeight)
+		const paragraphElem = paragraphRef.current!
+		const anchorContainerElem = anchorContainerRef.current!
+
+		transitionHeightClosedToOpen(paragraphElem, 2.5, 2)
+		transitionHeightClosedToOpen(anchorContainerElem, 4, 2)
 	}, [])
 
 	return (
 		<div className={`navbar ${isFullscreen ? 'fullscreen' : 'minimized'}`}>
 			<div className='splash-info'>
 				<h1 className='name'>{NAME}</h1>
-				<p className='text' ref={testRef}>
+				<p className='text' ref={paragraphRef}>
 					{PARAGRAPH}
 				</p>
 			</div>
-			<div className='anchor-container'>
+			<div className='anchor-container' ref={anchorContainerRef}>
 				<div className='anchor-link' style={{ animationDelay: '5.3s' }}>
 					About Me
 				</div>
