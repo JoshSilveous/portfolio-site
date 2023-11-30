@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import {
+	setDelay,
 	stringToSpanCharArray,
 	stringToSpanWordArray,
 } from '../../../functions'
@@ -8,20 +9,21 @@ import './Navbar.scss'
 import { transitionHeightClosedToOpen } from '../../../functions'
 
 export function Navbar() {
-	const [isFullscreen, setIsFullscreen] = useState(true)
+	const [isFullscreen, setIsFullscreen] = useState(window.scrollY === 0)
+
 	const paragraphRef = useRef<HTMLParagraphElement>(null)
 	const anchorContainerRef = useRef<HTMLParagraphElement>(null)
+	const navbarRef = useRef<HTMLDivElement>(null)
 
 	const NAME = stringToSpanCharArray('Joshua Silveous', 0.5, 0.05)
 	const PARAGRAPH = stringToSpanWordArray(SPLASH_PARAGRAPH, 2.5, 0.015)
 
-	// Toggle isFullscreen depending on where the scroll position is.
+	// toggle isFullscreen depending on where the scroll position is.
 	useEffect(() => {
-		let currentlyFullscreen = isFullscreen
 		function handleFullscreenChange() {
 			if (window.scrollY === 0) {
 				setIsFullscreen(true)
-			} else if (currentlyFullscreen) {
+			} else if (isFullscreen) {
 				setIsFullscreen(false)
 			}
 		}
@@ -31,16 +33,25 @@ export function Navbar() {
 		}
 	}, [])
 
-	// loading animation
 	useEffect(() => {
 		const pageLoadedInFullscreen = window.scrollY === 0
 
 		const paragraphElem = paragraphRef.current!
 		const anchorContainerElem = anchorContainerRef.current!
+		const navbarElem = navbarRef.current!
 
+		// height animations
 		if (pageLoadedInFullscreen) {
 			transitionHeightClosedToOpen(paragraphElem, 2.5, 2)
 			transitionHeightClosedToOpen(anchorContainerElem, 4, 2)
+		}
+
+		// prevents visual "bug" when page is loaded non-fullscreen
+		if (!pageLoadedInFullscreen) {
+			navbarElem.style.transition = 'none'
+			setDelay(10).then(() => {
+				navbarElem.style.transition = ''
+			})
 		}
 
 		let anchorContainerAnimDelay: number
@@ -58,7 +69,10 @@ export function Navbar() {
 	}, [])
 
 	return (
-		<div className={`navbar ${isFullscreen ? 'fullscreen' : 'minimized'}`}>
+		<div
+			className={`navbar ${isFullscreen ? 'fullscreen' : 'minimized'}`}
+			ref={navbarRef}
+		>
 			<div className='wrapper'>
 				<div className='splash-info'>
 					<h1 className='name'>{NAME}</h1>
