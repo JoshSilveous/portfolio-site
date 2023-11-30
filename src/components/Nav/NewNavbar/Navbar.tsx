@@ -15,37 +15,63 @@ export function Navbar() {
 	const NAME = stringToSpanCharArray('Joshua Silveous', 0.5, 0.05)
 	const PARAGRAPH = stringToSpanWordArray(SPLASH_PARAGRAPH, 2.5, 0.015)
 
+	// Toggle isFullscreen depending on where the scroll position is.
 	useEffect(() => {
+		let currentlyFullscreen = isFullscreen
+		function handleFullscreenChange() {
+			if (window.scrollY === 0) {
+				setIsFullscreen(true)
+			} else if (currentlyFullscreen) {
+				setIsFullscreen(false)
+			}
+		}
+		window.addEventListener('scroll', handleFullscreenChange)
+		return () => {
+			window.removeEventListener('scroll', handleFullscreenChange)
+		}
+	}, [])
+
+	// loading animation
+	useEffect(() => {
+		const pageLoadedInFullscreen = window.scrollY === 0
+
 		const paragraphElem = paragraphRef.current!
 		const anchorContainerElem = anchorContainerRef.current!
 
-		transitionHeightClosedToOpen(paragraphElem, 2.5, 2)
-		transitionHeightClosedToOpen(anchorContainerElem, 4, 2)
+		if (pageLoadedInFullscreen) {
+			transitionHeightClosedToOpen(paragraphElem, 2.5, 2)
+			transitionHeightClosedToOpen(anchorContainerElem, 4, 2)
+		}
+
+		let anchorContainerAnimDelay: number
+		if (pageLoadedInFullscreen) {
+			anchorContainerAnimDelay = 5.3
+		} else {
+			anchorContainerAnimDelay = 1
+		}
+		anchorContainerElem.childNodes.forEach((node) => {
+			if (node instanceof HTMLDivElement) {
+				node.style.animationDelay = anchorContainerAnimDelay + 's'
+				anchorContainerAnimDelay += 0.2
+			}
+		})
 	}, [])
 
 	return (
 		<div className={`navbar ${isFullscreen ? 'fullscreen' : 'minimized'}`}>
-			<div className='splash-info'>
-				<h1 className='name'>{NAME}</h1>
-				<p className='text' ref={paragraphRef}>
-					{PARAGRAPH}
-				</p>
-			</div>
-			<div className='anchor-container' ref={anchorContainerRef}>
-				<div className='anchor-link' style={{ animationDelay: '5.3s' }}>
-					About Me
+			<div className='wrapper'>
+				<div className='splash-info'>
+					<h1 className='name'>{NAME}</h1>
+					<p className='text' ref={paragraphRef}>
+						{PARAGRAPH}
+					</p>
 				</div>
-				<div className='anchor-link' style={{ animationDelay: '5.5s' }}>
-					Skills
-				</div>
-				<div className='anchor-link' style={{ animationDelay: '5.7s' }}>
-					Projects
-				</div>
-				<div className='anchor-link' style={{ animationDelay: '5.9s' }}>
-					Experience
-				</div>
-				<div className='anchor-link' style={{ animationDelay: '6.1s' }}>
-					Contact Info
+				<div className='anchor-container' ref={anchorContainerRef}>
+					<div className='anchor-link'>About Me</div>
+					<div className='anchor-link'>Skills</div>
+					<div className='anchor-link'>Projects</div>
+					<div className='anchor-link'>Experience</div>
+					<div className='anchor-link'>Contact Info</div>
 				</div>
 			</div>
 		</div>
