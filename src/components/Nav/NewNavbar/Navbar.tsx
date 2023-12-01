@@ -7,6 +7,14 @@ import {
 import { SPLASH_PARAGRAPH } from '../../SPLASH_PARAGRAPH'
 import './Navbar.scss'
 import { transitionHeightClosedToOpen } from '../../../functions'
+import { AboutMe } from '../../Main/sections'
+import {
+	AboutMeIcon,
+	ContactInfoIcon,
+	ExperienceIcon,
+	ProjectsIcon,
+	SkillsIcon,
+} from '../../../assets'
 
 export function Navbar() {
 	const [isFullscreen, setIsFullscreen] = useState(window.scrollY === 0)
@@ -81,11 +89,36 @@ export function Navbar() {
 					</p>
 				</div>
 				<div className='anchor-container' ref={anchorContainerRef}>
-					<div className='anchor-link'>About Me</div>
-					<div className='anchor-link'>Skills</div>
-					<div className='anchor-link'>Projects</div>
-					<div className='anchor-link'>Experience</div>
-					<div className='anchor-link'>Contact Info</div>
+					<div className='anchor-link'>
+						<div className='text'>About Me</div>
+						<div className='icon'>
+							<AboutMeIcon />
+						</div>
+					</div>
+					<div className='anchor-link'>
+						<div className='text'>Skills</div>
+						<div className='icon'>
+							<SkillsIcon />
+						</div>
+					</div>
+					<div className='anchor-link'>
+						<div className='text'>Projects</div>
+						<div className='icon'>
+							<ProjectsIcon />
+						</div>
+					</div>
+					<div className='anchor-link'>
+						<div className='text'>Experience</div>
+						<div className='icon'>
+							<ExperienceIcon />
+						</div>
+					</div>
+					<div className='anchor-link'>
+						<div className='text'>Contact Info</div>
+						<div className='icon'>
+							<ContactInfoIcon />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

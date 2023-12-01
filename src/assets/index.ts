@@ -1,0 +1,5 @@
+export { ReactComponent as AboutMeIcon } from './about-me.svg'
+export { ReactComponent as SkillsIcon } from './skills.svg'
+export { ReactComponent as ProjectsIcon } from './projects.svg'
+export { ReactComponent as ExperienceIcon } from './experience.svg'
+export { ReactComponent as ContactInfoIcon } from './contact-info.svg'
