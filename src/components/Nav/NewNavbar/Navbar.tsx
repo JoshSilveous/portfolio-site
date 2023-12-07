@@ -23,7 +23,8 @@ export function Navbar() {
 	const anchorContainerRef = useRef<HTMLParagraphElement>(null)
 	const navbarRef = useRef<HTMLDivElement>(null)
 
-	const NAME = stringToSpanCharArray('Joshua Silveous', 0.5, 0.05)
+	const FIRST_NAME = stringToSpanCharArray('Joshua', 0.5, 0.05)
+	const LAST_NAME = stringToSpanCharArray('Silveous', 0.8, 0.05)
 	const PARAGRAPH = stringToSpanWordArray(SPLASH_PARAGRAPH, 2.5, 0.015)
 
 	// toggle isFullscreen depending on where the scroll position is.
@@ -83,7 +84,10 @@ export function Navbar() {
 		>
 			<div className='wrapper'>
 				<div className='splash-info'>
-					<h1 className='name'>{NAME}</h1>
+					<h1 className='name'>
+						<div className='first-name'>{FIRST_NAME}</div>
+						<div className='last-name'>{LAST_NAME}</div>
+					</h1>
 					<p className='text' ref={paragraphRef}>
 						{PARAGRAPH}
 					</p>
