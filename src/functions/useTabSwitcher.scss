@@ -1,0 +1,23 @@
+.tab-switcher-component {
+	.tab-switch-container {
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+		border-bottom: 2px solid gray;
+		.tab {
+			width: 100%;
+			text-align: center;
+			padding: 10px 0px;
+			border: 2px solid gray;
+			border-bottom: 0px;
+			border-radius: 10px 10px 0px 0px;
+			transition: transform 0.2s ease;
+			&.active {
+				background-color: darkgreen;
+			}
+			&:not(.active) {
+				transform: translateY(10px);
+			}
+		}
+	}
+}
