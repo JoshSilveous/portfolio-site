@@ -7,7 +7,6 @@ import {
 import { SPLASH_PARAGRAPH } from '../../SPLASH_PARAGRAPH'
 import './Navbar.scss'
 import { transitionHeightClosedToOpen } from '../../../functions'
-import { AboutMe } from '../../Main/sections'
 import {
 	AboutMeIcon,
 	ContactInfoIcon,
@@ -70,7 +69,7 @@ export function Navbar() {
 			anchorContainerAnimDelay = 1
 		}
 		anchorContainerElem.childNodes.forEach((node) => {
-			if (node instanceof HTMLDivElement) {
+			if (node instanceof HTMLAnchorElement) {
 				node.style.animationDelay = anchorContainerAnimDelay + 's'
 				anchorContainerAnimDelay += 0.2
 			}
@@ -93,36 +92,36 @@ export function Navbar() {
 					</p>
 				</div>
 				<div className='anchor-container' ref={anchorContainerRef}>
-					<div className='anchor-link'>
+					<a className='anchor-link' href='#about-me'>
 						<div className='text'>About Me</div>
 						<div className='icon'>
 							<AboutMeIcon />
 						</div>
-					</div>
-					<div className='anchor-link'>
+					</a>
+					<a className='anchor-link' href='#skills'>
 						<div className='text'>Skills</div>
 						<div className='icon'>
 							<SkillsIcon />
 						</div>
-					</div>
-					<div className='anchor-link'>
+					</a>
+					<a className='anchor-link' href='#projects'>
 						<div className='text'>Projects</div>
 						<div className='icon'>
 							<ProjectsIcon />
 						</div>
-					</div>
-					<div className='anchor-link'>
+					</a>
+					<a className='anchor-link' href='#experience'>
 						<div className='text'>Experience</div>
 						<div className='icon'>
 							<ExperienceIcon />
 						</div>
-					</div>
-					<div className='anchor-link'>
+					</a>
+					<a className='anchor-link' href='#contact-info'>
 						<div className='text'>Contact Info</div>
 						<div className='icon'>
 							<ContactInfoIcon />
 						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,5 @@
 .navbar {
+	z-index: 10;
 	background: linear-gradient(
 		135deg,
 		rgba(148, 237, 255, 1) 0%,
@@ -76,6 +77,7 @@
 			align-items: center;
 
 			.anchor-link {
+				color: white;
 				cursor: pointer;
 				user-select: none;
 
