@@ -36,7 +36,7 @@ export function useTabSwitcher(tabs: TabConfiguration[], defaultTab?: string) {
 	return (
 		<div className='tab-switcher-component'>
 			<div className='tab-switch-container'>{tabsDisplay}</div>
-			<div className='tab-content'>{activeTab.content}</div>
+			<div className='tab-content-container'>{activeTab.content}</div>
 		</div>
 	)
 }

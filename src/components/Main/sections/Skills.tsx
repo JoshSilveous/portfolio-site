@@ -6,17 +6,21 @@ export function Skills() {
 		{
 			name: 'Front End',
 			id: 'front-end',
-			content: <div>Front end!</div>,
+			content: (
+				<div className='content'>
+					HTML, CSS, JS, TypeScript, React, SASS/SCSS, React Router, Lottie
+				</div>
+			),
 		},
 		{
 			name: 'Back End',
 			id: 'back-end',
-			content: <div>Back end!</div>,
+			content: <div className='content'>Node.JS, Express.js, SQL, Electron</div>,
 		},
 		{
 			name: 'Other',
 			id: 'other',
-			content: <div>Other!</div>,
+			content: <div className='content'>Photoshop, After Effects, Illustrator, Lottie</div>,
 		},
 	])
 
