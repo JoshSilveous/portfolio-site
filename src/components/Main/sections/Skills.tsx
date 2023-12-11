@@ -20,7 +20,11 @@ export function Skills() {
 		{
 			name: 'Other',
 			id: 'other',
-			content: <div className='content'>Photoshop, After Effects, Illustrator, Lottie</div>,
+			content: (
+				<div className='content'>
+					Photoshop, After Effects, Illustrator, Lottie, VBA, Microsoft Stuff
+				</div>
+			),
 		},
 	])
 
