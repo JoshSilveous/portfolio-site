@@ -7,6 +7,7 @@ import {
 	ReactIcon,
 	SassIcon,
 	TypeScriptIcon,
+	LottieIcon,
 } from '../../../../../assets'
 
 export function FrontEndContent() {
@@ -85,7 +86,7 @@ export function FrontEndContent() {
 		},
 		{
 			name: 'Lottie',
-			icon: <TypeScriptIcon />,
+			icon: <LottieIcon />,
 			description: (
 				<>
 					<h2>Lottie</h2>

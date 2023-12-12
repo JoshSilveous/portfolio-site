@@ -11,3 +11,16 @@ export { ReactComponent as ReactRouterIcon } from './skills_icons/react_router.s
 export { ReactComponent as ReactIcon } from './skills_icons/react.svg'
 export { ReactComponent as SassIcon } from './skills_icons/sass.svg'
 export { ReactComponent as TypeScriptIcon } from './skills_icons/typescript.svg'
+export { ReactComponent as LottieIcon } from './skills_icons/lottie.svg'
+
+export { ReactComponent as NodeIcon } from './skills_icons/node.svg'
+export { ReactComponent as ExpressIcon } from './skills_icons/express.svg'
+export { ReactComponent as SQLIcon } from './skills_icons/sql.svg'
+export { ReactComponent as ElectronIcon } from './skills_icons/electron.svg'
+export { ReactComponent as PHPIcon } from './skills_icons/php.svg'
+
+export { ReactComponent as PhotoshopIcon } from './skills_icons/photoshop.svg'
+export { ReactComponent as AfterEffectsIcon } from './skills_icons/after_effects.svg'
+export { ReactComponent as IllustratorIcon } from './skills_icons/illustrator.svg'
+export { ReactComponent as VBAIcon } from './skills_icons/vba.svg'
+export { ReactComponent as OfficeIcon } from './skills_icons/office.svg'
