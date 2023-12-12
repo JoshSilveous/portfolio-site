@@ -1,19 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
-import {
-	setDelay,
-	stringToSpanCharArray,
-	stringToSpanWordArray,
-} from '../../../functions'
-import { SPLASH_PARAGRAPH } from '../../SPLASH_PARAGRAPH'
+import { setDelay, stringToSpanCharArray, stringToSpanWordArray } from '../../functions'
+import { SPLASH_PARAGRAPH } from '../SPLASH_PARAGRAPH'
 import './Navbar.scss'
-import { transitionHeightClosedToOpen } from '../../../functions'
+import { transitionHeightClosedToOpen } from '../../functions'
 import {
 	AboutMeIcon,
 	ContactInfoIcon,
 	ExperienceIcon,
 	ProjectsIcon,
 	SkillsIcon,
-} from '../../../assets'
+} from '../../assets'
 
 export function Navbar() {
 	const [isFullscreen, setIsFullscreen] = useState(window.scrollY === 0)
@@ -77,10 +73,7 @@ export function Navbar() {
 	}, [])
 
 	return (
-		<div
-			className={`navbar ${isFullscreen ? 'fullscreen' : 'minimized'}`}
-			ref={navbarRef}
-		>
+		<div className={`navbar ${isFullscreen ? 'fullscreen' : 'minimized'}`} ref={navbarRef}>
 			<div className='wrapper'>
 				<div className='splash-info'>
 					<h1 className='name'>
