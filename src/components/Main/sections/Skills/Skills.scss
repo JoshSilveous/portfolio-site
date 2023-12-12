@@ -1,0 +1,31 @@
+.skills {
+	.content {
+		height: 300px;
+		background-color: rgba(255, 255, 255, 0.2);
+		padding: 20px;
+		border: 2px solid rgba(255, 255, 255, 0.2);
+		border-top: none;
+		.icon-row {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20px;
+			.icon-container {
+				cursor: pointer;
+				transition: scale 0.2s ease, text-shadow 0.2s ease;
+				text-align: center;
+				&:hover {
+					scale: 120%;
+				}
+				&.active {
+					text-shadow: 0 0 20px white, 0 0 30px white;
+				}
+
+				svg {
+					height: 50px;
+					width: 50px;
+					border-radius: 10px; /* Optional, for rounded corners */
+				}
+			}
+		}
+	}
+}

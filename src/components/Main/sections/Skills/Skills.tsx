@@ -1,30 +1,22 @@
-import { useState } from 'react'
-import './sections.scss'
-import { useTabSwitcher } from '../../../functions/useTabSwitcher'
+import './Skills.scss'
+import { useTabSwitcher } from '../../../../functions/useTabSwitcher'
+import { FrontEndContent, BackEndContent, OtherContent } from './tab_content'
 export function Skills() {
 	const tabSwitcher = useTabSwitcher([
 		{
 			name: 'Front End',
 			id: 'front-end',
-			content: (
-				<div className='content'>
-					HTML, CSS, JS, TypeScript, React, SASS/SCSS, React Router, Lottie
-				</div>
-			),
+			content: <FrontEndContent />,
 		},
 		{
 			name: 'Back End',
 			id: 'back-end',
-			content: <div className='content'>Node.JS, Express.js, SQL, Electron</div>,
+			content: <BackEndContent />,
 		},
 		{
 			name: 'Other',
 			id: 'other',
-			content: (
-				<div className='content'>
-					Photoshop, After Effects, Illustrator, Lottie, VBA, Microsoft Stuff
-				</div>
-			),
+			content: <OtherContent />,
 		},
 	])
 
