@@ -13,68 +13,33 @@ export function OtherContent() {
 		{
 			name: 'Photoshop',
 			icon: <PhotoshopIcon />,
-			description: (
-				<>
-					<h2>Photoshop</h2>
-					<p>
-						Adobe Photoshop is a powerful graphics editing software used for image
-						manipulation, design, and digital art creation.
-					</p>
-				</>
-			),
+			description: `Adobe Photoshop is a powerful graphics editing software used for image
+				manipulation, design, and digital art creation.`,
 		},
 		{
 			name: 'After Effects',
 			icon: <AfterEffectsIcon />,
-			description: (
-				<>
-					<h2>After Effects</h2>
-					<p>
-						Adobe After Effects is a motion graphics and visual effects software used
-						for creating animations, compositing, and video post-production.
-					</p>
-				</>
-			),
+			description: `Adobe After Effects is a motion graphics and visual effects software used
+				for creating animations, compositing, and video post-production.`,
 		},
 		{
 			name: 'Illustrator',
 			icon: <IllustratorIcon />,
-			description: (
-				<>
-					<h2>Illustrator</h2>
-					<p>
-						Adobe Illustrator is a vector graphics design software used for creating
-						scalable and high-quality illustrations, logos, and graphics.
-					</p>
-				</>
-			),
+			description: `Adobe Illustrator is a vector graphics design software used for creating
+				scalable and high-quality illustrations, logos, and graphics.`,
 		},
 		{
 			name: 'Office',
 			icon: <OfficeIcon />,
-			description: (
-				<>
-					<h2>Office</h2>
-					<p>
-						Microsoft Office is a suite of productivity software, including applications
-						like Word, Excel, PowerPoint, and Outlook, widely used for document
-						creation, data analysis, and communication.
-					</p>
-				</>
-			),
+			description: `Microsoft Office is a suite of productivity software, including applications
+				like Word, Excel, PowerPoint, and Outlook, widely used for document creation, data
+				analysis, and communication.`,
 		},
 		{
 			name: 'VBA',
 			icon: <VBAIcon />,
-			description: (
-				<>
-					<h2>VBA</h2>
-					<p>
-						VBA is a programming language developed by Microsoft for automating tasks
-						within applications like Excel, Word, and Access.
-					</p>
-				</>
-			),
+			description: `VBA is a programming language developed by Microsoft for automating tasks
+				within applications like Excel, Word, and Access.`,
 		},
 	]
 	return (
@@ -94,7 +59,10 @@ export function OtherContent() {
 					)
 				})}
 			</div>
-			<div className='description'>{sections[currentSectionIndex].description}</div>
+			<div className='description'>
+				<h2>{sections[currentSectionIndex].name}</h2>
+				<p>{sections[currentSectionIndex].description}</p>
+			</div>
 		</div>
 	)
 }

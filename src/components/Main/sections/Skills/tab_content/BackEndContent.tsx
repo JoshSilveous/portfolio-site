@@ -7,69 +7,34 @@ export function BackEndContent() {
 		{
 			name: 'Node.js',
 			icon: <NodeIcon />,
-			description: (
-				<>
-					<h2>Node.js</h2>
-					<p>
-						Node.js is a server-side JavaScript runtime environment that enables
-						building scalable and efficient network applications (APIs).
-					</p>
-				</>
-			),
+			description: `Node.js is a server-side JavaScript runtime environment that enables
+				building scalable and efficient network applications (APIs).`,
 		},
 		{
 			name: 'Express.js',
 			icon: <ExpressIcon />,
-			description: (
-				<>
-					<h2>Express.js</h2>
-					<p>
-						Express.js is a web application framework for Node.js, simplifying the
-						development of APIs with robust routing and middleware.
-					</p>
-				</>
-			),
+			description: `Express.js is a web application framework for Node.js, simplifying the
+				development of APIs with robust routing and middleware.`,
 		},
 		{
 			name: 'SQL',
 			icon: <SQLIcon />,
-			description: (
-				<>
-					<h2>SQL</h2>
-					<p>
-						SQL (Structured Query Language) is a domain-specific language for managing
-						and querying relational databases.
-					</p>
-				</>
-			),
+			description: `SQL (Structured Query Language) is a domain-specific language for managing
+				and querying relational databases.`,
 		},
 		{
 			name: 'Electron',
 			icon: <ElectronIcon />,
-			description: (
-				<>
-					<h2>Electron</h2>
-					<p>
-						Electron is a framework for building cross-platform desktop applications
-						using web technologies and architecture. An Electron application has a
-						renderer (front-end) process, built with HTML / CSS / JS, and a main
-						(back-end) process, running Node.js.
-					</p>
-				</>
-			),
+			description: `Electron is a framework for building cross-platform desktop applications
+				using web technologies and architecture. An Electron application has a renderer 
+				(front-end) process, built with HTML / CSS / JS, and a main (back-end) process, 
+				running Node.js.`,
 		},
 		{
 			name: 'PHP',
 			icon: <PHPIcon />,
-			description: (
-				<>
-					<h2>PHP</h2>
-					<p>
-						PHP is a time-tested server-side scripting language commonly used for web
-						development, capable of creating dynamic and interactive web applications.
-					</p>
-				</>
-			),
+			description: `PHP is a time-tested server-side scripting language commonly used for web
+				development, capable of creating dynamic and interactive web applications.`,
 		},
 	]
 	return (
@@ -89,7 +54,10 @@ export function BackEndContent() {
 					)
 				})}
 			</div>
-			<div className='description'>{sections[currentSectionIndex].description}</div>
+			<div className='description'>
+				<h2>{sections[currentSectionIndex].name}</h2>
+				<p>{sections[currentSectionIndex].description}</p>
+			</div>
 		</div>
 	)
 }

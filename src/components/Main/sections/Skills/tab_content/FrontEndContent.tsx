@@ -17,110 +17,53 @@ export function FrontEndContent() {
 		{
 			name: 'HTML',
 			icon: <HTMLIcon />,
-			description: (
-				<>
-					<h2>HTML</h2>
-					<p>
-						HTML (Hypertext Markup Language) is the foundation of web development, used
-						to structure and present content on the internet.
-					</p>
-				</>
-			),
+			description: `HTML (Hypertext Markup Language) is the foundation of web development, used
+				to structure and present content on the internet.`,
 		},
 		{
 			name: 'CSS',
 			icon: <CSSIcon />,
-			description: (
-				<>
-					<h2>CSS</h2>
-					<p>
-						CSS (Cascading Style Sheets) is responsible for styling web pages,
-						controlling layout, and enhancing the visual appeal of websites. CSS goes
-						hand-in-hand with HTML to create a page's UI.
-					</p>
-				</>
-			),
+			description: `CSS (Cascading Style Sheets) is responsible for styling web pages,
+				controlling layout, and enhancing the visual appeal of websites. CSS goes
+				hand-in-hand with HTML to create a page's UI.`,
 		},
 		{
 			name: 'JavaScript',
 			icon: <JavaScriptIcon />,
-			description: (
-				<>
-					<h2>JavaScript</h2>
-					<p>
-						JavaScript is a versatile programming language that adds interactivity and
-						dynamic behavior to web applications. JavaScript can also be used as a
-						back-end service (using Node.js), allowing applications, APIs, and server
-						programs to be built on JavaScript.
-					</p>
-				</>
-			),
+			description: `JavaScript is a versatile programming language that adds interactivity 
+				and dynamic behavior to web applications. JavaScript can also be used as a back-end 
+				service (using Node.js), allowing applications, APIs, and server programs to be 
+				built on JavaScript.`,
 		},
 		{
 			name: 'TypeScript',
 			icon: <TypeScriptIcon />,
-			description: (
-				<>
-					<h2>TypeScript</h2>
-					<p>
-						TypeScript brings type safety to JavaScript, providing reliable code and
-						developer productivity.
-					</p>
-				</>
-			),
+			description: `TypeScript brings type safety to JavaScript, providing reliable code and 
+				developer productivity.`,
 		},
 		{
 			name: 'React',
 			icon: <ReactIcon />,
-			description: (
-				<>
-					<h2>React</h2>
-					<p>
-						React is a popular JavaScript library for building user interfaces, offering
-						a component-based architecture and efficient rendering.
-					</p>
-				</>
-			),
+			description: `React is a popular JavaScript library for building user interfaces, 
+				offering a component-based architecture and efficient rendering.`,
 		},
 		{
 			name: 'React Router',
 			icon: <ReactRouterIcon />,
-			description: (
-				<>
-					<h2>React Router</h2>
-					<p>
-						React Router is a routing library for React applications, streamlining
-						navigation and URL route handling in a single-page application.
-					</p>
-				</>
-			),
+			description: `React Router is a routing library for React applications, streamlining 
+				navigation and URL route handling in a single-page application.`,
 		},
 		{
 			name: 'Sass',
 			icon: <SassIcon />,
-			description: (
-				<>
-					<h2>Sass</h2>
-					<p>
-						Sass (Syntactically Awesome Style Sheets) is a CSS preprocessor that
-						simplifies stylesheet authoring with variables, mixins, nested styles, and
-						more.
-					</p>
-				</>
-			),
+			description: `Sass (Syntactically Awesome Style Sheets) is a CSS preprocessor that 
+				simplifies stylesheet authoring with variables, mixins, nested styles, and more.`,
 		},
 		{
 			name: 'Lottie',
 			icon: <LottieIcon />,
-			description: (
-				<>
-					<h2>Lottie</h2>
-					<p>
-						Lottie is an animation library that allows the integration of high-quality
-						animations into web and mobile applications with ease.
-					</p>
-				</>
-			),
+			description: `Lottie is an animation library that allows the integration of high-quality 
+				animations into web and mobile applications with ease.`,
 		},
 	]
 	return (
@@ -140,7 +83,10 @@ export function FrontEndContent() {
 					)
 				})}
 			</div>
-			<div className='description'>{sections[currentSectionIndex].description}</div>
+			<div className='description'>
+				<h2>{sections[currentSectionIndex].name}</h2>
+				<p>{sections[currentSectionIndex].description}</p>
+			</div>
 		</div>
 	)
 }
