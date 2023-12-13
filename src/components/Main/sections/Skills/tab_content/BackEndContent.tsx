@@ -10,7 +10,10 @@ export function BackEndContent() {
 			description: (
 				<>
 					<h2>Node.js</h2>
-					<p>Node.js Description!</p>
+					<p>
+						Node.js is a server-side JavaScript runtime environment that enables
+						building scalable and efficient network applications (APIs).
+					</p>
 				</>
 			),
 		},
@@ -20,7 +23,10 @@ export function BackEndContent() {
 			description: (
 				<>
 					<h2>Express.js</h2>
-					<p>Express.js Description!</p>
+					<p>
+						Express.js is a web application framework for Node.js, simplifying the
+						development of APIs with robust routing and middleware.
+					</p>
 				</>
 			),
 		},
@@ -30,7 +36,10 @@ export function BackEndContent() {
 			description: (
 				<>
 					<h2>SQL</h2>
-					<p>SQL Description!</p>
+					<p>
+						SQL (Structured Query Language) is a domain-specific language for managing
+						and querying relational databases.
+					</p>
 				</>
 			),
 		},
@@ -40,7 +49,12 @@ export function BackEndContent() {
 			description: (
 				<>
 					<h2>Electron</h2>
-					<p>Electron Description!</p>
+					<p>
+						Electron is a framework for building cross-platform desktop applications
+						using web technologies and architecture. An Electron application has a
+						renderer (front-end) process, built with HTML / CSS / JS, and a main
+						(back-end) process, running Node.js.
+					</p>
 				</>
 			),
 		},
@@ -50,7 +64,10 @@ export function BackEndContent() {
 			description: (
 				<>
 					<h2>PHP</h2>
-					<p>PHP Description!</p>
+					<p>
+						PHP is a time-tested server-side scripting language commonly used for web
+						development, capable of creating dynamic and interactive web applications.
+					</p>
 				</>
 			),
 		},

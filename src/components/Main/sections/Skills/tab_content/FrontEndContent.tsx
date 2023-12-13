@@ -15,22 +15,29 @@ export function FrontEndContent() {
 
 	const sections = [
 		{
-			name: 'CSS',
-			icon: <CSSIcon />,
-			description: (
-				<>
-					<h2>CSS</h2>
-					<p>CSS Description!</p>
-				</>
-			),
-		},
-		{
 			name: 'HTML',
 			icon: <HTMLIcon />,
 			description: (
 				<>
 					<h2>HTML</h2>
-					<p>HTML Description!</p>
+					<p>
+						HTML (Hypertext Markup Language) is the foundation of web development, used
+						to structure and present content on the internet.
+					</p>
+				</>
+			),
+		},
+		{
+			name: 'CSS',
+			icon: <CSSIcon />,
+			description: (
+				<>
+					<h2>CSS</h2>
+					<p>
+						CSS (Cascading Style Sheets) is responsible for styling web pages,
+						controlling layout, and enhancing the visual appeal of websites. CSS goes
+						hand-in-hand with HTML to create a page's UI.
+					</p>
 				</>
 			),
 		},
@@ -40,37 +47,12 @@ export function FrontEndContent() {
 			description: (
 				<>
 					<h2>JavaScript</h2>
-					<p>JavaScript Description!</p>
-				</>
-			),
-		},
-		{
-			name: 'React Router',
-			icon: <ReactRouterIcon />,
-			description: (
-				<>
-					<h2>React Router</h2>
-					<p>React Router Description!</p>
-				</>
-			),
-		},
-		{
-			name: 'React',
-			icon: <ReactIcon />,
-			description: (
-				<>
-					<h2>React</h2>
-					<p>React Description!</p>
-				</>
-			),
-		},
-		{
-			name: 'Sass',
-			icon: <SassIcon />,
-			description: (
-				<>
-					<h2>Sass</h2>
-					<p>Sass Description!</p>
+					<p>
+						JavaScript is a versatile programming language that adds interactivity and
+						dynamic behavior to web applications. JavaScript can also be used as a
+						back-end service (using Node.js), allowing applications, APIs, and server
+						programs to be built on JavaScript.
+					</p>
 				</>
 			),
 		},
@@ -80,7 +62,50 @@ export function FrontEndContent() {
 			description: (
 				<>
 					<h2>TypeScript</h2>
-					<p>TypeScript Description!</p>
+					<p>
+						TypeScript brings type safety to JavaScript, providing reliable code and
+						developer productivity.
+					</p>
+				</>
+			),
+		},
+		{
+			name: 'React',
+			icon: <ReactIcon />,
+			description: (
+				<>
+					<h2>React</h2>
+					<p>
+						React is a popular JavaScript library for building user interfaces, offering
+						a component-based architecture and efficient rendering.
+					</p>
+				</>
+			),
+		},
+		{
+			name: 'React Router',
+			icon: <ReactRouterIcon />,
+			description: (
+				<>
+					<h2>React Router</h2>
+					<p>
+						React Router is a routing library for React applications, streamlining
+						navigation and URL route handling in a single-page application.
+					</p>
+				</>
+			),
+		},
+		{
+			name: 'Sass',
+			icon: <SassIcon />,
+			description: (
+				<>
+					<h2>Sass</h2>
+					<p>
+						Sass (Syntactically Awesome Style Sheets) is a CSS preprocessor that
+						simplifies stylesheet authoring with variables, mixins, nested styles, and
+						more.
+					</p>
 				</>
 			),
 		},
@@ -90,7 +115,10 @@ export function FrontEndContent() {
 			description: (
 				<>
 					<h2>Lottie</h2>
-					<p>Lottie Description!</p>
+					<p>
+						Lottie is an animation library that allows the integration of high-quality
+						animations into web and mobile applications with ease.
+					</p>
 				</>
 			),
 		},

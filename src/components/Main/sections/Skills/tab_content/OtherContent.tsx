@@ -16,7 +16,10 @@ export function OtherContent() {
 			description: (
 				<>
 					<h2>Photoshop</h2>
-					<p>Photoshop Description!</p>
+					<p>
+						Adobe Photoshop is a powerful graphics editing software used for image
+						manipulation, design, and digital art creation.
+					</p>
 				</>
 			),
 		},
@@ -26,7 +29,10 @@ export function OtherContent() {
 			description: (
 				<>
 					<h2>After Effects</h2>
-					<p>After Effects Description!</p>
+					<p>
+						Adobe After Effects is a motion graphics and visual effects software used
+						for creating animations, compositing, and video post-production.
+					</p>
 				</>
 			),
 		},
@@ -36,17 +42,10 @@ export function OtherContent() {
 			description: (
 				<>
 					<h2>Illustrator</h2>
-					<p>Illustrator Description!</p>
-				</>
-			),
-		},
-		{
-			name: 'VBA',
-			icon: <VBAIcon />,
-			description: (
-				<>
-					<h2>VBA</h2>
-					<p>VBA Description!</p>
+					<p>
+						Adobe Illustrator is a vector graphics design software used for creating
+						scalable and high-quality illustrations, logos, and graphics.
+					</p>
 				</>
 			),
 		},
@@ -56,7 +55,24 @@ export function OtherContent() {
 			description: (
 				<>
 					<h2>Office</h2>
-					<p>Office Description!</p>
+					<p>
+						Microsoft Office is a suite of productivity software, including applications
+						like Word, Excel, PowerPoint, and Outlook, widely used for document
+						creation, data analysis, and communication.
+					</p>
+				</>
+			),
+		},
+		{
+			name: 'VBA',
+			icon: <VBAIcon />,
+			description: (
+				<>
+					<h2>VBA</h2>
+					<p>
+						VBA is a programming language developed by Microsoft for automating tasks
+						within applications like Excel, Word, and Access.
+					</p>
 				</>
 			),
 		},
