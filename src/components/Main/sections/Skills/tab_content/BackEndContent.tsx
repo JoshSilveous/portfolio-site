@@ -7,34 +7,32 @@ export function BackEndContent() {
 		{
 			name: 'Node.js',
 			icon: <NodeIcon />,
-			description: `Node.js is a server-side JavaScript runtime environment that enables
-				building scalable and efficient network applications (APIs).`,
+			description:
+				'Node.js is a server-side JavaScript runtime environment that enables building scalable and efficient network applications (APIs).',
 		},
 		{
 			name: 'Express.js',
 			icon: <ExpressIcon />,
-			description: `Express.js is a web application framework for Node.js, simplifying the
-				development of APIs with robust routing and middleware.`,
+			description:
+				'Express.js is a web application framework for Node.js, simplifying the development of APIs with robust routing and middleware.',
 		},
 		{
 			name: 'SQL',
 			icon: <SQLIcon />,
-			description: `SQL (Structured Query Language) is a domain-specific language for managing
-				and querying relational databases.`,
+			description:
+				'SQL (Structured Query Language) is a domain-specific language for managing and querying relational databases.',
 		},
 		{
 			name: 'Electron',
 			icon: <ElectronIcon />,
-			description: `Electron is a framework for building cross-platform desktop applications
-				using web technologies and architecture. An Electron application has a renderer 
-				(front-end) process, built with HTML / CSS / JS, and a main (back-end) process, 
-				running Node.js.`,
+			description:
+				'Electron is a framework for building cross-platform desktop applications using web technologies and architecture. An Electron application has a renderer (front-end) process, built with HTML / CSS / JS, and a main (back-end) process, running Node.js.',
 		},
 		{
 			name: 'PHP',
 			icon: <PHPIcon />,
-			description: `PHP is a time-tested server-side scripting language commonly used for web
-				development, capable of creating dynamic and interactive web applications.`,
+			description:
+				'PHP is a time-tested server-side scripting language commonly used for web development, capable of creating dynamic and interactive web applications.',
 		},
 	]
 	return (
