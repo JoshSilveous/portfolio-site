@@ -48,6 +48,11 @@ export function Navbar() {
 		if (pageLoadedInFullscreen) {
 			transitionHeightClosedToOpen(paragraphElem, 2.5, 2)
 			transitionHeightClosedToOpen(anchorContainerElem, 4, 2)
+			document.body.style.overflow = 'hidden'
+			const revealOverflowTimeout = setTimeout(() => {
+				document.body.style.overflow = ''
+				clearTimeout(revealOverflowTimeout)
+			}, 7000)
 		}
 
 		// prevents visual "bug" when page is loaded non-fullscreen
