@@ -2,3 +2,4 @@
 - [ ] Fill out sections
 - [ ] Fix bug with NavBar-Desktop Loading Animation
     - Color switches abruptly
+- [ ] Advanced Lottie Playback Library

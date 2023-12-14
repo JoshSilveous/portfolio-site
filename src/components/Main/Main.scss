@@ -1,4 +1,10 @@
 .main {
 	padding: 20px;
 	padding-top: 280px;
+	a.anchor {
+		display: block;
+		position: relative;
+		top: -100px;
+		visibility: hidden;
+	}
 }
