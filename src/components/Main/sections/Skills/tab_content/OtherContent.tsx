@@ -65,13 +65,35 @@ export function OtherContent() {
 					project.
 					<br />I have also used Illustrator to create complex print designs, such as the
 					posterboard and brochures for my college capstone project:
-					<div style={{ display: 'flex', gap: '10px' }}>
-						<div style={{ width: '50%', textAlign: 'center' }}>
+					<div
+						style={{
+							display: 'flex',
+							gap: '10px',
+							flexWrap: 'wrap',
+							justifyContent: 'center',
+							textAlign: 'center',
+						}}
+					>
+						<div
+							style={{
+								width: 'calc(50% - 5px)',
+								minWidth: '270px',
+								maxWidth: '400px',
+								flexGrow: '1',
+							}}
+						>
 							<h3>Brochure</h3>
 							<BrochureFrontImage style={{ marginBottom: '10px' }} />
 							<BrochureBackImage />
 						</div>
-						<div style={{ width: '50%', textAlign: 'center' }}>
+						<div
+							style={{
+								width: 'calc(50% - 5px)',
+								minWidth: '270px',
+								maxWidth: '400px',
+								flexGrow: '1',
+							}}
+						>
 							<h3>Posterboard</h3>
 							<PosterboardImage />
 						</div>
@@ -99,8 +121,24 @@ export function OtherContent() {
 					<br />
 					Below are some examples of stuff I've created with Blender.
 					<br />
-					<div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
-						<div style={{ width: '50%' }}>
+					<div
+						style={{
+							display: 'flex',
+							gap: '10px',
+							marginTop: '20px',
+							flexWrap: 'wrap',
+							justifyContent: 'center',
+						}}
+					>
+						<div
+							style={{
+								width: 'calc(50% - 5px)',
+								minWidth: '270px',
+								maxWidth: '400px',
+								flexGrow: '1',
+							}}
+						>
+							<ColaImage style={{ marginBottom: '10px' }} />
 							<div className='iframe-wrapper'>
 								<iframe
 									src='https://www.youtube.com/embed/BrXJomWK94Y'
@@ -109,9 +147,16 @@ export function OtherContent() {
 									allowFullScreen
 								/>
 							</div>
-							<ColaImage style={{ marginTop: '10px' }} />
 						</div>
-						<div style={{ width: '50%' }}>
+						<div
+							style={{
+								width: 'calc(50% - 5px)',
+								minWidth: '270px',
+								maxWidth: '400px',
+								flexGrow: '1',
+							}}
+						>
+							<VaseImage style={{ marginBottom: '10px' }} />
 							<div className='iframe-wrapper'>
 								<iframe
 									loading='lazy'
@@ -121,7 +166,6 @@ export function OtherContent() {
 									allowFullScreen
 								/>
 							</div>
-							<VaseImage style={{ marginTop: '10px' }} />
 						</div>
 					</div>
 				</>
