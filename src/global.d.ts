@@ -12,3 +12,10 @@ interface TabConfiguration {
 	 */
 	content: JSX.Element
 }
+
+interface SkillSectionInfo {
+	name: string
+	icon: JSX.Element
+	description: string
+	paragraph: string | JSX.Element
+}

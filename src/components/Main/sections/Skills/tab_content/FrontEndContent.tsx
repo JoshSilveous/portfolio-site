@@ -13,7 +13,7 @@ import {
 export function FrontEndContent() {
 	const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
 
-	const sections = [
+	const sections: SkillSectionInfo[] = [
 		{
 			name: 'HTML',
 			icon: <HTMLIcon />,
@@ -96,8 +96,12 @@ export function FrontEndContent() {
 					I have experience with creating animated vector graphics with Adobe Illustrator
 					and After Effects (noted in the <strong>Other</strong> tab), and Lottie allows
 					you to use those skills to create awesome graphics for web applications.
-					Lottie's JavaScript also library provides a ton of functionality, such as that
-					used in the Advanced Lottie Playback library I created.
+					Lottie's JavaScript also library provides a ton of functionality, which allowed
+					me to create a{' '}
+					<a href='https://advanced-lottie-viewer.vercel.app/'>
+						dynamically animated hover effect
+					</a>
+					.
 				</>
 			),
 		},
