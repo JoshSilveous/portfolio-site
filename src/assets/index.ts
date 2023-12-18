@@ -1,4 +1,5 @@
-import { genImageComponent } from './genImageComponent.tsx'
+import { genImageComponent } from '../functions/ImageComponent/genImageComponent'
+
 export { ReactComponent as AboutMeIcon } from './navbar_icons/about-me.svg'
 export { ReactComponent as SkillsIcon } from './navbar_icons/skills.svg'
 export { ReactComponent as ProjectsIcon } from './navbar_icons/projects.svg'
@@ -28,17 +29,32 @@ export { ReactComponent as VBAIcon } from './skills_icons/vba.svg'
 export { ReactComponent as OfficeIcon } from './skills_icons/office.svg'
 
 export const BrochureFrontImage = genImageComponent(
-	'/src/assets/images/brochure_1_compressed.jpg',
+	'/src/assets/images/brochure_front_compressed.jpg',
+	'/src/assets/images/brochure_front_compressed.jpg',
 	'An image of the front of my brochure design.',
 	'Front of Brochure'
 )
 export const BrochureBackImage = genImageComponent(
-	'/src/assets/images/brochure_2_compressed.jpg',
+	'/src/assets/images/brochure_back_compressed.jpg',
+	'/src/assets/images/brochure_back_compressed.jpg',
 	'An image of the back of my brochure design.',
 	'Back of Brochure'
 )
 export const PosterboardImage = genImageComponent(
 	'/src/assets/images/posterboard_1_compressed.jpg',
+	'/src/assets/images/posterboard_1_compressed.jpg',
 	'An image of my posterboard design for my group.',
 	'Posterboard'
+)
+export const ColaImage = genImageComponent(
+	'/src/assets/images/cola_compressed.png',
+	'/src/assets/images/cola_full.png',
+	'An artistic rendering of Nuka-Cola bottles from the Fallout universe, with dramatic lighting and effects.',
+	'Fallout Nuka-Cola Bottles'
+)
+export const VaseImage = genImageComponent(
+	'/src/assets/images/vases_compressed.png',
+	'/src/assets/images/vases_full.png',
+	'A CGI rendering couple of vases filled with colorful liquids, with a natural lighting peeking in from a window.',
+	'Vases'
 )

@@ -9,6 +9,8 @@ import {
 	BrochureFrontImage,
 	BrochureBackImage,
 	PosterboardImage,
+	ColaImage,
+	VaseImage,
 } from '../../../../../assets'
 export function OtherContent() {
 	const [currentSectionIndex, setCurrentSectionIndex] = useState(0)
@@ -34,22 +36,10 @@ export function OtherContent() {
 					awesome CGI effects, such as this CGI Monkey animation:
 					<br />
 					<div
-						className='iframe_wrapper'
-						style={{
-							display: 'flex',
-							justifyContent: 'center',
-							margin: '15px 0 15px 0',
-						}}
+						className='iframe-wrapper'
+						style={{ maxWidth: '500px', margin: '20px auto' }}
 					>
 						<iframe
-							style={{
-								width: '500px',
-								height: '281px',
-								minWidth: '250px',
-								minHeight: '140px',
-								border: 'none',
-								boxShadow: '5px 5px 15px rgba(0, 0, 0, 0.34)',
-							}}
 							loading='lazy'
 							src='https://www.youtube.com/embed/2OkpcVEsZBo'
 							title='After Effects + Blender CGI Demonstration'
@@ -108,6 +98,32 @@ export function OtherContent() {
 					<br />
 					<br />
 					Below are some examples of stuff I've created with Blender.
+					<br />
+					<div style={{ display: 'flex', gap: '10px' }}>
+						<div style={{ width: '50%' }}>
+							<div className='iframe-wrapper'>
+								<iframe
+									src='https://www.youtube.com/embed/BrXJomWK94Y'
+									title='After Effects &amp; Blender CGI Demonstration - Interstellar TARS'
+									allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+									allowFullScreen
+								/>
+							</div>
+							<ColaImage style={{ width: '100%', marginTop: '10px' }} />
+						</div>
+						<div style={{ width: '50%' }}>
+							<div className='iframe-wrapper'>
+								<iframe
+									loading='lazy'
+									src='https://www.youtube.com/embed/2OkpcVEsZBo'
+									title='After Effects &amp; Blender CGI Demonstration - Monkey Head'
+									allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+									allowFullScreen
+								/>
+							</div>
+							<VaseImage style={{ width: '100%', marginTop: '10px' }} />
+						</div>
+					</div>
 				</>
 			),
 		},
