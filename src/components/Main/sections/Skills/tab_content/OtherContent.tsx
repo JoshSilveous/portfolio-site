@@ -68,7 +68,7 @@ export function OtherContent() {
 					<div style={{ display: 'flex', gap: '10px' }}>
 						<div style={{ width: '50%', textAlign: 'center' }}>
 							<h3>Brochure</h3>
-							<BrochureFrontImage style={{ width: '100%' }} />
+							<BrochureFrontImage style={{ width: '100%', marginBottom: '10px' }} />
 							<BrochureBackImage style={{ width: '100%' }} />
 						</div>
 						<div style={{ width: '50%', textAlign: 'center' }}>
@@ -99,7 +99,7 @@ export function OtherContent() {
 					<br />
 					Below are some examples of stuff I've created with Blender.
 					<br />
-					<div style={{ display: 'flex', gap: '10px' }}>
+					<div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
 						<div style={{ width: '50%' }}>
 							<div className='iframe-wrapper'>
 								<iframe
@@ -132,14 +132,29 @@ export function OtherContent() {
 			icon: <OfficeIcon />,
 			description:
 				'Microsoft Office is a suite of productivity software, including applications like Word, Excel, PowerPoint, and Outlook, widely used for document creation, data analysis, and communication.',
-			paragraph: '',
+			paragraph:
+				'I have an advanced knowledge of Microsoft Office products, especially Excel. I have used excel for many reasons, such as tracking personal finances or graphing data.',
 		},
 		{
 			name: 'VBA',
 			icon: <VBAIcon />,
 			description:
 				'VBA is a programming language developed by Microsoft for automating tasks within applications like Excel, Word, and Access.',
-			paragraph: '',
+			paragraph: (
+				<>
+					I took a deep dive into VBA for a few months, with the goal of creating a
+					personal finance tracker in Excel that would automatically generate new pages
+					per interval (weekly, biweekly, etc), and automatically update all formulas, so
+					the end user never has to.
+					<br />
+					<br />I know how to create dialog / model popups, perform complex loops, and
+					automate rigorous tasks within Excel using VBA. Check out my{' '}
+					<a href='#projects/excellent-finance-tracker'>
+						Excel-lent Finance Tracker
+					</a>{' '}
+					project for a closer look at my VBA skills.
+				</>
+			),
 		},
 	]
 	return (

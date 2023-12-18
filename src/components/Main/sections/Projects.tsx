@@ -12,6 +12,12 @@ export function Projects() {
 			<a className='anchor' id='projects/grading-application' style={{ top: '-150px' }} />
 			<h2>Advanced Lottie Viewer</h2>
 			<a className='anchor' id='projects/advanced-lottie-viewer' style={{ top: '-150px' }} />
+			<h2>Excel-lent Finance Tracker</h2>
+			<a
+				className='anchor'
+				id='projects/excellent-finance-tracker'
+				style={{ top: '-150px' }}
+			/>
 			<p>
 				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
 				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
