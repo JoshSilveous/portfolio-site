@@ -1,0 +1,26 @@
+.image-component {
+	position: relative;
+	.fullscreen-button {
+		position: absolute;
+		height: 40px;
+		width: 50px;
+		bottom: 15px;
+		right: 10px;
+		background-color: rgba(0, 0, 0, 0.5);
+		border-radius: 7px;
+		display: flex;
+		justify-content: center;
+		cursor: pointer;
+		svg {
+			height: 40px;
+			color: rgb(230, 230, 230);
+			transition: scale 0.2s ease;
+		}
+		&:hover > svg {
+			scale: 120%;
+		}
+		&:active > svg {
+			scale: 110%;
+		}
+	}
+}
