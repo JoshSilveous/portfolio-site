@@ -1,3 +1,4 @@
+import { genImageComponent } from './genImageComponent.tsx'
 export { ReactComponent as AboutMeIcon } from './navbar_icons/about-me.svg'
 export { ReactComponent as SkillsIcon } from './navbar_icons/skills.svg'
 export { ReactComponent as ProjectsIcon } from './navbar_icons/projects.svg'
@@ -22,5 +23,22 @@ export { ReactComponent as PHPIcon } from './skills_icons/php.svg'
 export { ReactComponent as PhotoshopIcon } from './skills_icons/photoshop.svg'
 export { ReactComponent as AfterEffectsIcon } from './skills_icons/after_effects.svg'
 export { ReactComponent as IllustratorIcon } from './skills_icons/illustrator.svg'
+export { ReactComponent as BlenderIcon } from './skills_icons/blender.svg'
 export { ReactComponent as VBAIcon } from './skills_icons/vba.svg'
 export { ReactComponent as OfficeIcon } from './skills_icons/office.svg'
+
+export const BrochureFrontImage = genImageComponent(
+	'/src/assets/images/brochure_1_compressed.jpg',
+	'An image of the front of my brochure design.',
+	'Front of Brochure'
+)
+export const BrochureBackImage = genImageComponent(
+	'/src/assets/images/brochure_2_compressed.jpg',
+	'An image of the back of my brochure design.',
+	'Back of Brochure'
+)
+export const PosterboardImage = genImageComponent(
+	'/src/assets/images/posterboard_1_compressed.jpg',
+	'An image of my posterboard design for my group.',
+	'Posterboard'
+)
