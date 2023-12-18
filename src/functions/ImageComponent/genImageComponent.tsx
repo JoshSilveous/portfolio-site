@@ -26,8 +26,8 @@ export function genImageComponent(
 		props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
 	) {
 		return (
-			<div className='image-component'>
-				<img loading='lazy' title={title} src={srcCompressed} alt={alt} {...props} />
+			<div className='image-component' {...props}>
+				<img loading='lazy' title={title} src={srcCompressed} alt={alt} />
 				<div
 					className='fullscreen-button'
 					onClick={() => {

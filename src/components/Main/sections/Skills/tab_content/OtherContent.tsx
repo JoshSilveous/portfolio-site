@@ -68,12 +68,12 @@ export function OtherContent() {
 					<div style={{ display: 'flex', gap: '10px' }}>
 						<div style={{ width: '50%', textAlign: 'center' }}>
 							<h3>Brochure</h3>
-							<BrochureFrontImage style={{ width: '100%', marginBottom: '10px' }} />
-							<BrochureBackImage style={{ width: '100%' }} />
+							<BrochureFrontImage style={{ marginBottom: '10px' }} />
+							<BrochureBackImage />
 						</div>
 						<div style={{ width: '50%', textAlign: 'center' }}>
 							<h3>Posterboard</h3>
-							<PosterboardImage style={{ width: '100%' }} />
+							<PosterboardImage />
 						</div>
 					</div>
 				</>
@@ -109,7 +109,7 @@ export function OtherContent() {
 									allowFullScreen
 								/>
 							</div>
-							<ColaImage style={{ width: '100%', marginTop: '10px' }} />
+							<ColaImage style={{ marginTop: '10px' }} />
 						</div>
 						<div style={{ width: '50%' }}>
 							<div className='iframe-wrapper'>
@@ -121,7 +121,7 @@ export function OtherContent() {
 									allowFullScreen
 								/>
 							</div>
-							<VaseImage style={{ width: '100%', marginTop: '10px' }} />
+							<VaseImage style={{ marginTop: '10px' }} />
 						</div>
 					</div>
 				</>
