@@ -65,35 +65,13 @@ export function OtherContent() {
 					project.
 					<br />I have also used Illustrator to create complex print designs, such as the
 					posterboard and brochures for my college capstone project:
-					<div
-						style={{
-							display: 'flex',
-							gap: '10px',
-							flexWrap: 'wrap',
-							justifyContent: 'center',
-							textAlign: 'center',
-						}}
-					>
-						<div
-							style={{
-								width: 'calc(50% - 5px)',
-								minWidth: '270px',
-								maxWidth: '400px',
-								flexGrow: '1',
-							}}
-						>
+					<div className='two-col-container'>
+						<div className='col'>
 							<h3>Brochure</h3>
 							<BrochureFrontImage style={{ marginBottom: '10px' }} />
 							<BrochureBackImage />
 						</div>
-						<div
-							style={{
-								width: 'calc(50% - 5px)',
-								minWidth: '270px',
-								maxWidth: '400px',
-								flexGrow: '1',
-							}}
-						>
+						<div className='col'>
 							<h3>Posterboard</h3>
 							<PosterboardImage />
 						</div>
@@ -121,23 +99,8 @@ export function OtherContent() {
 					<br />
 					Below are some examples of stuff I've created with Blender.
 					<br />
-					<div
-						style={{
-							display: 'flex',
-							gap: '10px',
-							marginTop: '20px',
-							flexWrap: 'wrap',
-							justifyContent: 'center',
-						}}
-					>
-						<div
-							style={{
-								width: 'calc(50% - 5px)',
-								minWidth: '270px',
-								maxWidth: '400px',
-								flexGrow: '1',
-							}}
-						>
+					<div className='two-col-container'>
+						<div className='col'>
 							<ColaImage style={{ marginBottom: '10px' }} />
 							<div className='iframe-wrapper'>
 								<iframe
@@ -148,14 +111,7 @@ export function OtherContent() {
 								/>
 							</div>
 						</div>
-						<div
-							style={{
-								width: 'calc(50% - 5px)',
-								minWidth: '270px',
-								maxWidth: '400px',
-								flexGrow: '1',
-							}}
-						>
+						<div className='col'>
 							<VaseImage style={{ marginBottom: '10px' }} />
 							<div className='iframe-wrapper'>
 								<iframe
