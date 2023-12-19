@@ -1,22 +1,20 @@
 import './Skills.scss'
 import { useTabSwitcher } from '../../../../functions/useTabSwitcher'
-import { FrontEndContent, BackEndContent, OtherContent } from './tab_content'
+import { backendContent, frontendContent, otherContent } from './tab_content'
+import { SkillSectionContent } from './tab_content/SkillSectionContent'
 export function Skills() {
 	const tabSwitcher = useTabSwitcher([
 		{
 			name: 'Front End',
-			id: 'front-end',
-			content: <FrontEndContent />,
+			content: <SkillSectionContent sections={frontendContent} />,
 		},
 		{
 			name: 'Back End',
-			id: 'back-end',
-			content: <BackEndContent />,
+			content: <SkillSectionContent sections={backendContent} />,
 		},
 		{
 			name: 'Other',
-			id: 'other',
-			content: <OtherContent />,
+			content: <SkillSectionContent sections={otherContent} />,
 		},
 	])
 
@@ -25,17 +23,6 @@ export function Skills() {
 			<a className='anchor' id='skills' />
 			<h1>Skills</h1>
 			{tabSwitcher}
-			<p>
-				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
-				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
-				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
-				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
-				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
-				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
-				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
-				Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
-				Blah Blah Blah Blah Blah Blah Blah
-			</p>
 		</div>
 	)
 }

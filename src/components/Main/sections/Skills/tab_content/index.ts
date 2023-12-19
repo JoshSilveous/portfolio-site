@@ -1,3 +1,3 @@
-export { FrontEndContent } from './FrontEndContent'
-export { BackEndContent } from './BackEndContent'
-export { OtherContent } from './OtherContent'
+export { frontendContent } from './frontendContent'
+export { backendContent } from './backendContent'
+export { otherContent } from './otherContent'
