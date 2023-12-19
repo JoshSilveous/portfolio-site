@@ -1,42 +1,32 @@
 import { useState } from 'react'
 import './useTabSwitcher.scss'
 
-export function useTabSwitcher(tabs: TabConfiguration[], defaultTab?: string) {
-	let firstTab: string
-	if (defaultTab === undefined) {
-		firstTab = tabs[0].id
-	} else {
-		firstTab = defaultTab
-	}
-
-	const [activeTabID, setActiveTabID] = useState(firstTab)
-
-	function handleTabClick(e: React.MouseEvent) {
-		setActiveTabID((e.target as HTMLDivElement).dataset.tabname!)
-	}
-
-	const tabsDisplay = tabs.map((tab) => {
-		return (
-			<div
-				className={`tab ${activeTabID === tab.id ? 'active' : ''}`}
-				data-tabname={tab.id}
-				onClick={handleTabClick}
-			>
-				{tab.name}
-			</div>
-		)
-	})
-
-	const activeTab = tabs.find((tab) => tab.id === activeTabID)
-
-	if (activeTab === undefined) {
-		throw new Error(`Tab ID "${activeTabID}" not found.`)
-	}
+export function useTabSwitcher(tabs: TabConfiguration[], defaultTabIndex?: number) {
+	const [activeTabIndex, setActiveTabIndex] = useState<number>(
+		defaultTabIndex !== undefined ? defaultTabIndex : 0
+	)
 
 	return (
 		<div className='tab-switcher-component'>
-			<div className='tab-switch-container'>{tabsDisplay}</div>
-			<div className='tab-content-container'>{activeTab.content}</div>
+			<div className='tab-switch-container'>
+				{tabs.map((tab, index) => {
+					return (
+						<div
+							className={`tab ${index === activeTabIndex ? 'active' : ''}`}
+							onClick={() => setActiveTabIndex(index)}
+						>
+							{tab.name}
+						</div>
+					)
+				})}
+			</div>
+			{tabs.map((tab, index) => {
+				return (
+					<div className='tab-content-container' hidden={index !== activeTabIndex}>
+						{tab.content}
+					</div>
+				)
+			})}
 		</div>
 	)
 }
