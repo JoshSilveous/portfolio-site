@@ -1,7 +1,7 @@
 import './Skills.scss'
 import { useTabSwitcher } from '../../../../functions/useTabSwitcher'
 import { backendContent, frontendContent, otherContent } from './tab_content'
-import { SkillSectionContent } from './tab_content/SkillSectionContent'
+import { SkillSectionContent } from './SkillSectionContent'
 export function Skills() {
 	const tabSwitcher = useTabSwitcher([
 		{
