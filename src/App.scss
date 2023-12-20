@@ -8,4 +8,17 @@
 .app {
 	display: flex;
 	flex-direction: column;
+
+	.main {
+		padding: 20px;
+		padding-top: 280px;
+		margin: auto;
+		max-width: 1280px;
+		a.anchor {
+			display: block;
+			position: relative;
+			top: -100px;
+			visibility: hidden;
+		}
+	}
 }
