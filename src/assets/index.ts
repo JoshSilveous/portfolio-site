@@ -28,6 +28,8 @@ export { ReactComponent as BlenderIcon } from './skills_icons/blender.svg'
 export { ReactComponent as VBAIcon } from './skills_icons/vba.svg'
 export { ReactComponent as OfficeIcon } from './skills_icons/office.svg'
 
+export { ReactComponent as FoldIcon } from './misc/fold.svg'
+
 export const BrochureFrontImage = genImageComponent(
 	'/src/assets/images/brochure_front_cmpr.jpg',
 	'/src/assets/images/brochure_front_full.jpg',
