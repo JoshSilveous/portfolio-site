@@ -35,3 +35,16 @@ export function useTabSwitcher(tabs: TabConfiguration[], defaultTabIndex?: numbe
 		</div>
 	)
 }
+
+declare global {
+	interface TabConfiguration {
+		/**
+		 * The display name for the tab
+		 */
+		name: string
+		/**
+		 * The content shown when this tab is active
+		 */
+		content: JSX.Element
+	}
+}

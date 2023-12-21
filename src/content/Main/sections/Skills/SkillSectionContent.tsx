@@ -33,3 +33,12 @@ export function SkillSectionContent({ sections }: { sections: SkillSectionInfo[]
 		</div>
 	)
 }
+
+declare global {
+	interface SkillSectionInfo {
+		name: string
+		icon: JSX.Element
+		description: string
+		additional_content: JSX.Element
+	}
+}
