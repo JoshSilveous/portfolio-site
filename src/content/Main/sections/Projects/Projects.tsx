@@ -1,77 +1,27 @@
 import { FoldComponent, FoldSwitcher } from '../../../../components'
+import * as sections from './fold_content'
 import '../sections.scss'
 export function Projects() {
 	const folds: FoldSwitcherContent[] = [
 		{
 			title: 'Guitar Visualizer',
-			content: (
-				<>
-					<a
-						className='anchor'
-						id='projects/guitar-visualizer'
-						style={{ top: '-150px' }}
-					/>
-					Some text Some text Some text Some text Some text Some text Some text Some text
-					Some text Some text Some text Some text Some text Some text Some text Some text
-					Some text Some text
-				</>
-			),
+			content: sections.guitarVisualizerContent,
 		},
 		{
 			title: 'Finance Tracker',
-			content: (
-				<>
-					<a className='anchor' id='projects/finance-tracker' style={{ top: '-150px' }} />
-					Some text Some text Some text Some text Some text Some text Some text Some text
-					Some text Some text Some text Some text Some text Some text Some text Some text
-					Some text Some text
-				</>
-			),
+			content: sections.financeTrackerContent,
 		},
 		{
 			title: 'Grading Application',
-			content: (
-				<>
-					<a
-						className='anchor'
-						id='projects/grading-application'
-						style={{ top: '-150px' }}
-					/>
-					Some text Some text Some text Some text Some text Some text Some text Some text
-					Some text Some text Some text Some text Some text Some text Some text Some text
-					Some text Some text
-				</>
-			),
+			content: sections.gradingApplicationContent,
 		},
 		{
 			title: 'Advanced Lottie Viewer',
-			content: (
-				<>
-					<a
-						className='anchor'
-						id='projects/advanced-lottie-viewer'
-						style={{ top: '-150px' }}
-					/>
-					Some text Some text Some text Some text Some text Some text Some text Some text
-					Some text Some text Some text Some text Some text Some text Some text Some text
-					Some text Some text
-				</>
-			),
+			content: sections.advancedLottieViewerContent,
 		},
 		{
 			title: 'Excel-lent Finance Tracker',
-			content: (
-				<>
-					<a
-						className='anchor'
-						id='projects/excellent-finance-tracker'
-						style={{ top: '-150px' }}
-					/>
-					Some text Some text Some text Some text Some text Some text Some text Some text
-					Some text Some text Some text Some text Some text Some text Some text Some text
-					Some text Some text
-				</>
-			),
+			content: sections.excellentFinanceTrackerContent,
 		},
 	]
 	return (

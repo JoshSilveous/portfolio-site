@@ -1,21 +1,21 @@
 import './Skills.scss'
 
-import { backendContent, frontendContent, otherContent } from './tab_content'
+import * as sections from './tab_content'
 import { SkillSectionContent } from './SkillSectionContent'
 import { TabSwitcher } from '../../../../components'
 export function Skills() {
 	const tabs: TabSwitcherContent[] = [
 		{
 			name: 'Front End',
-			content: <SkillSectionContent sections={frontendContent} />,
+			content: <SkillSectionContent sections={sections.frontendContent} />,
 		},
 		{
 			name: 'Back End',
-			content: <SkillSectionContent sections={backendContent} />,
+			content: <SkillSectionContent sections={sections.backendContent} />,
 		},
 		{
 			name: 'Other',
-			content: <SkillSectionContent sections={otherContent} />,
+			content: <SkillSectionContent sections={sections.otherContent} />,
 		},
 	]
 
