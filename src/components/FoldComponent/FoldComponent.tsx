@@ -1,6 +1,7 @@
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useRef } from 'react'
 import './FoldComponent.scss'
 import { FoldIcon } from '../../assets'
+import { setDelay } from '../../functions'
 
 /**
  * A component that can be folded open and closed. This component does NOT manage state.
@@ -15,13 +16,52 @@ import { FoldIcon } from '../../assets'
  * *Should toggle* `folded`
  */
 export function FoldComponent({ title, children, folded, handleToggle }: FoldComponentProps) {
+	const foldRef = useRef<HTMLDivElement>(null)
+	const contentRef = useRef<HTMLDivElement>(null)
+
+	const ANIMATION_TIME = 0.5
+
+	useEffect(() => {
+		const contentNode = contentRef.current!
+		if (folded) {
+			// set height to full px value instead of 'auto'
+			contentNode.style.height = contentNode.scrollHeight + 'px'
+
+			// short delay so above line can render
+			setDelay(10).then(() => {
+				contentNode.style.height = '0px'
+			})
+		} else {
+			// set height to px value of full height instead of '0px'
+			contentNode.style.height = contentNode.scrollHeight + 'px'
+
+			setDelay(ANIMATION_TIME * 1000).then(() => {
+				// conditional to make sure the animation wasn't interrupted
+				if (contentNode.style.height !== '0px') {
+					// remove height px value after animation finishes
+					// allows height to be 'auto', making height responsive to display size changes
+					contentNode.style.height = ''
+				}
+			})
+		}
+	}, [folded])
+
+	useEffect(() => {
+		// wait to add the transition effect until after fold-content is at it's proper height
+		// prevents folding/unfolding animation on initial component load
+		setDelay(50).then(() => {
+			contentRef.current!.style.transition = `height ${ANIMATION_TIME}s ease`
+		})
+	}, [])
 	return (
-		<div className='fold-component'>
-			<div className={`fold-title${folded ? ' folded' : ''}`} onClick={handleToggle}>
+		<div className={`fold-component${folded ? ' folded' : ''}`} ref={foldRef}>
+			<div className='fold-title' onClick={handleToggle}>
 				<FoldIcon />
 				<h2>{title}</h2>
 			</div>
-			<div className='fold-content'>{children}</div>
+			<div className='fold-content' ref={contentRef}>
+				{children}
+			</div>
 		</div>
 	)
 }

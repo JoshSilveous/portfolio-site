@@ -2,6 +2,7 @@
 	.fold-title {
 		display: flex;
 		align-items: center;
+		user-select: none;
 		cursor: pointer;
 		svg {
 			width: 50px;
@@ -13,23 +14,29 @@
 			transition: font-size 0.2s ease;
 		}
 
-		&.folded {
-			svg {
-				rotate: 90deg;
-			}
-		}
-		&:not(.folded) {
-			svg {
-				rotate: 270deg;
-			}
-		}
-
 		&:hover {
 			h2 {
 				font-size: 1.6em;
 			}
 			svg {
 				scale: 120%;
+			}
+		}
+	}
+	.fold-content {
+		overflow: hidden;
+	}
+	&.folded {
+		.fold-title {
+			svg {
+				rotate: 90deg;
+			}
+		}
+	}
+	&:not(.folded) {
+		.fold-title {
+			svg {
+				rotate: 270deg;
 			}
 		}
 	}
