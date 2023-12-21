@@ -1,5 +1,5 @@
+import { FoldComponent } from '../../../../components'
 import '../sections.scss'
-import { FoldComponent } from './FoldComponent'
 export function Projects() {
 	return (
 		<div className='section projects'>

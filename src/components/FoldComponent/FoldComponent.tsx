@@ -1,6 +1,6 @@
 import { ReactNode, useState } from 'react'
-import { FoldIcon } from '../../../../assets'
 import './FoldComponent.scss'
+import { FoldIcon } from '../../assets'
 
 interface FoldComponentProps {
 	title: string

@@ -16,7 +16,6 @@ export async function transitionHeightClosedToOpen(
 	element.style.transition = 'none'
 	element.style.height = '0px'
 	element.style.padding = '0px'
-	console.log('waiting for switch')
 
 	await setDelay(delay * 1000)
 
@@ -25,7 +24,6 @@ export async function transitionHeightClosedToOpen(
 	element.style.padding = computedPadding
 
 	await setDelay(duration * 1000)
-	console.log('waiting for switch 2')
 
 	element.style.height = initialHeight
 	element.style.padding = initialPadding

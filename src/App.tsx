@@ -1,6 +1,6 @@
 import './App.scss'
-import { Navbar } from './components/NavBar/Navbar'
-import { AboutMe, ContactInfo, Experience, Projects, Skills } from './components/Main/sections'
+import { Navbar } from './content/NavBar/Navbar'
+import { AboutMe, ContactInfo, Experience, Projects, Skills } from './content/Main/sections'
 
 function App() {
 	return (
