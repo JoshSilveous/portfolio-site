@@ -17,15 +17,19 @@ export const otherContent: SkillSectionInfo[] = [
 		icon: <PhotoshopIcon />,
 		description:
 			'Adobe Photoshop is a powerful graphics editing software used for image manipulation, design, and digital art creation.',
-		paragraph:
-			'I have used Photoshop countless times. In regards to web development, I have used it to place consistent graphics on images and repair minor imperfections.',
+		additional_content: (
+			<>
+				I have used Photoshop countless times. In regards to web development, I have used it
+				to place consistent graphics on images and repair minor imperfections.
+			</>
+		),
 	},
 	{
 		name: 'After Effects',
 		icon: <AfterEffectsIcon />,
 		description:
 			'Adobe After Effects is a motion graphics and visual effects software used for creating animations, compositing, and video post-production.',
-		paragraph: (
+		additional_content: (
 			<>
 				I have pretty advanced hobby experience with After Effects, such as 3D motion
 				tracking and compositing. In high school, I would use it with Blender to create
@@ -51,7 +55,7 @@ export const otherContent: SkillSectionInfo[] = [
 		icon: <IllustratorIcon />,
 		description:
 			'Adobe Illustrator is a vector graphics design software used for creating scalable and high-quality illustrations, logos, and graphics.',
-		paragraph: (
+		additional_content: (
 			<>
 				I mainly use Illustrator to create and edit SVG designs, such as those shown in my{' '}
 				<a href='#projects/advanced-lottie-viewer'>Advanced Lottie Viewer</a> project.
@@ -76,7 +80,7 @@ export const otherContent: SkillSectionInfo[] = [
 		icon: <BlenderIcon />,
 		description:
 			'Blender is a versatile open-source 3D computer graphics software used for modeling, animation, rendering, and creating visual effects.',
-		paragraph: (
+		additional_content: (
 			<>
 				I picked up Blender animation for fun in high school, and have spent many hours
 				learning to do neat things with it. Most of my time was spent learning rendering
@@ -124,15 +128,19 @@ export const otherContent: SkillSectionInfo[] = [
 		icon: <OfficeIcon />,
 		description:
 			'Microsoft Office is a suite of productivity software, including applications like Word, Excel, PowerPoint, and Outlook, widely used for document creation, data analysis, and communication.',
-		paragraph:
-			'I have an advanced knowledge of Microsoft Office products, especially Excel. I have used excel for many reasons, such as tracking personal finances or graphing data.',
+		additional_content: (
+			<>
+				I have an advanced knowledge of Microsoft Office products, especially Excel. I have
+				used excel for many reasons, such as tracking personal finances or graphing data.
+			</>
+		),
 	},
 	{
 		name: 'VBA',
 		icon: <VBAIcon />,
 		description:
 			'VBA is a programming language developed by Microsoft for automating tasks within applications like Excel, Word, and Access.',
-		paragraph: (
+		additional_content: (
 			<>
 				I took a deep dive into VBA for a few months, with the goal of creating a personal
 				finance tracker in Excel that would automatically generate new pages per interval

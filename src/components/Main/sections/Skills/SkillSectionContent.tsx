@@ -13,6 +13,7 @@ export function SkillSectionContent({ sections }: { sections: SkillSectionInfo[]
 								index === currentSectionIndex ? 'active' : ''
 							}`}
 							onClick={() => setCurrentSectionIndex(index)}
+							key={index}
 						>
 							{section.icon}
 							<div className='label'>{section.name}</div>
@@ -22,10 +23,10 @@ export function SkillSectionContent({ sections }: { sections: SkillSectionInfo[]
 			</div>
 			{sections.map((section, index) => {
 				return (
-					<div className='description' hidden={index !== currentSectionIndex}>
+					<div className='description' hidden={index !== currentSectionIndex} key={index}>
 						<h2>{section.name}</h2>
 						<p>{section.description}</p>
-						<p>{section.paragraph}</p>
+						<div>{section.additional_content}</div>
 					</div>
 				)
 			})}

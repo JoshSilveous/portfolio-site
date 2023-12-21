@@ -6,7 +6,7 @@ export const backendContent: SkillSectionInfo[] = [
 		icon: <NodeIcon />,
 		description:
 			'Node.js is a server-side JavaScript runtime environment that enables building scalable and efficient network applications (APIs).',
-		paragraph: (
+		additional_content: (
 			<>
 				I have used Node.js to build processes for Electron applications, and to build
 				servers/APIs for full-stack projects, such as my{' '}
@@ -20,7 +20,7 @@ export const backendContent: SkillSectionInfo[] = [
 		icon: <ExpressIcon />,
 		description:
 			'Express.js is a web application framework for Node.js, simplifying the development of APIs with robust routing and middleware.',
-		paragraph: (
+		additional_content: (
 			<>
 				I have used Express.js in most of my Node applications that involve API routing,
 				such as my <a href='#projects/finance-tracker'>Finance Tracker</a> project.
@@ -32,7 +32,7 @@ export const backendContent: SkillSectionInfo[] = [
 		icon: <SQLIcon />,
 		description:
 			'SQL (Structured Query Language) is a domain-specific language for managing and querying relational databases.',
-		paragraph: (
+		additional_content: (
 			<>
 				I have taken multiple advanced classes covering SQL database design, normalization
 				rules, and more complex topics such as Views. Whenever I need a robust database in a
@@ -49,7 +49,7 @@ export const backendContent: SkillSectionInfo[] = [
 		icon: <ElectronIcon />,
 		description:
 			'Electron is a framework for building cross-platform desktop applications using web technologies and architecture. An Electron application has a renderer (front-end) process, built with HTML / CSS / JS, and a main (back-end) process, running Node.js.',
-		paragraph: (
+		additional_content: (
 			<>
 				Electron itself has a fairly minimal learning curve if you already know how to
 				develop frontends and backends. I used Electron to create my{' '}
@@ -63,7 +63,11 @@ export const backendContent: SkillSectionInfo[] = [
 		icon: <PHPIcon />,
 		description:
 			'PHP is a time-tested server-side scripting language commonly used for web development, capable of creating dynamic and interactive web applications.',
-		paragraph:
-			'I have taken classes covering PHP, specifically using it to loop over data to generate HTML, such as MySQL Database Queries.',
+		additional_content: (
+			<>
+				I have taken classes covering PHP, specifically using it to loop over data to
+				generate HTML, such as MySQL Database Queries.
+			</>
+		),
 	},
 ]

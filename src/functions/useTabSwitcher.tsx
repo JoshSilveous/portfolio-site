@@ -14,6 +14,7 @@ export function useTabSwitcher(tabs: TabConfiguration[], defaultTabIndex?: numbe
 						<div
 							className={`tab ${index === activeTabIndex ? 'active' : ''}`}
 							onClick={() => setActiveTabIndex(index)}
+							key={index}
 						>
 							{tab.name}
 						</div>
@@ -22,7 +23,11 @@ export function useTabSwitcher(tabs: TabConfiguration[], defaultTabIndex?: numbe
 			</div>
 			{tabs.map((tab, index) => {
 				return (
-					<div className='tab-content-container' hidden={index !== activeTabIndex}>
+					<div
+						className='tab-content-container'
+						hidden={index !== activeTabIndex}
+						key={index}
+					>
 						{tab.content}
 					</div>
 				)
