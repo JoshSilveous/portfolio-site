@@ -1,10 +1,19 @@
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import './useTabSwitcher.scss'
 
-export function useTabSwitcher(tabs: TabConfiguration[], defaultTabIndex?: number) {
-	const [activeTabIndex, setActiveTabIndex] = useState<number>(
+export function useTabSwitcher(tabs: TabSwitcherContent[], defaultTabIndex?: number) {
+	const [activeTabIndex, setActiveTabIndex] = useState(
 		defaultTabIndex !== undefined ? defaultTabIndex : 0
 	)
+
+	// check to make sure specified defaultTabIndex actually exists in provided array
+	if (defaultTabIndex !== undefined && defaultTabIndex >= tabs.length) {
+		throw new Error(
+			`defaultTabIndex "${defaultTabIndex} specified, but array indexes only go up to '${
+				tabs.length - 1
+			}!`
+		)
+	}
 
 	return (
 		<div className='tab-switcher-component'>
@@ -37,7 +46,7 @@ export function useTabSwitcher(tabs: TabConfiguration[], defaultTabIndex?: numbe
 }
 
 declare global {
-	interface TabConfiguration {
+	interface TabSwitcherContent {
 		/**
 		 * The display name for the tab
 		 */
@@ -45,6 +54,6 @@ declare global {
 		/**
 		 * The content shown when this tab is active
 		 */
-		content: JSX.Element
+		content: ReactNode
 	}
 }
