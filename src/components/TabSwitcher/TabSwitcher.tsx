@@ -1,7 +1,11 @@
 import { ReactNode, useState } from 'react'
-import './useTabSwitcher.scss'
+import './TabSwitcher.scss'
 
-export function useTabSwitcher(tabs: TabSwitcherContent[], defaultTabIndex?: number) {
+interface TabSwitcherProps {
+	tabs: TabSwitcherContent[]
+	defaultTabIndex?: number
+}
+export function TabSwitcher({ tabs, defaultTabIndex }: TabSwitcherProps) {
 	const [activeTabIndex, setActiveTabIndex] = useState(
 		defaultTabIndex !== undefined ? defaultTabIndex : 0
 	)

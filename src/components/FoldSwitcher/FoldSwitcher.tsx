@@ -1,7 +1,11 @@
 import { ReactNode, useState } from 'react'
-import { FoldComponent } from '../../components'
+import { FoldComponent } from '..'
 
-export function useFoldSwitcher(folds: FoldSwitcherContent[], defaultFoldIndex?: number) {
+interface FoldSwitcherProps {
+	folds: FoldSwitcherContent[]
+	defaultFoldIndex?: number
+}
+export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 	const [activeFoldIndex, setActiveFoldIndex] = useState(
 		defaultFoldIndex === undefined ? NaN : defaultFoldIndex
 	)

@@ -2,9 +2,9 @@ import './Skills.scss'
 
 import { backendContent, frontendContent, otherContent } from './tab_content'
 import { SkillSectionContent } from './SkillSectionContent'
-import { useTabSwitcher } from '../../../../hooks'
+import { TabSwitcher } from '../../../../components'
 export function Skills() {
-	const tabSwitcher = useTabSwitcher([
+	const tabs: TabSwitcherContent[] = [
 		{
 			name: 'Front End',
 			content: <SkillSectionContent sections={frontendContent} />,
@@ -17,13 +17,13 @@ export function Skills() {
 			name: 'Other',
 			content: <SkillSectionContent sections={otherContent} />,
 		},
-	])
+	]
 
 	return (
 		<div className='section skills'>
 			<a className='anchor' id='skills' />
 			<h1>Skills</h1>
-			{tabSwitcher}
+			<TabSwitcher tabs={tabs} />
 		</div>
 	)
 }
