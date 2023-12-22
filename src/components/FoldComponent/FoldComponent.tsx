@@ -15,13 +15,7 @@ import { setDelay } from '../../functions'
  * `handleToggle` *Function* - Function that will be executed whenever the header is clicked.
  * *Should toggle* `folded`
  */
-export function FoldComponent({
-	title,
-	children,
-	folded,
-	handleToggle,
-	anchor,
-}: FoldComponentProps) {
+export function FoldComponent({ title, children, folded, handleToggle }: FoldComponentProps) {
 	const foldRef = useRef<HTMLDivElement>(null)
 	const contentRef = useRef<HTMLDivElement>(null)
 
@@ -62,7 +56,6 @@ export function FoldComponent({
 
 	return (
 		<div className={`fold-component${folded ? ' folded' : ''}`} ref={foldRef}>
-			{anchor !== undefined && <a className='anchor' id={anchor} style={{ top: '-80px' }} />}
 			<div className='fold-title' onClick={handleToggle}>
 				<FoldIcon />
 				<h2>{title}</h2>
@@ -93,8 +86,4 @@ interface FoldComponentProps {
 	 * *Should toggle* `folded`
 	 */
 	handleToggle: () => void
-	/**
-	 * Anchor tag used to navigate to this section via URL
-	 */
-	anchor?: string
 }

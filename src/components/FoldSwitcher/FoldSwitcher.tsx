@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 import { FoldComponent } from '..'
 
 interface FoldSwitcherProps {
@@ -6,21 +6,43 @@ interface FoldSwitcherProps {
 	defaultFoldIndex?: number
 }
 export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
+	const foldSwitchContainerRef = useRef<HTMLDivElement>(null)
 	const [activeFoldIndex, setActiveFoldIndex] = useState(
 		defaultFoldIndex === undefined ? NaN : defaultFoldIndex
 	)
 
+	// If user clicks a href that focuses on a fold section, close other folds, open the specified fold, and scroll to it's position
 	useEffect(() => {
 		const anchorsArray = folds.map((fold) => '#' + fold.anchor)
-		function focusFoldSpecifiedInURL() {
+
+		function scrollToFoldSpecifiedInURL() {
 			const indexOfURLDirectedFold = anchorsArray.indexOf(window.location.hash)
 			if (indexOfURLDirectedFold !== -1) {
+				const foldSwitcherContainer = foldSwitchContainerRef.current! as HTMLDivElement
+				const foldSwitcherTop = foldSwitcherContainer.offsetTop - 80 // offset for NavBar
+
+				// using <a id="..." /> elements causes a visual bug, where when a fold higher-on the page is closing, it offsets the scrollTo position of the <a> element
+				// this method preemptively calculates where the top of the fold will be, and scrolls the user to it, regardless of open/close animation state
+				let scrollToPosition = foldSwitcherTop
+				folds.some((_fold, index) => {
+					if (index === indexOfURLDirectedFold) {
+						return true
+					} else {
+						const thisFoldTitle = foldSwitcherContainer.childNodes[index]
+							.childNodes[0] as HTMLDivElement
+						scrollToPosition += thisFoldTitle.clientHeight
+						console.log(scrollToPosition)
+						return false
+					}
+				})
+
+				window.scrollTo(0, scrollToPosition)
 				setActiveFoldIndex(indexOfURLDirectedFold)
 			}
 		}
-		window.addEventListener('popstate', focusFoldSpecifiedInURL)
+		window.addEventListener('popstate', scrollToFoldSpecifiedInURL)
 		return () => {
-			window.removeEventListener('popstate', focusFoldSpecifiedInURL)
+			window.removeEventListener('popstate', scrollToFoldSpecifiedInURL)
 		}
 	}, [])
 
@@ -45,14 +67,17 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 				title={fold.title}
 				folded={index !== activeFoldIndex}
 				handleToggle={handleToggle}
-				anchor={fold.anchor}
 			>
 				{fold.content}
 			</FoldComponent>
 		)
 	})
 
-	return <div className='fold-switcher-component'>{foldComponents}</div>
+	return (
+		<div className='fold-switcher-component' ref={foldSwitchContainerRef}>
+			{foldComponents}
+		</div>
+	)
 }
 
 declare global {
