@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import { FoldComponent } from '..'
 
 interface FoldSwitcherProps {
@@ -9,6 +9,20 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 	const [activeFoldIndex, setActiveFoldIndex] = useState(
 		defaultFoldIndex === undefined ? NaN : defaultFoldIndex
 	)
+
+	useEffect(() => {
+		const anchorsArray = folds.map((fold) => '#' + fold.anchor)
+		function focusFoldSpecifiedInURL() {
+			const indexOfURLDirectedFold = anchorsArray.indexOf(window.location.hash)
+			if (indexOfURLDirectedFold !== -1) {
+				setActiveFoldIndex(indexOfURLDirectedFold)
+			}
+		}
+		window.addEventListener('popstate', focusFoldSpecifiedInURL)
+		return () => {
+			window.removeEventListener('popstate', focusFoldSpecifiedInURL)
+		}
+	}, [])
 
 	// check to make sure specified defaultFoldIndex actually exists in provided array
 	if (defaultFoldIndex !== undefined && defaultFoldIndex >= folds.length) {
@@ -31,6 +45,7 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 				title={fold.title}
 				folded={index !== activeFoldIndex}
 				handleToggle={handleToggle}
+				anchor={fold.anchor}
 			>
 				{fold.content}
 			</FoldComponent>
@@ -44,5 +59,6 @@ declare global {
 	interface FoldSwitcherContent {
 		title: string
 		content: ReactNode
+		anchor?: string
 	}
 }
