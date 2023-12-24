@@ -1,4 +1,11 @@
-import { NodeIcon, ExpressIcon, SQLIcon, ElectronIcon, PHPIcon } from '../../../../../assets'
+import {
+	NodeIcon,
+	ExpressIcon,
+	SQLIcon,
+	ElectronIcon,
+	PHPIcon,
+	JestIcon,
+} from '../../../../../assets'
 
 export const backendContent: SkillSectionInfo[] = [
 	{
@@ -41,6 +48,22 @@ export const backendContent: SkillSectionInfo[] = [
 				<br />I designed a SQLite database structure for my{' '}
 				<a href='#projects/finance-tracker'>Finance Tracker</a> and{' '}
 				<a href='#projects/grading-application'>Grading Application</a> projects.
+			</>
+		),
+	},
+	{
+		name: 'Jest',
+		icon: <JestIcon />,
+		description:
+			'Jest is a popular JavaScript testing framework that simplifies the process of writing and running unit and integration tests for your code, ensuring its reliability and robustness.',
+		additional_content: (
+			<>
+				My <a href='#projects/finance-tracker'>Finance Tracker</a> project is the first time
+				I've build an API, and it's a fairly complex API with a lot of endpoints. While I
+				was building the API, I realized that using Postman to manually test my code was
+				taking up a lot of time. When looking into alternatives, I discovered Jest, and
+				spent some time writing up tests to ensure that every function of my API behaves
+				appropriately.
 			</>
 		),
 	},
