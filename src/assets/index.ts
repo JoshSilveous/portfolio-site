@@ -20,6 +20,7 @@ export { ReactComponent as ExpressIcon } from './skills_icons/express.svg'
 export { ReactComponent as SQLIcon } from './skills_icons/sql.svg'
 export { ReactComponent as ElectronIcon } from './skills_icons/electron.svg'
 export { ReactComponent as PHPIcon } from './skills_icons/php.svg'
+export { ReactComponent as JestIcon } from './skills_icons/jest.svg'
 
 export { ReactComponent as PhotoshopIcon } from './skills_icons/photoshop.svg'
 export { ReactComponent as AfterEffectsIcon } from './skills_icons/after_effects.svg'
@@ -29,6 +30,8 @@ export { ReactComponent as VBAIcon } from './skills_icons/vba.svg'
 export { ReactComponent as OfficeIcon } from './skills_icons/office.svg'
 
 export { ReactComponent as FoldIcon } from './misc/fold.svg'
+export { ReactComponent as GitHubIcon } from './misc/github.svg'
+export { ReactComponent as LinkIcon } from './misc/link.svg'
 
 export const BrochureFrontImage = genImageComponent(
 	'/src/assets/images/brochure_front_cmpr.jpg',
