@@ -1,0 +1,39 @@
+.fold {
+	padding-left: 50px;
+	margin-bottom: 100px;
+	.links-container {
+		display: flex;
+		margin: 10px 0;
+		max-width: 300px;
+		a {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+			margin-right: 50px;
+			text-wrap: nowrap;
+
+			svg {
+				height: 20px;
+				width: 20px;
+			}
+		}
+	}
+	.description {
+	}
+	.tech-stack {
+		h3 {
+			line-height: 0;
+			margin-top: 50px;
+		}
+		.item {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			margin-bottom: 5px;
+			svg {
+				height: 20px;
+				width: 20px;
+			}
+		}
+	}
+}
