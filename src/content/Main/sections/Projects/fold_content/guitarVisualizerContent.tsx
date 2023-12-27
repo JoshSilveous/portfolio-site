@@ -35,7 +35,7 @@ export const guitarVisualizerContent = (
 			</p>
 		</div>
 		<div className='tech-stack'>
-			<h3>Tech Stack</h3>
+			<h3>Technologies Used</h3>
 			<div className='item'>
 				<TypeScriptIcon />
 				TypeScript
