@@ -11,35 +11,37 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 		defaultFoldIndex === undefined ? NaN : defaultFoldIndex
 	)
 
+	function scrollToFold(foldIndex: number) {
+		const foldSwitcherContainer = foldSwitchContainerRef.current! as HTMLDivElement
+		const foldSwitcherTop = foldSwitcherContainer.offsetTop - 80 // offset for NavBar
+
+		// using <a id="..." /> elements causes a visual bug, where when a fold higher-on the page is closing, it offsets the scrollTo position of the <a> element
+		// this method preemptively calculates where the top of the fold will be, and scrolls the user to it, regardless of open/close animation state
+		let scrollToPosition = foldSwitcherTop
+		folds.some((_fold, index) => {
+			if (index === foldIndex) {
+				return true
+			} else {
+				const thisFoldTitle = foldSwitcherContainer.childNodes[index]
+					.childNodes[0] as HTMLDivElement
+				scrollToPosition += thisFoldTitle.clientHeight
+				console.log(scrollToPosition)
+				return false
+			}
+		})
+		window.scrollTo(0, scrollToPosition)
+	}
+
 	// If user clicks a href that focuses on a fold section, close other folds, open the specified fold, and scroll to it's position
 	useEffect(() => {
 		const anchorsArray = folds.map((fold) => '#' + fold.anchor)
 
 		function scrollToFoldSpecifiedInURL() {
 			const indexOfURLDirectedFold = anchorsArray.indexOf(window.location.hash)
-			if (indexOfURLDirectedFold !== -1) {
-				const foldSwitcherContainer = foldSwitchContainerRef.current! as HTMLDivElement
-				const foldSwitcherTop = foldSwitcherContainer.offsetTop - 80 // offset for NavBar
-
-				// using <a id="..." /> elements causes a visual bug, where when a fold higher-on the page is closing, it offsets the scrollTo position of the <a> element
-				// this method preemptively calculates where the top of the fold will be, and scrolls the user to it, regardless of open/close animation state
-				let scrollToPosition = foldSwitcherTop
-				folds.some((_fold, index) => {
-					if (index === indexOfURLDirectedFold) {
-						return true
-					} else {
-						const thisFoldTitle = foldSwitcherContainer.childNodes[index]
-							.childNodes[0] as HTMLDivElement
-						scrollToPosition += thisFoldTitle.clientHeight
-						console.log(scrollToPosition)
-						return false
-					}
-				})
-
-				window.scrollTo(0, scrollToPosition)
-				setActiveFoldIndex(indexOfURLDirectedFold)
-			}
+			scrollToFold(indexOfURLDirectedFold)
+			setActiveFoldIndex(indexOfURLDirectedFold)
 		}
+
 		window.addEventListener('popstate', scrollToFoldSpecifiedInURL)
 		return () => {
 			window.removeEventListener('popstate', scrollToFoldSpecifiedInURL)
@@ -59,6 +61,7 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 			if (index === activeFoldIndex) {
 				setActiveFoldIndex(NaN)
 			} else {
+				scrollToFold(index)
 				setActiveFoldIndex(index)
 			}
 		}
