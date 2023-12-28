@@ -67,6 +67,7 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 				title={fold.title}
 				folded={index !== activeFoldIndex}
 				handleToggle={handleToggle}
+				key={index}
 			>
 				{fold.content}
 			</FoldComponent>
