@@ -63,3 +63,16 @@ export const VaseImage = genImageComponent(
 	'A CGI rendering couple of vases filled with colorful liquids, with a natural lighting peeking in from a window.',
 	'Vases'
 )
+
+export const FretboardVis1Image = genImageComponent(
+	'/src/assets/images/fretboard_vis_1_cmpr.png',
+	'/src/assets/images/fretboard_vis_1_full.png',
+	'A screenshot of my first fretboard visualizer. It looks amateurish, with wacky colors and default HTML styles',
+	'First Iteration of Fretboard Visualizer'
+)
+export const FretboardVis2Image = genImageComponent(
+	'/src/assets/images/fretboard_vis_2_cmpr.png',
+	'/src/assets/images/fretboard_vis_2_full.png',
+	'A screenshot of my second fretboard visualizer.',
+	'Second Iteration of Fretboard Visualizer'
+)
