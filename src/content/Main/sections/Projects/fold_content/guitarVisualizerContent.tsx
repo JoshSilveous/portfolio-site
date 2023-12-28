@@ -2,15 +2,33 @@ import { GitHubIcon, LinkIcon, ReactIcon, SassIcon, TypeScriptIcon } from '../..
 import './fold_content.scss'
 export const guitarVisualizerContent = (
 	<div className='fold guitar-visualizer'>
-		<div className='links-container'>
-			<a href='https://guitar-visualizer.vercel.app/' target='_blank'>
-				<LinkIcon />
-				Deployment
-			</a>
-			<a href='https://github.com/JoshSilveous/Guitar-Visualizer' target='_blank'>
-				<GitHubIcon />
-				GitHub
-			</a>
+		<div className='col'>
+			<div className='links'>
+				<h3>Links</h3>
+				<a href='https://guitar-visualizer.vercel.app/' target='_blank'>
+					<LinkIcon />
+					Deployment
+				</a>
+				<a href='https://github.com/JoshSilveous/Guitar-Visualizer' target='_blank'>
+					<GitHubIcon />
+					GitHub
+				</a>
+			</div>
+			<div className='tech'>
+				<h3>Technologies</h3>
+				<div className='item'>
+					<TypeScriptIcon />
+					TypeScript
+				</div>
+				<div className='item'>
+					<ReactIcon />
+					React
+				</div>
+				<div className='item'>
+					<SassIcon />
+					Sass
+				</div>
+			</div>
 		</div>
 		<div className='description'>
 			<p>
@@ -33,21 +51,6 @@ export const guitarVisualizerContent = (
 				Viverra nam libero justo laoreet sit amet cursus sit amet. Amet dictum sit amet
 				justo donec enim.
 			</p>
-		</div>
-		<div className='tech-stack'>
-			<h3>Technologies Used</h3>
-			<div className='item'>
-				<TypeScriptIcon />
-				TypeScript
-			</div>
-			<div className='item'>
-				<ReactIcon />
-				React
-			</div>
-			<div className='item'>
-				<SassIcon />
-				Sass
-			</div>
 		</div>
 	</div>
 )
