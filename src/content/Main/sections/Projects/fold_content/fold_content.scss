@@ -1,5 +1,8 @@
 .fold {
-	padding-left: 50px;
+	@media (max-width: 480px) {
+		padding: 0;
+	}
+	padding: 0 50px;
 	margin-bottom: 100px;
 	.col {
 		display: flex;

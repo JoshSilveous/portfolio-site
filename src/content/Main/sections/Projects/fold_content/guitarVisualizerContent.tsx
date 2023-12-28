@@ -1,6 +1,7 @@
 import {
 	FretboardVis1Image,
 	FretboardVis2Image,
+	FretboardVis3Image,
 	GitHubIcon,
 	LinkIcon,
 	ReactIcon,
@@ -56,7 +57,7 @@ export const guitarVisualizerContent = (
 			</p>
 			<FretboardVis1Image style={{ maxWidth: '400px', margin: '0 auto' }} />
 			<p>
-				Dispite that, it worked really well. Whenever I wanted to jam out to a song, I can
+				Despite that, it worked really well. Whenever I wanted to jam out to a song, I can
 				just google what scale the song uses, plug that in here, and know exactly what notes
 				would sound good to play alongside it. This tool wasn't for an assignment or
 				anything, I just did it because I enjoyed it.
@@ -97,7 +98,31 @@ export const guitarVisualizerContent = (
 				<a href='https://github.com/JoshSilveous/old-musiqtools'>here</a>, and the
 				deployment <a href='https://old-musiqtools.vercel.app/'>here</a>.
 			</p>
-			<h3>The Third Implementation</h3>
+			<h3>The Third (current) Implementation</h3>
+			<p>
+				This time around, there's a ton that has improved. For starters, I'm now using Sass
+				for precise styling (instead of using inline styles, like the previous iteration). I
+				also decided a file structure before beginning the project, making it much easier
+				for me to jump back in and work on this.
+			</p>
+			<FretboardVis3Image
+				style={{
+					maxWidth: '400px',
+					margin: '0 auto',
+				}}
+			/>
+			<p>
+				Visually, it doesn't look too different from the previous iteration (besides the
+				color scheme). However, the code itself is much more readable, efficient, and
+				modular. Right now, I'm taking a hiatus from developing this to focus on back-end
+				skills, but eventually I'd like to add different instruments, barre chord
+				highlighting, and many other features.
+			</p>
+			<p>
+				The GitHub repository can be found{' '}
+				<a href='https://github.com/JoshSilveous/guitar-visualizer'>here</a>, and the
+				deployment <a href='https://guitar-visualizer.vercel.app/'>here</a>.
+			</p>
 		</div>
 	</div>
 )

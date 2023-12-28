@@ -76,3 +76,9 @@ export const FretboardVis2Image = genImageComponent(
 	'A screenshot of my second fretboard visualizer.',
 	'Second Iteration of Fretboard Visualizer'
 )
+export const FretboardVis3Image = genImageComponent(
+	'/src/assets/images/fretboard_vis_3_cmpr.png',
+	'/src/assets/images/fretboard_vis_3_full.png',
+	'A screenshot of my third fretboard visualizer.',
+	'Third Iteration of Fretboard Visualizer'
+)
