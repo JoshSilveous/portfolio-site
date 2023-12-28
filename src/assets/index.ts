@@ -1,4 +1,5 @@
 import { genImageComponent } from '../functions/ImageComponent/genImageComponent'
+import urls from './images/urls'
 
 export { ReactComponent as AboutMeIcon } from './navbar_icons/about-me.svg'
 export { ReactComponent as SkillsIcon } from './navbar_icons/skills.svg'
@@ -34,14 +35,14 @@ export { ReactComponent as GitHubIcon } from './misc/github.svg'
 export { ReactComponent as LinkIcon } from './misc/link.svg'
 
 export const BrochureFrontImage = genImageComponent(
-	'/src/assets/images/brochure_front_cmpr.jpg',
-	'/src/assets/images/brochure_front_full.jpg',
+	urls.brochure_front_cmpr,
+	urls.brochure_front_full,
 	'An image of the front of my brochure design.',
 	'Front of Brochure'
 )
 export const BrochureBackImage = genImageComponent(
-	'/src/assets/images/brochure_back_cmpr.jpg',
-	'/src/assets/images/brochure_back_full.jpg',
+	urls.brochure_back_cmpr,
+	urls.brochure_back_full,
 	'An image of the back of my brochure design.',
 	'Back of Brochure'
 )
