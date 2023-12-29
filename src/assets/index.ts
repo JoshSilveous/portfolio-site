@@ -47,39 +47,39 @@ export const BrochureBackImage = genImageComponent(
 	'Back of Brochure'
 )
 export const PosterboardImage = genImageComponent(
-	'/src/assets/images/posterboard_cmpr.jpg',
-	'/src/assets/images/posterboard_full.jpg',
+	urls.posterboard_cmpr,
+	urls.posterboard_full,
 	'An image of my posterboard design for my group.',
 	'Posterboard'
 )
 export const ColaImage = genImageComponent(
-	'/src/assets/images/cola_cmpr.png',
-	'/src/assets/images/cola_full.png',
+	urls.cola_cmpr,
+	urls.cola_full,
 	'An artistic rendering of Nuka-Cola bottles from the Fallout universe, with dramatic lighting and effects.',
 	'Fallout Nuka-Cola Bottles'
 )
 export const VaseImage = genImageComponent(
-	'/src/assets/images/vases_cmpr.png',
-	'/src/assets/images/vases_full.png',
+	urls.vases_cmpr,
+	urls.vases_full,
 	'A CGI rendering couple of vases filled with colorful liquids, with a natural lighting peeking in from a window.',
 	'Vases'
 )
 
 export const FretboardVis1Image = genImageComponent(
-	'/src/assets/images/fretboard_vis_1_cmpr.png',
-	'/src/assets/images/fretboard_vis_1_full.png',
+	urls.fretboard_vis_1_cmpr,
+	urls.fretboard_vis_1_full,
 	'A screenshot of my first fretboard visualizer. It looks amateurish, with wacky colors and default HTML styles',
 	'First Iteration of Fretboard Visualizer'
 )
 export const FretboardVis2Image = genImageComponent(
-	'/src/assets/images/fretboard_vis_2_cmpr.png',
-	'/src/assets/images/fretboard_vis_2_full.png',
+	urls.fretboard_vis_2_cmpr,
+	urls.fretboard_vis_2_full,
 	'A screenshot of my second fretboard visualizer.',
 	'Second Iteration of Fretboard Visualizer'
 )
 export const FretboardVis3Image = genImageComponent(
-	'/src/assets/images/fretboard_vis_3_cmpr.png',
-	'/src/assets/images/fretboard_vis_3_full.png',
+	urls.fretboard_vis_3_cmpr,
+	urls.fretboard_vis_3_full,
 	'A screenshot of my third fretboard visualizer.',
 	'Third Iteration of Fretboard Visualizer'
 )
