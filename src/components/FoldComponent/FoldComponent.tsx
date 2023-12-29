@@ -19,7 +19,7 @@ export function FoldComponent({ title, children, folded, handleToggle }: FoldCom
 	const foldRef = useRef<HTMLDivElement>(null)
 	const contentRef = useRef<HTMLDivElement>(null)
 
-	const ANIMATION_TIME = 0.5
+	const ANIMATION_TIME = 1
 
 	useEffect(() => {
 		const contentNode = contentRef.current!
@@ -57,7 +57,7 @@ export function FoldComponent({ title, children, folded, handleToggle }: FoldCom
 	return (
 		<div className={`fold-component${folded ? ' folded' : ''}`} ref={foldRef}>
 			<div className='fold-title' onClick={handleToggle}>
-				<FoldIcon />
+				<FoldIcon style={{ transition: `rotate ${ANIMATION_TIME}s ease` }} />
 				<h2>{title}</h2>
 			</div>
 			<div className='fold-content' ref={contentRef}>
