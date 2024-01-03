@@ -57,24 +57,43 @@ export const financeTrackerContent = (
 		</div>
 		<div className='description'>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua. Vulputate eu scelerisque felis
-				imperdiet proin fermentum leo vel. Porttitor eget dolor morbi non arcu. At risus
-				viverra adipiscing at in tellus integer feugiat. Sociis natoque penatibus et magnis.
-				Risus quis varius quam quisque. Enim ut sem viverra aliquet eget. Tempor id eu nisl
-				nunc. Amet dictum sit amet justo donec. Faucibus nisl tincidunt eget nullam non. Ac
-				felis donec et odio pellentesque diam volutpat. Mattis ullamcorper velit sed
-				ullamcorper.
+				This project is my first <i>real</i> foray into developing API routes to connect a
+				server to a client application. I spent some time learning Node.js and Express.js
+				beforehand, but the scale of this project is much larger than anything else I'd
+				done.
 			</p>
 			<p>
-				Et netus et malesuada fames ac turpis. Non enim praesent elementum facilisis leo
-				vel. Nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque.
-				Pretium nibh ipsum consequat nisl vel. Viverra aliquet eget sit amet. Nulla aliquet
-				porttitor lacus luctus accumsan tortor posuere ac. Eleifend quam adipiscing vitae
-				proin sagittis nisl rhoncus mattis. Blandit massa enim nec dui nunc mattis enim ut
-				tellus. Sollicitudin tempor id eu nisl nunc mi. Ac turpis egestas integer eget.
-				Viverra nam libero justo laoreet sit amet cursus sit amet. Amet dictum sit amet
-				justo donec enim.
+				Right now, I use Microsoft Excel to track my own finances (using my{' '}
+				<a href='#projects/excellent-finance-tracker'>Excel-lent Finance Tracker</a>). It
+				works really well for my own needs, but I wished there was a tool with a web
+				interface that allowed me to track transactions in a similar style. Pre-existing
+				apps like RocketMoney never really did what I wanted, so I decided to build my
+				"dream finance tracker" app myself.
+			</p>
+			<h3>Back end</h3>
+			<p>
+				Right now, I've got the database structure and API routes built. For this first
+				prototype, a series of SQLite databases are used (one file per user). A node
+				instance, running with Express.js, connects all of the HTTP methods to database
+				queries and other methods (such as creating/destroying the DB files for each user).
+			</p>
+			<p>
+				This first iteration uses a <strong>very</strong> rudimentary username/password
+				database for authentication. Ideally, I'd like to use third-party authorization
+				systems (including OAuth), but I decided to wait to learn that until I've got a
+				working prototype.
+			</p>
+			<p>
+				All of the API routes are type-safe, using a library called Joi. Also, the entire
+				backend has full test coverage, using Jest testing suite. These tests create a mock
+				user profile, and tests every API route, including testing for expected errors.
+			</p>
+			<h3>Front end</h3>
+			<p>
+				The Front end for this project is currently being worked on. I have a rough UI
+				built, but there's a lot of styling needed. I put a pause on this project to work on
+				building this portfolio site, as I figured this portfolio would be more important in
+				my job search.
 			</p>
 		</div>
 	</div>
