@@ -33,6 +33,7 @@ export { ReactComponent as OfficeIcon } from './skills_icons/office.svg'
 export { ReactComponent as FoldIcon } from './misc/fold.svg'
 export { ReactComponent as GitHubIcon } from './misc/github.svg'
 export { ReactComponent as LinkIcon } from './misc/link.svg'
+export { ReactComponent as PDFIcon } from './misc/pdf.svg'
 
 export const BrochureFrontImage = genImageComponent(
 	urls.brochure_front_cmpr,
