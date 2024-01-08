@@ -15,7 +15,7 @@
 			transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 			cursor: pointer;
 			&.active {
-				background-color: rgba(255, 255, 255, 0.2);
+				background-color: rgba(255, 255, 255, 0.1);
 			}
 			&:not(.active) {
 				border-color: rgba(255, 255, 255, 0.4);
@@ -29,7 +29,7 @@
 		}
 	}
 	.tab-content-container {
-		background-color: rgba(255, 255, 255, 0.2);
+		background-color: rgba(255, 255, 255, 0.1);
 		border: 2px solid rgba(255, 255, 255, 0.2);
 		border-radius: 0px 0px 10px 10px;
 		border-top: none;
