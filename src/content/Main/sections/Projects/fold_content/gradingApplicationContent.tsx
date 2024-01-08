@@ -112,7 +112,7 @@ export const gradingApplicationContent = (
 					href='https://github.com/JoshSilveous/grading-application/blob/master/Report.pdf'
 					target='_blank'
 				>
-					<PDFIcon />
+					<PDFIcon style={{ transform: 'translateY(2px)' }} />
 					Report
 				</a>{' '}
 				I wrote about this project, and the technologies used in it.

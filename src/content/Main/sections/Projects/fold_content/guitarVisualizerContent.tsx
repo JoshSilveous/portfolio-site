@@ -14,26 +14,34 @@ export const guitarVisualizerContent = (
 		<div className='col'>
 			<div className='links'>
 				<h3>Links</h3>
-				<a href='https://guitar-visualizer.vercel.app/' target='_blank'>
+				<a
+					className='contains-icon'
+					href='https://guitar-visualizer.vercel.app/'
+					target='_blank'
+				>
 					<LinkIcon />
 					Deployment
 				</a>
-				<a href='https://github.com/JoshSilveous/Guitar-Visualizer' target='_blank'>
+				<a
+					className='contains-icon'
+					href='https://github.com/JoshSilveous/Guitar-Visualizer'
+					target='_blank'
+				>
 					<GitHubIcon />
 					GitHub
 				</a>
 			</div>
 			<div className='tech'>
 				<h3>Technologies</h3>
-				<div className='item'>
+				<div className='contains-icon'>
 					<TypeScriptIcon />
 					TypeScript
 				</div>
-				<div className='item'>
+				<div className='contains-icon'>
 					<ReactIcon />
 					React
 				</div>
-				<div className='item'>
+				<div className='contains-icon'>
 					<SassIcon />
 					Sass
 				</div>
@@ -69,11 +77,21 @@ export const guitarVisualizerContent = (
 			</p>
 			<p>
 				If you'd like to check this old version out, I've deployed it{' '}
-				<a href='https://old-fretboard-visualizer.vercel.app/' target='_blank'>
+				<a
+					className='contains-icon inline'
+					href='https://old-fretboard-visualizer.vercel.app/'
+					target='_blank'
+				>
+					<LinkIcon style={{ transform: 'translateY(2px)' }} />
 					here
 				</a>
 				, and the GitHub repository can be found{' '}
-				<a href='https://github.com/JoshSilveous/old-fretboard-visualizer' target='_blank'>
+				<a
+					className='contains-icon inline'
+					href='https://github.com/JoshSilveous/old-fretboard-visualizer'
+					target='_blank'
+				>
+					<GitHubIcon style={{ transform: 'translateY(2px)' }} />
 					here.
 				</a>{' '}
 				Again, please don't judge.
@@ -95,8 +113,19 @@ export const guitarVisualizerContent = (
 				Eventually, I decided to axe this project. I determined it'd be better to start from
 				scratch with all the insight I'd gained throughout this project. However, if you'd
 				like to take a look, you can find the GitHub repository{' '}
-				<a href='https://github.com/JoshSilveous/old-musiqtools'>here</a>, and the
-				deployment <a href='https://old-musiqtools.vercel.app/'>here</a>.
+				<a
+					className='contains-icon inline'
+					href='https://github.com/JoshSilveous/old-musiqtools'
+				>
+					<GitHubIcon style={{ transform: 'translateY(2px)' }} />
+					here
+				</a>
+				, and the deployment{' '}
+				<a className='contains-icon inline' href='https://old-musiqtools.vercel.app/'>
+					<LinkIcon style={{ transform: 'translateY(2px)' }} />
+					here
+				</a>
+				.
 			</p>
 			<h3>The Third (current) Implementation</h3>
 			<p>
@@ -119,9 +148,20 @@ export const guitarVisualizerContent = (
 				highlighting, and many other features.
 			</p>
 			<p>
-				The GitHub repository can be found{' '}
-				<a href='https://github.com/JoshSilveous/guitar-visualizer'>here</a>, and the
-				deployment <a href='https://guitar-visualizer.vercel.app/'>here</a>.
+				The GitHub repository for this final version can be found{' '}
+				<a
+					className='contains-icon inline'
+					href='https://github.com/JoshSilveous/guitar-visualizer'
+				>
+					<GitHubIcon style={{ transform: 'translateY(2px)' }} />
+					here
+				</a>
+				, and the deployment{' '}
+				<a className='contains-icon inline' href='https://guitar-visualizer.vercel.app/'>
+					<LinkIcon style={{ transform: 'translateY(2px)' }} />
+					here
+				</a>
+				.
 			</p>
 		</div>
 	</div>

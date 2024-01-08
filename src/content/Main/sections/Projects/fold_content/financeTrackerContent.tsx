@@ -3,6 +3,7 @@ import {
 	GitHubIcon,
 	JestIcon,
 	NodeIcon,
+	ProjectsIcon,
 	ReactIcon,
 	SQLIcon,
 	SassIcon,
@@ -14,42 +15,50 @@ export const financeTrackerContent = (
 		<div className='col'>
 			<div className='links'>
 				<h3>Links</h3>
-				<a href='https://github.com/JoshSilveous/money-tracker-server' target='_blank'>
+				<a
+					className='contains-icon'
+					href='https://github.com/JoshSilveous/money-tracker-server'
+					target='_blank'
+				>
 					<GitHubIcon />
 					GitHub (Server)
 				</a>
-				<a href='https://github.com/JoshSilveous/money-tracker-client' target='_blank'>
+				<a
+					className='contains-icon'
+					href='https://github.com/JoshSilveous/money-tracker-client'
+					target='_blank'
+				>
 					<GitHubIcon />
 					GitHub (Frontend)
 				</a>
 			</div>
 			<div className='tech'>
 				<h3>Technologies</h3>
-				<div className='item'>
+				<div className='contains-icon'>
 					<TypeScriptIcon />
 					TypeScript
 				</div>
-				<div className='item'>
+				<div className='contains-icon'>
 					<ReactIcon />
 					React
 				</div>
-				<div className='item'>
+				<div className='contains-icon'>
 					<SassIcon />
 					Sass
 				</div>
-				<div className='item'>
+				<div className='contains-icon'>
 					<SQLIcon />
 					SQL
 				</div>
-				<div className='item'>
+				<div className='contains-icon'>
 					<NodeIcon />
 					Node
 				</div>
-				<div className='item'>
+				<div className='contains-icon'>
 					<ExpressIcon />
 					Express
 				</div>
-				<div className='item'>
+				<div className='contains-icon'>
 					<JestIcon />
 					Jest
 				</div>
@@ -64,13 +73,16 @@ export const financeTrackerContent = (
 			</p>
 			<p>
 				Right now, I use Microsoft Excel to track my own finances (using my{' '}
-				<a href='#projects/excellent-finance-tracker'>Excel-lent Finance Tracker</a>). It
-				works really well for my own needs, but I wished there was a tool with a web
+				<a className='contains-icon inline' href='#projects/excellent-finance-tracker'>
+					<ProjectsIcon style={{ transform: 'translateY(1.5px)' }} />
+					Excel-lent Finance Tracker
+				</a>
+				). It works really well for my own needs, but I wished there was a tool with a web
 				interface that allowed me to track transactions in a similar style. Pre-existing
 				apps like RocketMoney never really did what I wanted, so I decided to build my
 				"dream finance tracker" app myself.
 			</p>
-			<h3>Back end</h3>
+			<h3>Back End</h3>
 			<p>
 				Right now, I've got the database structure and API routes built. For this first
 				prototype, a series of SQLite databases are used (one file per user). A node
