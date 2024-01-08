@@ -84,3 +84,21 @@ export const FretboardVis3Image = genImageComponent(
 	'A screenshot of my third fretboard visualizer.',
 	'Third Iteration of Fretboard Visualizer'
 )
+export const GradingAppUI1Image = genImageComponent(
+	urls.grading_app_ui_1_cmpr,
+	urls.grading_app_ui_1_full,
+	"A screenshot of the UI for my Grading Application, featuring a table-oriented layout showing a class, it's students, and their grades.",
+	'Grading Application Main Class UI'
+)
+export const GradingAppUI2Image = genImageComponent(
+	urls.grading_app_ui_2_cmpr,
+	urls.grading_app_ui_2_full,
+	'A screenshot of the UI for my Grading Application, featuring a form for creating new assignments. The form contains the name, description, type, extra credit, and max points fields.',
+	'Grading Application New Assignment UI'
+)
+export const GradingAppUI3Image = genImageComponent(
+	urls.grading_app_ui_3_cmpr,
+	urls.grading_app_ui_3_full,
+	'A screenshot of the UI for my Grading Application, featuring a menu for adding a student to a class.',
+	'Grading Application Add Student UI'
+)

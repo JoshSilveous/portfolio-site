@@ -14,6 +14,12 @@ import fretboard_vis_2_cmpr from './fretboard_vis_2_cmpr.png'
 import fretboard_vis_2_full from './fretboard_vis_2_full.png'
 import fretboard_vis_3_cmpr from './fretboard_vis_3_cmpr.png'
 import fretboard_vis_3_full from './fretboard_vis_3_full.png'
+import grading_app_ui_1_cmpr from './grading_app_ui_1_cmpr.png'
+import grading_app_ui_1_full from './grading_app_ui_1_full.png'
+import grading_app_ui_2_cmpr from './grading_app_ui_2_cmpr.png'
+import grading_app_ui_2_full from './grading_app_ui_2_full.png'
+import grading_app_ui_3_cmpr from './grading_app_ui_3_cmpr.png'
+import grading_app_ui_3_full from './grading_app_ui_3_full.png'
 
 export default {
 	brochure_back_cmpr,
@@ -32,4 +38,10 @@ export default {
 	fretboard_vis_2_full,
 	fretboard_vis_3_cmpr,
 	fretboard_vis_3_full,
+	grading_app_ui_1_cmpr,
+	grading_app_ui_1_full,
+	grading_app_ui_2_cmpr,
+	grading_app_ui_2_full,
+	grading_app_ui_3_cmpr,
+	grading_app_ui_3_full,
 }
