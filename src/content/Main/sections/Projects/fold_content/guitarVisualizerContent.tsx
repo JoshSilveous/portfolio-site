@@ -78,7 +78,7 @@ export const guitarVisualizerContent = (
 				, and the GitHub repository can be found{' '}
 				<TextWithIcon
 					Icon={GitHubIcon}
-					href='https://old-fretboard-visualizer.vercel.app/'
+					href='https://github.com/JoshSilveous/old-fretboard-visualizer'
 					newWindow
 					inline
 				>
