@@ -7,7 +7,10 @@ import {
 	SassIcon,
 	TypeScriptIcon,
 	LottieIcon,
+	ProjectsIcon,
+	LinkIcon,
 } from '../../../../../assets'
+import { TextWithIcon } from '../../../../../components'
 export const frontendContent: SkillSectionInfo[] = [
 	{
 		name: 'HTML',
@@ -78,7 +81,10 @@ export const frontendContent: SkillSectionInfo[] = [
 				web applications. Developing applications with React isn't always the best choice,
 				but it is much better than vanilla HTML & JS for most interactive web applications.
 				React's component-based development architecture has allowed me to develop complex
-				applications, such as my <a href='#projects/guitar-visualizer'>Guitar Visualizer</a>
+				applications, such as my
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/guitar-visualizer' inline>
+					Guitar Visualizer
+				</TextWithIcon>
 				, with much less boilerplate.
 			</>
 		),
@@ -91,10 +97,15 @@ export const frontendContent: SkillSectionInfo[] = [
 		additional_content: (
 			<>
 				I have gone through some courses (mostly on{' '}
-				<a href='https://scrimba.com/'>Scrimba.com</a>) learning how React Router works, and
-				have implemented it on a few small projects for learning purposes. Also, I am
-				currently implementing it into my{' '}
-				<a href='#projects/finance-tracker'>Finance Tracker</a> application.
+				<TextWithIcon Icon={LinkIcon} href='https://scrimba.com/' inline newWindow>
+					Scrimba.com
+				</TextWithIcon>
+				) learning how React Router works, and have implemented it on a few small projects
+				for learning purposes. Also, I am currently implementing it into my{' '}
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/finance-tracker' inline>
+					Finance Tracker
+				</TextWithIcon>{' '}
+				application.
 			</>
 		),
 	},
@@ -124,9 +135,14 @@ export const frontendContent: SkillSectionInfo[] = [
 				use those skills to create awesome graphics for web applications. Lottie's
 				JavaScript also library provides a ton of functionality, which allowed me to create
 				a{' '}
-				<a href='https://advanced-lottie-viewer.vercel.app/'>
+				<TextWithIcon
+					Icon={LinkIcon}
+					href='https://advanced-lottie-viewer.vercel.app/'
+					inline
+					newWindow
+				>
 					dynamically animated hover effect
-				</a>
+				</TextWithIcon>
 				.
 			</>
 		),

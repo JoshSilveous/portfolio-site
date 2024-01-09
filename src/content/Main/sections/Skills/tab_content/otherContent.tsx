@@ -10,7 +10,9 @@ import {
 	PosterboardImage,
 	ColaImage,
 	VaseImage,
+	ProjectsIcon,
 } from '../../../../../assets'
+import { TextWithIcon } from '../../../../../components'
 export const otherContent: SkillSectionInfo[] = [
 	{
 		name: 'Photoshop',
@@ -46,7 +48,10 @@ export const otherContent: SkillSectionInfo[] = [
 				</div>
 				<br />I also use After Effects to animate Lottie SVG graphics for websites, such as
 				those shown in my{' '}
-				<a href='#projects/advanced-lottie-viewer'>Advanced Lottie Viewer</a> project.
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/advanced-lottie-viewer' inline>
+					Advanced Lottie Viewer
+				</TextWithIcon>{' '}
+				project.
 			</>
 		),
 	},
@@ -58,7 +63,10 @@ export const otherContent: SkillSectionInfo[] = [
 		additional_content: (
 			<>
 				I mainly use Illustrator to create and edit SVG designs, such as those shown in my{' '}
-				<a href='#projects/advanced-lottie-viewer'>Advanced Lottie Viewer</a> project.
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/advanced-lottie-viewer' inline>
+					Advanced Lottie Viewer
+				</TextWithIcon>{' '}
+				project.
 				<br />I have also used Illustrator to create complex print designs, such as the
 				posterboard and brochures for my college capstone project:
 				<div className='two-col-container'>
@@ -149,8 +157,10 @@ export const otherContent: SkillSectionInfo[] = [
 				<br />
 				<br />I know how to create dialog / model popups, perform complex loops, and
 				automate rigorous tasks within Excel using VBA. Check out my{' '}
-				<a href='#projects/excellent-finance-tracker'>Excel-lent Finance Tracker</a> project
-				for a closer look at my VBA skills.
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/excellent-finance-tracker' inline>
+					Excel-lent Finance Tracker
+				</TextWithIcon>{' '}
+				project for a closer look at my VBA skills.
 			</>
 		),
 	},
