@@ -9,59 +9,37 @@ import {
 	SassIcon,
 	TypeScriptIcon,
 } from '../../../../../assets'
+import { TextWithIcon } from '../../../../../components'
 
 export const financeTrackerContent = (
 	<div className='fold guitar-visualizer'>
 		<div className='col'>
 			<div className='links'>
 				<h3>Links</h3>
-				<a
-					className='contains-icon'
+				<TextWithIcon
+					Icon={GitHubIcon}
 					href='https://github.com/JoshSilveous/money-tracker-server'
-					target='_blank'
+					newWindow
 				>
-					<GitHubIcon />
 					GitHub (Server)
-				</a>
-				<a
-					className='contains-icon'
+				</TextWithIcon>
+				<TextWithIcon
+					Icon={GitHubIcon}
 					href='https://github.com/JoshSilveous/money-tracker-client'
-					target='_blank'
+					newWindow
 				>
-					<GitHubIcon />
 					GitHub (Frontend)
-				</a>
+				</TextWithIcon>
 			</div>
 			<div className='tech'>
 				<h3>Technologies</h3>
-				<div className='contains-icon'>
-					<TypeScriptIcon />
-					TypeScript
-				</div>
-				<div className='contains-icon'>
-					<ReactIcon />
-					React
-				</div>
-				<div className='contains-icon'>
-					<SassIcon />
-					Sass
-				</div>
-				<div className='contains-icon'>
-					<SQLIcon />
-					SQL
-				</div>
-				<div className='contains-icon'>
-					<NodeIcon />
-					Node
-				</div>
-				<div className='contains-icon'>
-					<ExpressIcon />
-					Express
-				</div>
-				<div className='contains-icon'>
-					<JestIcon />
-					Jest
-				</div>
+				<TextWithIcon Icon={TypeScriptIcon}>TypeScript</TextWithIcon>
+				<TextWithIcon Icon={ReactIcon}>React</TextWithIcon>
+				<TextWithIcon Icon={SassIcon}>Sass</TextWithIcon>
+				<TextWithIcon Icon={SQLIcon}>SQL</TextWithIcon>
+				<TextWithIcon Icon={NodeIcon}>Node</TextWithIcon>
+				<TextWithIcon Icon={ExpressIcon}>Express</TextWithIcon>
+				<TextWithIcon Icon={JestIcon}>Jest</TextWithIcon>
 			</div>
 		</div>
 		<div className='description'>
@@ -73,10 +51,9 @@ export const financeTrackerContent = (
 			</p>
 			<p>
 				Right now, I use Microsoft Excel to track my own finances (using my{' '}
-				<a className='contains-icon inline' href='#projects/excellent-finance-tracker'>
-					<ProjectsIcon style={{ transform: 'translateY(1.5px)' }} />
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/excellent-finance-tracker' inline>
 					Excel-lent Finance Tracker
-				</a>{' '}
+				</TextWithIcon>{' '}
 				project). It works really well for my own needs, but I wished there was a tool with
 				a web interface that allowed me to track transactions in a similar style.
 				Pre-existing apps like RocketMoney never really did what I wanted, so I decided to

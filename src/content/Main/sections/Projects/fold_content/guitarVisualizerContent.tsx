@@ -8,43 +8,33 @@ import {
 	SassIcon,
 	TypeScriptIcon,
 } from '../../../../../assets'
+import { TextWithIcon } from '../../../../../components'
 import './fold_content.scss'
 export const guitarVisualizerContent = (
 	<div className='fold guitar-visualizer'>
 		<div className='col'>
 			<div className='links'>
 				<h3>Links</h3>
-				<a
-					className='contains-icon'
+				<TextWithIcon
+					Icon={LinkIcon}
 					href='https://guitar-visualizer.vercel.app/'
-					target='_blank'
+					newWindow
 				>
-					<LinkIcon />
 					Deployment
-				</a>
-				<a
-					className='contains-icon'
+				</TextWithIcon>
+				<TextWithIcon
+					Icon={GitHubIcon}
 					href='https://github.com/JoshSilveous/Guitar-Visualizer'
-					target='_blank'
+					newWindow
 				>
-					<GitHubIcon />
 					GitHub
-				</a>
+				</TextWithIcon>
 			</div>
 			<div className='tech'>
 				<h3>Technologies</h3>
-				<div className='contains-icon'>
-					<TypeScriptIcon />
-					TypeScript
-				</div>
-				<div className='contains-icon'>
-					<ReactIcon />
-					React
-				</div>
-				<div className='contains-icon'>
-					<SassIcon />
-					Sass
-				</div>
+				<TextWithIcon Icon={TypeScriptIcon}>TypeScript</TextWithIcon>
+				<TextWithIcon Icon={ReactIcon}>React</TextWithIcon>
+				<TextWithIcon Icon={SassIcon}>Sass</TextWithIcon>
 			</div>
 		</div>
 		<div className='description'>
@@ -77,24 +67,24 @@ export const guitarVisualizerContent = (
 			</p>
 			<p>
 				If you'd like to check this old version out, I've deployed it{' '}
-				<a
-					className='contains-icon inline'
+				<TextWithIcon
+					Icon={LinkIcon}
 					href='https://old-fretboard-visualizer.vercel.app/'
-					target='_blank'
+					newWindow
+					inline
 				>
-					<LinkIcon style={{ transform: 'translateY(2px)' }} />
 					here
-				</a>
+				</TextWithIcon>
 				, and the GitHub repository can be found{' '}
-				<a
-					className='contains-icon inline'
-					href='https://github.com/JoshSilveous/old-fretboard-visualizer'
-					target='_blank'
+				<TextWithIcon
+					Icon={GitHubIcon}
+					href='https://old-fretboard-visualizer.vercel.app/'
+					newWindow
+					inline
 				>
-					<GitHubIcon style={{ transform: 'translateY(2px)' }} />
-					here.
-				</a>{' '}
-				Again, please don't judge.
+					here
+				</TextWithIcon>
+				. Again, please don't judge.
 			</p>
 			<h3>The Second Implementation</h3>
 			<p>
@@ -113,18 +103,23 @@ export const guitarVisualizerContent = (
 				Eventually, I decided to axe this project. I determined it'd be better to start from
 				scratch with all the insight I'd gained throughout this project. However, if you'd
 				like to take a look, you can find the GitHub repository{' '}
-				<a
-					className='contains-icon inline'
+				<TextWithIcon
+					Icon={GitHubIcon}
 					href='https://github.com/JoshSilveous/old-musiqtools'
+					newWindow
+					inline
 				>
-					<GitHubIcon style={{ transform: 'translateY(2px)' }} />
 					here
-				</a>
+				</TextWithIcon>
 				, and the deployment{' '}
-				<a className='contains-icon inline' href='https://old-musiqtools.vercel.app/'>
-					<LinkIcon style={{ transform: 'translateY(2px)' }} />
+				<TextWithIcon
+					Icon={LinkIcon}
+					href='https://old-musiqtools.vercel.app/'
+					newWindow
+					inline
+				>
 					here
-				</a>
+				</TextWithIcon>
 				.
 			</p>
 			<h3>The Third (current) Implementation</h3>
@@ -149,18 +144,23 @@ export const guitarVisualizerContent = (
 			</p>
 			<p>
 				The GitHub repository for this final version can be found{' '}
-				<a
-					className='contains-icon inline'
+				<TextWithIcon
+					Icon={GitHubIcon}
 					href='https://github.com/JoshSilveous/guitar-visualizer'
+					newWindow
+					inline
 				>
-					<GitHubIcon style={{ transform: 'translateY(2px)' }} />
 					here
-				</a>
+				</TextWithIcon>
 				, and the deployment{' '}
-				<a className='contains-icon inline' href='https://guitar-visualizer.vercel.app/'>
-					<LinkIcon style={{ transform: 'translateY(2px)' }} />
+				<TextWithIcon
+					Icon={LinkIcon}
+					href='https://guitar-visualizer.vercel.app/'
+					newWindow
+					inline
+				>
 					here
-				</a>
+				</TextWithIcon>
 				.
 			</p>
 		</div>

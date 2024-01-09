@@ -11,55 +11,36 @@ import {
 	SassIcon,
 	TypeScriptIcon,
 } from '../../../../../assets'
+import { TextWithIcon } from '../../../../../components'
 
 export const gradingApplicationContent = (
 	<div className='fold guitar-visualizer'>
 		<div className='col'>
 			<div className='links'>
 				<h3>Links</h3>
-				<a
-					className='contains-icon'
+				<TextWithIcon
+					Icon={GitHubIcon}
 					href='https://github.com/JoshSilveous/grading-application'
-					target='_blank'
+					newWindow
 				>
-					<GitHubIcon />
 					GitHub
-				</a>
-				<a
-					className='contains-icon'
+				</TextWithIcon>
+				<TextWithIcon
+					Icon={PDFIcon}
 					href='https://github.com/JoshSilveous/grading-application/blob/master/Report.pdf'
-					target='_blank'
+					newWindow
 				>
-					<PDFIcon />
 					Report
-				</a>
+				</TextWithIcon>
 			</div>
 			<div className='tech'>
 				<h3>Technologies</h3>
-				<div className='contains-icon'>
-					<TypeScriptIcon />
-					TypeScript
-				</div>
-				<div className='contains-icon'>
-					<ReactIcon />
-					React
-				</div>
-				<div className='contains-icon'>
-					<SassIcon />
-					Sass
-				</div>
-				<div className='contains-icon'>
-					<ElectronIcon />
-					Electron
-				</div>
-				<div className='contains-icon'>
-					<NodeIcon />
-					Node
-				</div>
-				<div className='contains-icon'>
-					<SQLIcon />
-					SQL
-				</div>
+				<TextWithIcon Icon={TypeScriptIcon}>TypeScript</TextWithIcon>
+				<TextWithIcon Icon={ReactIcon}>React</TextWithIcon>
+				<TextWithIcon Icon={SassIcon}>Sass</TextWithIcon>
+				<TextWithIcon Icon={ElectronIcon}>Electron</TextWithIcon>
+				<TextWithIcon Icon={NodeIcon}>Node</TextWithIcon>
+				<TextWithIcon Icon={SQLIcon}>SQL</TextWithIcon>
 			</div>
 		</div>
 		<div className='description'>
@@ -107,14 +88,13 @@ export const gradingApplicationContent = (
 			</p>
 			<p>
 				If you'd like more details on this project, check out the{' '}
-				<a
-					className='contains-icon inline'
+				<TextWithIcon
+					Icon={PDFIcon}
 					href='https://github.com/JoshSilveous/grading-application/blob/master/Report.pdf'
-					target='_blank'
+					inline
 				>
-					<PDFIcon style={{ transform: 'translateY(2px)' }} />
 					Report
-				</a>{' '}
+				</TextWithIcon>{' '}
 				I wrote about this project, and the technologies used in it.
 			</p>
 		</div>
