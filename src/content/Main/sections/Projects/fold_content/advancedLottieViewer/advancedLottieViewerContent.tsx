@@ -60,9 +60,12 @@ export const advancedLottieViewerContent = (
 			</div>
 			<div className='hover-not-supported'>
 				Below is an example of what I'm talking about, however this{' '}
-				<span className='warn'>will not work on your device</span>. This is because you are
-				using a touchscreen. If you'd like to check out this effect properly, visit this
-				website on a device with <strong>a mouse</strong>, and hover it over this image.
+				<span className='warn'>will not work correctly on your device</span>. This is
+				because you are using a <span className='warn'>touchscreen device</span>, which
+				doesn't allow for a mouse-hovering effect to occur.
+				<br />
+				If you'd like to check out this effect properly, visit this website on a device with{' '}
+				<strong>a mouse</strong>, and hover it over this image.
 			</div>
 			<LottieViewerIntegration />
 			<br />
