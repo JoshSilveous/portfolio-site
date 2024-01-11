@@ -45,4 +45,27 @@
 			}
 		}
 	}
+
+	&.advanced-lottie-viewer {
+		.warn {
+			color: rgb(255, 88, 88);
+			text-decoration: underline;
+		}
+		@media (hover: hover) {
+			.hover-supported {
+				display: block;
+			}
+			.hover-not-supported {
+				display: none;
+			}
+		}
+		@media (hover: none) {
+			.hover-supported {
+				display: none;
+			}
+			.hover-not-supported {
+				display: block;
+			}
+		}
+	}
 }
