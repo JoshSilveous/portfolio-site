@@ -5,8 +5,9 @@ import {
 	CSSIcon,
 	LottieIcon,
 	LinkIcon,
-} from '../../../../../assets'
-import { TextWithIcon } from '../../../../../components'
+} from '../../../../../../assets'
+import { TextWithIcon } from '../../../../../../components'
+import { LottieViewerIntegration } from './LottieViewerIntegration'
 
 export const advancedLottieViewerContent = (
 	<div className='fold advanced-lottie-viewer'>
@@ -50,11 +51,12 @@ export const advancedLottieViewerContent = (
 				hovers their mouse over the image, this function allows animators to change how the
 				animation behaves when the user stops hovering.
 			</p>
-			<br />
+			<h3>Example</h3>
 			<div className='hover-supported'>
-				Below is an example of what I'm talking about. Try moving your mouse over this image
-				and removing it. Notice that the different "segments" play different animations when
-				you remove your mouse, depending on which segment you're in.
+				Below is an example of what I'm talking about.
+				<br /> Try <strong>hovering</strong> your mouse over this image and removing it.
+				Notice that the different "segments" play different animations when you remove your
+				mouse, depending on which segment you're in.
 			</div>
 			<div className='hover-not-supported'>
 				Below is an example of what I'm talking about, however this{' '}
@@ -62,6 +64,34 @@ export const advancedLottieViewerContent = (
 				using a touchscreen. If you'd like to check out this effect properly, visit this
 				website on a device with <strong>a mouse</strong>, and hover it over this image.
 			</div>
+			<LottieViewerIntegration />
+			<br />
+			<p>
+				This project is <strong>really old</strong>. I created it as I was first learning
+				web development, so a lot of the code isn't exactly top notch. But, it works.
+			</p>
+			<p>
+				Check out the player{' '}
+				<TextWithIcon
+					Icon={LinkIcon}
+					href='https://advanced-lottie-viewer.vercel.app/'
+					inline
+					newWindow
+				>
+					here
+				</TextWithIcon>
+				, it contains another example and some more controls. You can also find the code
+				repository{' '}
+				<TextWithIcon
+					Icon={GitHubIcon}
+					href='https://github.com/JoshSilveous/advanced-lottie-viewer'
+					inline
+					newWindow
+				>
+					here
+				</TextWithIcon>
+				.
+			</p>
 		</div>
 	</div>
 )

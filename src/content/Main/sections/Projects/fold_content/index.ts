@@ -1,5 +1,5 @@
 export { guitarVisualizerContent } from './guitarVisualizerContent'
 export { financeTrackerContent } from './financeTrackerContent'
 export { gradingApplicationContent } from './gradingApplicationContent'
-export { advancedLottieViewerContent } from './advancedLottieViewerContent'
+export { advancedLottieViewerContent } from './advancedLottieViewer/advancedLottieViewerContent'
 export { excellentFinanceTrackerContent } from './excellentFinanceTrackerContent'

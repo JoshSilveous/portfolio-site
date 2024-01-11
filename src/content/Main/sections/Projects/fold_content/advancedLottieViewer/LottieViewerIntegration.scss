@@ -1,0 +1,166 @@
+/*
+	THIS CODE IS VERY OLD.
+	I was new to JavaScript and fairly new to HTML/CSS when I created this, so please don't judge the code quality. I just wanted to share this old project of mine.
+*/
+.lottie-viewer-integration {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+	margin: auto;
+	width: 90%;
+	padding: 10px;
+	text-align: center;
+	font-family: Roboto;
+	.lottie {
+		width: 90%;
+		max-width: 400px;
+		margin: 0 auto;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	table {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	h1 {
+		color: #e55274;
+		font-size: 50px;
+	}
+
+	#curFrame,
+	#totFrame,
+	#curSegment {
+		color: #e55274;
+		width: 20px;
+		display: inline-block;
+	}
+	#curFrame,
+	#totFrame {
+		width: 50px;
+	}
+	#curSegment {
+		margin-left: 3px;
+	}
+
+	h2 {
+		color: #4896c0;
+		font-size: 40px;
+	}
+
+	h3 {
+		font-size: 12x;
+		margin: 0 !important;
+	}
+
+	.progbar {
+		width: 90%;
+		height: 20px;
+		background-color: #d1d1d5;
+		margin: 0 auto;
+	}
+
+	.gapbar {
+		width: 90%;
+		height: 20px;
+		margin: 0 auto;
+	}
+
+	.progbarcomplete {
+		line-height: 30px;
+		height: 100%;
+		width: 0%;
+		display: block;
+		font-family: arial;
+		font-size: 12px;
+		background-color: transparent;
+		border-right: solid 3px #1e1d32;
+	}
+
+	.segprogbar {
+		width: 90%;
+		height: 10px;
+		background-color: #d1d1d5;
+		margin: 0 auto;
+		margin-top: 0px;
+	}
+
+	.segmentprogbarcomplete {
+		line-height: 15px;
+		height: 100%;
+		display: inline-block;
+		text-align: left;
+		font-family: arial;
+		font-size: 12px;
+		color: #fff;
+	}
+
+	input {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		margin-left: 6px;
+		width: 60px;
+		background: #3e3a66;
+		font-family: Roboto;
+		font-size: 22px;
+		color: #d1d1d5;
+		border-radius: 3px;
+		text-align: center;
+	}
+	input:focus {
+		outline: none;
+		background: #4e4980;
+	}
+
+	.color-guide {
+		display: flex;
+		justify-content: space-between;
+		max-width: 400px;
+		min-width: 200px;
+		margin: 25px auto 5px auto;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+	.color-guide > .entry {
+		color: rgb(72, 150, 192);
+	}
+
+	.color-guide > .exit {
+		color: rgb(229, 82, 116);
+	}
+
+	.anim-title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.anim-title {
+		margin-left: auto;
+	}
+	body > p {
+		max-width: 800px;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+
+	.current-title h2 {
+		margin: 0;
+	}
+	.current-title p {
+		margin: 0;
+	}
+	@keyframes shimmer {
+		0% {
+			background-position: -50% 0;
+		}
+		100% {
+			background-position: 150% 0;
+		}
+	}
+}
