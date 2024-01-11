@@ -62,7 +62,8 @@ export const advancedLottieViewerContent = (
 				Below is an example of what I'm talking about, however this{' '}
 				<span className='warn'>will not work correctly on your device</span>. This is
 				because you are using a <span className='warn'>touchscreen device</span>, which
-				doesn't allow for a mouse-hovering effect to occur.
+				doesn't allow for a mouse-hovering effect to occur. However, you can tap on the
+				image to trigger the animation, and tap somewhere else to exit.
 				<br />
 				If you'd like to check out this effect properly, visit this website on a device with{' '}
 				<strong>a mouse</strong>, and hover it over this image.
