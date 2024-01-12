@@ -7,7 +7,6 @@ import {
 	Excel6Image,
 	GitHubIcon,
 	ImageIcon,
-	LinkIcon,
 	OfficeIcon,
 	VBAIcon,
 } from '../../../../../assets'
