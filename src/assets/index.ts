@@ -34,6 +34,7 @@ export { ReactComponent as FoldIcon } from './misc/fold.svg'
 export { ReactComponent as GitHubIcon } from './misc/github.svg'
 export { ReactComponent as LinkIcon } from './misc/link.svg'
 export { ReactComponent as PDFIcon } from './misc/pdf.svg'
+export { ReactComponent as ImageIcon } from './misc/image.svg'
 
 export const BrochureFrontImage = genImageComponent(
 	urls.brochure_front_cmpr,
@@ -101,4 +102,43 @@ export const GradingAppUI3Image = genImageComponent(
 	urls.grading_app_ui_3_full,
 	'A screenshot of the UI for my Grading Application, featuring a menu for adding a student to a class.',
 	'Grading Application Add Student UI'
+)
+
+export const Excel1Image = genImageComponent(
+	urls.excel_1,
+	urls.excel_1,
+	'A screenshot of my custom excel tracker form, prompting the user to select "Weekly", "Biweekly", or "Monthly"',
+	'Custom Excel Finance Tracker'
+)
+
+export const Excel2Image = genImageComponent(
+	urls.excel_2,
+	urls.excel_2,
+	'A screenshot of my custom excel tracker form, prompting the user to select a date using a custom calendar widget',
+	'Custom Excel Finance Tracker'
+)
+export const Excel3Image = genImageComponent(
+	urls.excel_3,
+	urls.excel_3,
+	'A screenshot of my custom excel tracker form, prompting the user to enter categories',
+	'Custom Excel Finance Tracker'
+)
+export const Excel4Image = genImageComponent(
+	urls.excel_4,
+	urls.excel_4,
+	'A screenshot of my custom excel tracker form, prompting the user to enter accounts and their starting values',
+	'Custom Excel Finance Tracker'
+)
+export const Excel5Image = genImageComponent(
+	urls.excel_5_cmpr,
+	urls.excel_5_full,
+	'A screenshot of my custom excel trackers page, with an interface allowing you to enter data.',
+	'Custom Excel Finance Tracker'
+)
+
+export const Excel6Image = genImageComponent(
+	urls.excel_6_cmpr,
+	urls.excel_6_full,
+	'A screenshot of my custom excel trackers page, with an interface allowing you to change categories, accounts, and theme.',
+	'Custom Excel Finance Tracker'
 )

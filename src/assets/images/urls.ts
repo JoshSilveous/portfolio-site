@@ -20,6 +20,15 @@ import grading_app_ui_2_cmpr from './grading_app_ui_2_cmpr.png'
 import grading_app_ui_2_full from './grading_app_ui_2_full.png'
 import grading_app_ui_3_cmpr from './grading_app_ui_3_cmpr.png'
 import grading_app_ui_3_full from './grading_app_ui_3_full.png'
+import excel_1 from './excel_1.png'
+import excel_2 from './excel_2.png'
+import excel_3 from './excel_3.png'
+import excel_4 from './excel_4.png'
+import excel_5_cmpr from './excel_5_cmpr.png'
+import excel_5_full from './excel_5_full.png'
+import excel_6_cmpr from './excel_6_cmpr.png'
+import excel_6_full from './excel_6_full.png'
+import excel_7 from './excel_7.png'
 
 export default {
 	brochure_back_cmpr,
@@ -44,4 +53,13 @@ export default {
 	grading_app_ui_2_full,
 	grading_app_ui_3_cmpr,
 	grading_app_ui_3_full,
+	excel_1,
+	excel_2,
+	excel_3,
+	excel_4,
+	excel_5_cmpr,
+	excel_5_full,
+	excel_6_cmpr,
+	excel_6_full,
+	excel_7,
 }
