@@ -8,11 +8,11 @@ import { setDelay } from '../../functions'
  *
  * **REQUIRED PROPS**
  *
- * `title` *string* - The title of the fold, displayed in the header
+ * `title` `string | ReactNode` - The title of the fold, displayed in the header
  *
- * `folded` *boolean* - Boolean value controlling if the content is hidden or not
+ * `folded` `boolean` - Boolean value controlling if the content is hidden or not
  *
- * `handleToggle` *Function* - Function that will be executed whenever the header is clicked.
+ * `handleToggle` `Function` - Function that will be executed whenever the header is clicked.
  * *Should toggle* `folded`
  */
 export function FoldComponent({ title, children, folded, handleToggle }: FoldComponentProps) {
@@ -57,8 +57,11 @@ export function FoldComponent({ title, children, folded, handleToggle }: FoldCom
 	return (
 		<div className={`fold-component${folded ? ' folded' : ''}`} ref={foldRef}>
 			<div className='fold-title' onClick={handleToggle}>
-				<FoldIcon style={{ transition: `rotate ${ANIMATION_TIME}s ease` }} />
-				<h2>{title}</h2>
+				<FoldIcon
+					className='arrow'
+					style={{ transition: `rotate ${ANIMATION_TIME}s ease` }}
+				/>
+				{typeof title === 'string' ? <h2 className='default'>{title}</h2> : title}
 			</div>
 			<div className='fold-content' ref={contentRef}>
 				{children}
@@ -71,7 +74,7 @@ interface FoldComponentProps {
 	/**
 	 * The title of the fold, displayed in the header
 	 */
-	title: string
+	title: string | ReactNode
 	/**
 	 * The content hidden by the fold
 	 */

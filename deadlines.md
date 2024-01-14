@@ -1,6 +1,3 @@
-Add Icons to Projects section (far right)
-    by  Monday, 1-15
-
 Complete About Me Section
     by  Thursday, 1-18
 
@@ -17,3 +14,6 @@ Complete Experience Section
     by  Saturday, 1-27
 
 
+
+- Add Icons to Projects section (far right)
+    by  Monday, 1-15

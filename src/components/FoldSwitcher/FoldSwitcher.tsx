@@ -86,7 +86,7 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 
 declare global {
 	interface FoldSwitcherContent {
-		title: string
+		title: string | ReactNode
 		content: ReactNode
 		anchor?: string
 	}

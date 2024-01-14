@@ -1,0 +1,36 @@
+.title-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+	h2 {
+		width: fit-content;
+		margin: 0;
+	}
+
+	.icon-container {
+		display: flex;
+		height: inherit;
+		align-items: center;
+		gap: 10px;
+
+		svg {
+			height: 30px;
+			width: 30px;
+		}
+	}
+
+	@media (max-width: 586px) {
+		flex-direction: column;
+		.icon-container {
+			height: 17.5px;
+			gap: 5px;
+			margin-bottom: 20px;
+
+			svg {
+				height: 17.5px;
+				width: 17.5px;
+			}
+		}
+	}
+}
