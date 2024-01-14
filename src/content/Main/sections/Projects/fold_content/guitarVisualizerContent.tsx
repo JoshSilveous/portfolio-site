@@ -15,11 +15,7 @@ export const guitarVisualizerContent = (
 		<div className='col'>
 			<div className='links'>
 				<h3>Links</h3>
-				<TextWithIcon
-					Icon={LinkIcon}
-					href='https://guitar-visualizer.vercel.app/'
-					newWindow
-				>
+				<TextWithIcon Icon={LinkIcon} href='https://guitar.silveo.us/' newWindow>
 					Deployment
 				</TextWithIcon>
 				<TextWithIcon
@@ -69,7 +65,7 @@ export const guitarVisualizerContent = (
 				If you'd like to check this old version out, I've deployed it{' '}
 				<TextWithIcon
 					Icon={LinkIcon}
-					href='https://old-fretboard-visualizer.vercel.app/'
+					href='https://old-fretboard-visualizer.silveo.us/'
 					newWindow
 					inline
 				>
@@ -114,7 +110,7 @@ export const guitarVisualizerContent = (
 				, and the deployment{' '}
 				<TextWithIcon
 					Icon={LinkIcon}
-					href='https://old-musiqtools.vercel.app/'
+					href='https://old-musiqtools.silveo.us/'
 					newWindow
 					inline
 				>
@@ -153,12 +149,7 @@ export const guitarVisualizerContent = (
 					here
 				</TextWithIcon>
 				, and the deployment{' '}
-				<TextWithIcon
-					Icon={LinkIcon}
-					href='https://guitar-visualizer.vercel.app/'
-					newWindow
-					inline
-				>
+				<TextWithIcon Icon={LinkIcon} href='https://guitar.silveo.us/' newWindow inline>
 					here
 				</TextWithIcon>
 				.

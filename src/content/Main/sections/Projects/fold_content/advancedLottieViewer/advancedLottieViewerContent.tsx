@@ -23,7 +23,7 @@ export const advancedLottieViewerContent = (
 				</TextWithIcon>
 				<TextWithIcon
 					Icon={LinkIcon}
-					href='https://advanced-lottie-viewer.vercel.app/'
+					href='https://advanced-lottie-viewer.silveo.us/'
 					newWindow
 				>
 					Deployment
@@ -78,7 +78,7 @@ export const advancedLottieViewerContent = (
 				Check out the player{' '}
 				<TextWithIcon
 					Icon={LinkIcon}
-					href='https://advanced-lottie-viewer.vercel.app/'
+					href='https://advanced-lottie-viewer.silveo.us/'
 					inline
 					newWindow
 				>
