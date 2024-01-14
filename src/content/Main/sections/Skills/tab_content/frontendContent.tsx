@@ -134,16 +134,11 @@ export const frontendContent: SkillSectionInfo[] = [
 				After Effects (noted in the <strong>Other</strong> tab), and Lottie allows you to
 				use those skills to create awesome graphics for web applications. Lottie's
 				JavaScript also library provides a ton of functionality, which allowed me to create
-				a{' '}
-				<TextWithIcon
-					Icon={LinkIcon}
-					href='https://advanced-lottie-viewer.vercel.app/'
-					inline
-					newWindow
-				>
-					dynamically animated hover effect
-				</TextWithIcon>
-				.
+				a dynamically animated hover effect, as shown in my{' '}
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/advanced-lottie-viewer' inline>
+					Advanced Lottie Viewer
+				</TextWithIcon>{' '}
+				project. .
 			</>
 		),
 	},

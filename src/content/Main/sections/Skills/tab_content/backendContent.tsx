@@ -22,7 +22,7 @@ export const backendContent: SkillSectionInfo[] = [
 				<TextWithIcon Icon={ProjectsIcon} href='#projects/finance-tracker' inline>
 					Finance Tracker
 				</TextWithIcon>{' '}
-				and
+				and{' '}
 				<TextWithIcon Icon={ProjectsIcon} href='#projects/grading-application' inline>
 					Grading Application
 				</TextWithIcon>{' '}
