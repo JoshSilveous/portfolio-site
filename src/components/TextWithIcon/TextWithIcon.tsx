@@ -5,6 +5,7 @@ interface TextWithIconProps {
 	href?: string
 	Icon: React.FC<React.SVGProps<SVGSVGElement>>
 	iconStyle?: React.CSSProperties
+	style?: React.CSSProperties
 	children: ReactNode
 	inline?: boolean
 	newWindow?: boolean
@@ -13,6 +14,7 @@ export function TextWithIcon({
 	href,
 	Icon,
 	iconStyle,
+	style,
 	children,
 	inline = false,
 	newWindow = false,
@@ -20,7 +22,7 @@ export function TextWithIcon({
 	console.log(href, Icon, iconStyle)
 	if (href === undefined) {
 		return (
-			<div className={`text-with-icon ${inline ? 'inline' : ''}`}>
+			<div className={`text-with-icon ${inline ? 'inline' : ''}`} style={style}>
 				<Icon style={iconStyle} />
 				{children}
 			</div>
@@ -31,6 +33,7 @@ export function TextWithIcon({
 				href={href}
 				target={newWindow ? '_blank' : '_self'}
 				className={`text-with-icon ${inline ? 'inline' : ''}`}
+				style={style}
 			>
 				<Icon style={iconStyle} />
 				{children}
