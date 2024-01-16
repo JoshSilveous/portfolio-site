@@ -36,6 +36,14 @@ export { ReactComponent as LinkIcon } from './misc/link.svg'
 export { ReactComponent as PDFIcon } from './misc/pdf.svg'
 export { ReactComponent as ImageIcon } from './misc/image.svg'
 
+export { ReactComponent as BikeIcon } from './hobbies_icons/bike.svg'
+export { ReactComponent as ControllerIcon } from './hobbies_icons/controller.svg'
+export { ReactComponent as ExerciseIcon } from './hobbies_icons/exercise.svg'
+export { ReactComponent as GeocachingIcon } from './hobbies_icons/geocaching.svg'
+export { ReactComponent as HikingIcon } from './hobbies_icons/hiking.svg'
+export { ReactComponent as MusicIcon } from './hobbies_icons/music.svg'
+export { ReactComponent as NutritionIcon } from './hobbies_icons/nutrition.svg'
+
 export const BrochureFrontImage = genImageComponent(
 	urls.brochure_front_cmpr,
 	urls.brochure_front_full,
@@ -141,4 +149,11 @@ export const Excel6Image = genImageComponent(
 	urls.excel_6_full,
 	'A screenshot of my custom excel trackers page, with an interface allowing you to change categories, accounts, and theme.',
 	'Custom Excel Finance Tracker'
+)
+
+export const AboutMe1Image = genImageComponent(
+	urls.about_me_1_cmpr,
+	urls.about_me_1_full,
+	'A picture of myself.',
+	'About Me'
 )
