@@ -1,4 +1,4 @@
-export { AboutMe } from './AboutMe'
+export { AboutMe } from './AboutMe/AboutMe'
 export { Skills } from './Skills/Skills'
 export { Projects } from './Projects/Projects'
 export { Experience } from './Experience'

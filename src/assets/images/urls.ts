@@ -29,6 +29,8 @@ import excel_5_full from './excel_5_full.png'
 import excel_6_cmpr from './excel_6_cmpr.png'
 import excel_6_full from './excel_6_full.png'
 import excel_7 from './excel_7.png'
+import about_me_1_cmpr from './about_me_1_cmpr.jpg'
+import about_me_1_full from './about_me_1_full.jpg'
 
 export default {
 	brochure_back_cmpr,
@@ -62,4 +64,6 @@ export default {
 	excel_6_cmpr,
 	excel_6_full,
 	excel_7,
+	about_me_1_cmpr,
+	about_me_1_full,
 }
