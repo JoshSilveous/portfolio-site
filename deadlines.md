@@ -12,7 +12,6 @@ Re-create NavBar system
 Complete Experience Section
     by  Saturday, 1-27
 
-Add Joi to back-end skill
 
 
 - Add Icons to Projects section (far right)
@@ -20,3 +19,5 @@ Add Joi to back-end skill
 
 - Complete About Me Section
     by  Thursday, 1-18
+    
+- Add Joi to back-end skills

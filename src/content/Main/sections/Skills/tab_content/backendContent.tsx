@@ -6,6 +6,7 @@ import {
 	PHPIcon,
 	JestIcon,
 	ProjectsIcon,
+	JoiIcon,
 } from '../../../../../assets'
 import { TextWithIcon } from '../../../../../components'
 
@@ -85,6 +86,25 @@ export const backendContent: SkillSectionInfo[] = [
 				manually test my code was taking up a lot of time. When looking into alternatives, I
 				discovered Jest, and spent some time writing up tests to ensure that every function
 				of my API behaves appropriately.
+			</>
+		),
+	},
+	{
+		name: 'Joi',
+		icon: <JoiIcon />,
+		description:
+			'Joi is a powerful schema description language and data validator for Node.js and Express.js. It allows developers to create blueprints or schemas for JavaScript objects, such as those received by APIs, to ensure validation of key information.',
+		additional_content: (
+			<>
+				After spending time trying to come up with my own data validation system for my{' '}
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/finance-tracker' inline>
+					Finance Tracker
+				</TextWithIcon>{' '}
+				project, I decided to do some research and discovered Joi. This library allows you
+				to strictly enforce the format of JSON objects that hit your API, and requires very
+				little code to do so. You simply create a schema, then create middleware functions
+				for your API routes that validate objects against it (and methods to handle
+				different validation outcomes).
 			</>
 		),
 	},

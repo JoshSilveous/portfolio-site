@@ -22,6 +22,7 @@ export { ReactComponent as SQLIcon } from './skills_icons/sql.svg'
 export { ReactComponent as ElectronIcon } from './skills_icons/electron.svg'
 export { ReactComponent as PHPIcon } from './skills_icons/php.svg'
 export { ReactComponent as JestIcon } from './skills_icons/jest.svg'
+export { ReactComponent as JoiIcon } from './skills_icons/joi.svg'
 
 export { ReactComponent as PhotoshopIcon } from './skills_icons/photoshop.svg'
 export { ReactComponent as AfterEffectsIcon } from './skills_icons/after_effects.svg'

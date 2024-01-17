@@ -4,6 +4,7 @@ import {
 	ExerciseIcon,
 	GeocachingIcon,
 	HikingIcon,
+	JoiIcon,
 	MusicIcon,
 	NutritionIcon,
 } from '../../../../assets'
