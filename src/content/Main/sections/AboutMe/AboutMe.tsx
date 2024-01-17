@@ -1,5 +1,5 @@
 import {
-	AboutMe1Image,
+	// AboutMe1Image,
 	BikeIcon,
 	ControllerIcon,
 	ExerciseIcon,
