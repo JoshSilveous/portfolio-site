@@ -1,5 +1,4 @@
-Complete About Me Section
-    by  Thursday, 1-18
+
 
 Complete Contact Info Section
     by  Saturday, 1-20
@@ -13,7 +12,11 @@ Re-create NavBar system
 Complete Experience Section
     by  Saturday, 1-27
 
+Add Joi to back-end skill
 
 
 - Add Icons to Projects section (far right)
     by  Monday, 1-15
+
+- Complete About Me Section
+    by  Thursday, 1-18

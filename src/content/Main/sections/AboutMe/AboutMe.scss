@@ -4,40 +4,22 @@
 		gap: 20px;
 		width: 100%;
 	}
-	.col-container.one {
-		flex-wrap: wrap-reverse;
-		.col-left {
-			width: 400px;
-		}
-		.col-right {
-			flex-grow: 1;
-			.image-component,
-			p {
-				max-width: 250px;
-				margin: 0 auto;
-			}
-			p {
-				font-size: 12px;
-				font-style: italic;
-				margin-bottom: 0;
-			}
-		}
-		@media (max-width: 709px) {
-			.col-left {
-				width: 100%;
-				p {
-					max-width: 500px;
-				}
-			}
-		}
-	}
 
 	.col-container.two {
 		.col-left {
 			width: calc(50% - 10px);
+			min-width: fit-content;
 		}
 		.col-right {
 			width: calc(50% - 10px);
+			min-width: 187px;
+		}
+		@media (max-width: 434px) {
+			flex-direction: column;
+			.col-left,
+			.col-right {
+				width: 100%;
+			}
 		}
 	}
 }

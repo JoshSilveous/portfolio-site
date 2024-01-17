@@ -1,5 +1,4 @@
 import {
-	// AboutMe1Image,
 	BikeIcon,
 	ControllerIcon,
 	ExerciseIcon,
@@ -15,10 +14,7 @@ export function AboutMe() {
 		<div className='section about-me'>
 			<a className='anchor' id='about-me' />
 			<h1>About Me</h1>
-			{/* <div className='col-container one'>
-				<div className='col-left'> */}
 			<div>
-				<h2>Background</h2>
 				<p>Hi! 👋</p>
 				<p>
 					My interest in technology has always been a theme in my life. Starting with
@@ -33,14 +29,20 @@ export function AboutMe() {
 					engaged in personal projects. Today, web development is more than a hobby; it's
 					the path I want to take in my professional life. With a blend of formal
 					education and self-directed learning, I'm ready to start my career in the tech
-					industry as a full-stack developer.
+					industry as a web developer.
+				</p>
+				<br />
+				<p style={{ marginBottom: '0px' }}>
+					<strong>So, are you a front end developer? Or are you full stack?</strong>
+				</p>
+				<p style={{ marginTop: '5px' }}>
+					I am a <u>front end developer with back end capabilities</u>. Much of my
+					knowledge resides in front end technologies (React, TypeScript, Sass, etc.), but
+					I also know Relational Database tech (SQL) very well. I can also create
+					type-safe APIs using Node.js and Express.js, though my backend knowledge doesn't
+					extent too far past that currently.
 				</p>
 			</div>
-			{/* <div className='col-right'>
-					<AboutMe1Image />
-					<p>Note to self: take a more professional photo at some point</p>
-				</div>
-			</div> */}
 			<div className='col-container two'>
 				<div className='col-left'>
 					<h2>Hobbies</h2>
@@ -95,10 +97,10 @@ export function AboutMe() {
 					</TextWithIcon>
 				</div>
 				<div className='col-right'>
-					<h2>Goals</h2>
+					<h2>Career Goal</h2>
 					<p>
-						Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
-						Blah{' '}
+						To solve challenging problems by creating beautiful (and intuitive)
+						applications that provide efficiency, convenience, and functionality.
 					</p>
 				</div>
 			</div>
