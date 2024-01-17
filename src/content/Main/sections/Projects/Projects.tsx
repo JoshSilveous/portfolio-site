@@ -5,6 +5,7 @@ import {
 	HTMLIcon,
 	JavaScriptIcon,
 	JestIcon,
+	JoiIcon,
 	LottieIcon,
 	NodeIcon,
 	OfficeIcon,
@@ -45,6 +46,7 @@ export function Projects() {
 						<NodeIcon />
 						<ExpressIcon />
 						<JestIcon />
+						<JoiIcon />
 					</div>
 				</div>
 			),

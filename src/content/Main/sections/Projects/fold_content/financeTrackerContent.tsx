@@ -2,6 +2,7 @@ import {
 	ExpressIcon,
 	GitHubIcon,
 	JestIcon,
+	JoiIcon,
 	NodeIcon,
 	ProjectsIcon,
 	ReactIcon,
@@ -40,6 +41,7 @@ export const financeTrackerContent = (
 				<TextWithIcon Icon={NodeIcon}>Node</TextWithIcon>
 				<TextWithIcon Icon={ExpressIcon}>Express</TextWithIcon>
 				<TextWithIcon Icon={JestIcon}>Jest</TextWithIcon>
+				<TextWithIcon Icon={JoiIcon}>Joi</TextWithIcon>
 			</div>
 		</div>
 		<div className='description'>
