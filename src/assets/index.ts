@@ -32,7 +32,6 @@ export { ReactComponent as VBAIcon } from './skills_icons/vba.svg'
 export { ReactComponent as OfficeIcon } from './skills_icons/office.svg'
 
 export { ReactComponent as FoldIcon } from './misc/fold.svg'
-export { ReactComponent as GitHubIcon } from './misc/github.svg'
 export { ReactComponent as LinkIcon } from './misc/link.svg'
 export { ReactComponent as PDFIcon } from './misc/pdf.svg'
 export { ReactComponent as ImageIcon } from './misc/image.svg'
@@ -44,6 +43,11 @@ export { ReactComponent as GeocachingIcon } from './hobbies_icons/geocaching.svg
 export { ReactComponent as HikingIcon } from './hobbies_icons/hiking.svg'
 export { ReactComponent as MusicIcon } from './hobbies_icons/music.svg'
 export { ReactComponent as NutritionIcon } from './hobbies_icons/nutrition.svg'
+
+export { ReactComponent as GitHubIcon } from './contact_icons/github.svg'
+export { ReactComponent as LinkedInIcon } from './contact_icons/linkedin.svg'
+export { ReactComponent as EmailIcon } from './contact_icons/email.svg'
+export { ReactComponent as PhoneIcon } from './contact_icons/phone.svg'
 
 export const BrochureFrontImage = genImageComponent(
 	urls.brochure_front_cmpr,
