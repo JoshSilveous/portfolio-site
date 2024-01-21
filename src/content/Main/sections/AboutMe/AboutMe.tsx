@@ -40,7 +40,7 @@ export function AboutMe() {
 					knowledge resides in front end technologies (React, TypeScript, Sass, etc.), but
 					I also know Relational Database tech (SQL) very well. I can also create
 					type-safe APIs using Node.js and Express.js, though my backend knowledge doesn't
-					extent too far past that currently.
+					extend too far past that currently.
 				</p>
 			</div>
 			<div className='col-container two'>
