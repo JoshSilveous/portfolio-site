@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { setDelay, stringToSpanCharArray, stringToSpanWordArray } from '../../functions'
-import { SPLASH_PARAGRAPH } from '../SPLASH_PARAGRAPH'
+import { setDelay, stringToSpanCharArray } from '../../functions'
+import { Splash } from './Splash'
 import './Navbar.scss'
 import { transitionHeightClosedToOpen } from '../../functions'
 import {
@@ -20,7 +20,6 @@ export function Navbar() {
 
 	const FIRST_NAME = stringToSpanCharArray('Joshua', 0.5, 0.05)
 	const LAST_NAME = stringToSpanCharArray('Silveous', 0.8, 0.05)
-	const PARAGRAPH = stringToSpanWordArray(SPLASH_PARAGRAPH, 2.5, 0.015)
 
 	// toggle isFullscreen depending on where the scroll position is.
 	useEffect(() => {
@@ -86,7 +85,7 @@ export function Navbar() {
 						<div className='last-name'>{LAST_NAME}</div>
 					</h1>
 					<p className='text' ref={paragraphRef}>
-						{PARAGRAPH}
+						<Splash />
 					</p>
 				</div>
 				<div className='anchor-container' ref={anchorContainerRef}>
