@@ -1,0 +1,188 @@
+.navbar {
+	z-index: 10;
+	background: linear-gradient(
+		135deg,
+		rgba(148, 237, 255, 1) 0%,
+		rgb(77, 77, 206) 30%,
+		rgba(9, 9, 121, 1) 70%,
+		rgba(2, 0, 36, 1) 100%
+	);
+	background-size: 400% 400%;
+
+	width: 100vw;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	transition: justify-content 3s ease;
+	padding: 0px 40px;
+	box-sizing: border-box;
+	overflow: hidden;
+
+	&.fullscreen {
+		height: 100vh;
+	}
+	&:not(.fullscreen) {
+		height: 80px;
+	}
+
+	&.loading {
+		height: 100vh;
+		background: none;
+		background-color: #242424;
+		.wrapper {
+			.splash-info,
+			.anchor-container {
+				display: none;
+			}
+			.loading-icon {
+				display: block;
+			}
+		}
+	}
+	&.loaded-in-fullscreen {
+		.wrapper {
+			.splash-info {
+				span {
+					opacity: 0%; // before animation
+					animation: 1s ease-out 1 fadeDown forwards;
+				}
+			}
+		}
+	}
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		width: 700px;
+		max-width: 100%;
+
+		.loading-icon {
+			display: none;
+		}
+
+		.splash-info {
+			span {
+				display: inline-block;
+			}
+			.name {
+				text-align: center;
+				display: flex;
+				gap: 20px;
+				justify-content: center;
+
+				@media (max-width: 500px) {
+					flex-direction: column;
+					gap: 0px;
+				}
+
+				span {
+					min-width: 15px;
+				}
+			}
+
+			.text {
+				max-width: 700px;
+				box-sizing: border-box;
+				height: auto;
+				padding: 20px 0px;
+				overflow: hidden;
+				text-align: center;
+				span {
+					padding-right: 2.5px;
+				}
+			}
+		}
+		.anchor-container {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			max-width: 700px;
+			height: 80px;
+			align-items: center;
+			overflow: hidden;
+			.anchor-link {
+				color: white;
+				cursor: pointer;
+				user-select: none;
+
+				opacity: 0%; // initial
+				animation: 1s ease-out 1 fadeDown forwards;
+
+				transition: scale 0.2s ease, text-shadow 0.2s ease;
+				&:hover {
+					scale: 120%;
+					text-shadow: 0 0 20px white, 0 0 30px white;
+				}
+				&:active {
+					scale: 110%;
+					text-shadow: 0 0 15px white, 0 0 25px white;
+				}
+				.icon {
+					height: 35px;
+					svg {
+						height: 100%;
+						width: 100%;
+					}
+				}
+			}
+
+			@media (min-width: 480px) {
+				.text {
+					display: block;
+				}
+				.icon {
+					display: none;
+				}
+			}
+			@media (max-width: 481px) {
+				.text {
+					display: none;
+				}
+				.icon {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@keyframes backgroundGradientLoad {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+@keyframes backgroundGradientIdle {
+	0% {
+		background-position: 100% 50%;
+	}
+	50% {
+		background-position: 60% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+@keyframes fadeDown {
+	0% {
+		transform: translateY(-20px);
+		filter: blur(3px);
+		opacity: 0%;
+	}
+	100% {
+		transform: translateY(0);
+		filter: blur(0px);
+		opacity: 100%;
+	}
+}
+@keyframes animateHeightOpening {
+	0% {
+	}
+	100% {
+	}
+}
