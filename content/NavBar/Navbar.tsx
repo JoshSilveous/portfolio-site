@@ -78,7 +78,7 @@ export function Navbar() {
 		}
 
 		// set delays for Anchor Bar based on if page loaded in fullscreen
-		let anchorContainerAnimDelay = 5.3
+		let anchorContainerAnimDelay = 6
 		if (window.scrollY !== 0) {
 			anchorContainerAnimDelay = 1
 		}
