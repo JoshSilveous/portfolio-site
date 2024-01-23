@@ -1,5 +1,5 @@
--   Complete Experience Section
-    by Saturday, 1-27
+Complete Experience Section
+by Saturday, 1-27
 
 -   Add Icons to Projects section (far right)
     by Monday, 1-15
