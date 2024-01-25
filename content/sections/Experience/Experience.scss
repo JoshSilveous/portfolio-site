@@ -14,6 +14,7 @@
 
 			.job-title {
 				width: 208px;
+				font-weight: 700;
 				h2 {
 					margin: 0;
 				}
@@ -31,6 +32,16 @@
 				justify-content: space-between;
 			}
 			@media (max-width: 834px) {
+				flex-direction: column;
+				align-items: flex-start;
+				.company {
+					font-style: italic;
+					font-size: 18px;
+				}
+				.timeframe {
+					font-size: 12px;
+					width: 130px;
+				}
 			}
 		}
 	}
