@@ -19,9 +19,9 @@ export function Experience() {
 					</div>
 					<div className='company'>Contractor</div>
 					<div className='timeframe'>
-						<div className='start-month'>May 2019</div>
+						<div className='start-month'>Feb 2021</div>
 						<div className='divider'>-</div>
-						<div className='end-month'>Jun 2020</div>
+						<div className='end-month'>Present</div>
 					</div>
 				</div>
 			),
