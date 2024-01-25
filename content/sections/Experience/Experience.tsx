@@ -1,4 +1,12 @@
 import { FoldSwitcher } from '@/components'
+import {
+	cashierLomaLindas,
+	itSupportSwanton,
+	itSupportThermaTru,
+	packageHandlerFedEx,
+	sysAdminContractor,
+	webDevContractor,
+} from './fold_content'
 import './Experience.scss'
 
 export function Experience() {
@@ -17,8 +25,8 @@ export function Experience() {
 					</div>
 				</div>
 			),
-			content: 'hello!',
-			anchor: 'experience/therma-tru',
+			content: webDevContractor,
+			anchor: 'experience/web-developer-contractor',
 		},
 		{
 			title: (
@@ -34,8 +42,8 @@ export function Experience() {
 					</div>
 				</div>
 			),
-			content: 'hello!',
-			anchor: 'experience/therma-tru',
+			content: sysAdminContractor,
+			anchor: 'experience/system-admin-contractor',
 		},
 		{
 			title: (
@@ -51,8 +59,8 @@ export function Experience() {
 					</div>
 				</div>
 			),
-			content: 'hello!',
-			anchor: 'experience/therma-tru',
+			content: itSupportThermaTru,
+			anchor: 'experience/it-support-therma-tru',
 		},
 		{
 			title: (
@@ -68,8 +76,8 @@ export function Experience() {
 					</div>
 				</div>
 			),
-			content: 'hello!',
-			anchor: 'experience/therma-tru',
+			content: itSupportSwanton,
+			anchor: 'experience/it-support-swanton-schools',
 		},
 		{
 			title: (
@@ -85,8 +93,8 @@ export function Experience() {
 					</div>
 				</div>
 			),
-			content: 'hello!',
-			anchor: 'experience/therma-tru',
+			content: packageHandlerFedEx,
+			anchor: 'experience/package-handler-fedex',
 		},
 		{
 			title: (
@@ -102,8 +110,8 @@ export function Experience() {
 					</div>
 				</div>
 			),
-			content: 'hello!',
-			anchor: 'experience/therma-tru',
+			content: cashierLomaLindas,
+			anchor: 'experience/cashier-loma-lindas',
 		},
 	]
 
