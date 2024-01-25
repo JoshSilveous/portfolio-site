@@ -35,10 +35,15 @@
 				flex-direction: column;
 				align-items: flex-start;
 				.company {
+					width: fit-content;
 					font-style: italic;
 					font-size: 18px;
 				}
+				.job-title {
+					width: fit-content;
+				}
 				.timeframe {
+					width: fit-content;
 					font-size: 12px;
 					width: 130px;
 				}
