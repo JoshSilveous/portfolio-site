@@ -2,7 +2,6 @@
 	.fold-switcher-component {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
 		.title-wrapper {
 			display: flex;
 			justify-content: space-between;
@@ -11,6 +10,7 @@
 			flex-wrap: wrap;
 			gap: 15px;
 			row-gap: 0px;
+			margin-bottom: 20px;
 
 			.job-title {
 				width: 208px;

@@ -26,7 +26,6 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 				const thisFoldTitle = foldSwitcherContainer.childNodes[index]
 					.childNodes[0] as HTMLDivElement
 				scrollToPosition += thisFoldTitle.clientHeight
-				console.log(scrollToPosition)
 				return false
 			}
 		})
