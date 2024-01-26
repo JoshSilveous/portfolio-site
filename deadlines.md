@@ -1,5 +1,5 @@
-Complete Experience Section
-by Saturday, 1-27
+Add portfolio site project
+by Sunday, 1-28
 
 -   Add Icons to Projects section (far right)
     by Monday, 1-15
@@ -18,3 +18,9 @@ by Saturday, 1-27
     by Thursday, 1-25
 
 -   check mailto link
+
+-   Complete Experience Section
+    by Saturday, 1-27
+
+-   Add Next.JS Skill
+    by Sunday, 1-28

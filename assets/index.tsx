@@ -16,6 +16,7 @@ export { default as ReactIcon } from '@/public/skills_icons/react.svg'
 export { default as SassIcon } from '@/public/skills_icons/sass.svg'
 export { default as TypeScriptIcon } from '@/public/skills_icons/typescript.svg'
 export { default as LottieIcon } from '@/public/skills_icons/lottie.svg'
+export { default as NextIcon } from '@/public/skills_icons/next.svg'
 
 export { default as NodeIcon } from '@/public/skills_icons/node.svg'
 export { default as ExpressIcon } from '@/public/skills_icons/express.svg'

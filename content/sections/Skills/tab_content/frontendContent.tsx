@@ -9,6 +9,7 @@ import {
 	LottieIcon,
 	ProjectsIcon,
 	LinkIcon,
+	NextIcon,
 } from '@/assets'
 import { TextWithIcon } from '@/components'
 export const frontendContent: SkillSectionInfo[] = [
@@ -109,6 +110,23 @@ export const frontendContent: SkillSectionInfo[] = [
 			</>
 		),
 	},
+	{
+		name: 'Next',
+		icon: <NextIcon style={{ color: 'white' }} />,
+		description:
+			'Next.js is a React framework that enables functionalities such as server-side rendering and generating static websites, aiming to improve performance and development experience. It offers features like file-based routing, API routes, and built-in CSS modules support to streamline the process of building web applications',
+		additional_content: (
+			<>
+				Next.js is one of the newest tools I've added to my toolbelt. I have gone through
+				tutorials and crash courses to learn how Next.js's routing and unique features work.
+				<br />
+				<br />
+				This Portfolio website runs on Next.js, and I have done a bunch of little exercises
+				to learn multi-page routing and keeping state/data between URL routes.
+			</>
+		),
+	},
+
 	{
 		name: 'Sass',
 		icon: <SassIcon />,
