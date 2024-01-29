@@ -7,6 +7,7 @@ import {
 	JestIcon,
 	JoiIcon,
 	LottieIcon,
+	NextIcon,
 	NodeIcon,
 	OfficeIcon,
 	ReactIcon,
@@ -20,6 +21,21 @@ import * as sections from './fold_content'
 import './Projects.scss'
 export function Projects() {
 	const folds: FoldSwitcherContent[] = [
+		{
+			title: (
+				<div className='title-wrapper'>
+					<h2>Portfolio Site</h2>
+					<div className='icon-container'>
+						<NextIcon />
+						<TypeScriptIcon />
+						<ReactIcon />
+						<SassIcon />
+					</div>
+				</div>
+			),
+			content: sections.portfolioSiteContent,
+			anchor: 'projects/guitar-visualizer',
+		},
 		{
 			title: (
 				<div className='title-wrapper'>

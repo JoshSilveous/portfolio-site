@@ -1,3 +1,4 @@
+export { portfolioSiteContent } from './portfolioSiteContent'
 export { guitarVisualizerContent } from './guitarVisualizerContent'
 export { financeTrackerContent } from './financeTrackerContent'
 export { gradingApplicationContent } from './gradingApplicationContent'
