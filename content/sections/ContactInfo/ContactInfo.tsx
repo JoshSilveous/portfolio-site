@@ -15,11 +15,11 @@ export function ContactInfo() {
 						<div>JoshSilveous</div>
 					</div>
 				</TextWithIcon>
-				<TextWithIcon Icon={EmailIcon} href='mailto:JoshSilveous@gmail.com' newWindow>
+				<TextWithIcon Icon={EmailIcon} href='mailto:Joshua@silveo.us' newWindow>
 					<div className='container'>
 						<div>Email</div>
 						<div>-</div>
-						<div>JoshSilveous@gmail.com</div>
+						<div>Joshua@silveo.us</div>
 					</div>
 				</TextWithIcon>
 				<TextWithIcon
