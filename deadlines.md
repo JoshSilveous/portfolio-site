@@ -1,3 +1,6 @@
+Change link colors
+by Monday, 1-15
+
 -   Add Icons to Projects section (far right)
     by Monday, 1-15
 
