@@ -1,5 +1,11 @@
 Add portfolio site project
-by Sunday, 1-28
+by Monday, 1-29
+
+Add Education
+by Monday, 1-29
+
+Add Metadata
+by Monday, 1-29
 
 -   Add Icons to Projects section (far right)
     by Monday, 1-15
