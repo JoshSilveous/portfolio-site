@@ -17,7 +17,7 @@ export function Experience() {
 					<div className='job-title'>
 						<h2>Web Developer</h2>
 					</div>
-					<div className='company'>Contractor</div>
+					<div className='company'>Freelance</div>
 					<div className='timeframe'>
 						<div className='start-month'>Feb 2021</div>
 						<div className='divider'>-</div>
@@ -26,7 +26,7 @@ export function Experience() {
 				</div>
 			),
 			content: webDevContractor,
-			anchor: 'experience/web-developer-contractor',
+			anchor: 'experience/web-developer-freelance',
 		},
 		{
 			title: (
@@ -34,7 +34,7 @@ export function Experience() {
 					<div className='job-title'>
 						<h2>IT Systems Admin</h2>
 					</div>
-					<div className='company'>Contractor</div>
+					<div className='company'>Freelance</div>
 					<div className='timeframe'>
 						<div className='start-month'>Dec 2023</div>
 						<div className='divider'>-</div>
@@ -43,7 +43,7 @@ export function Experience() {
 				</div>
 			),
 			content: sysAdminContractor,
-			anchor: 'experience/system-admin-contractor',
+			anchor: 'experience/system-admin-freelance',
 		},
 		{
 			title: (
@@ -119,6 +119,9 @@ export function Experience() {
 		<div className='section experience'>
 			<a className='anchor' id='experience' />
 			<h1>Experience</h1>
+			<p style={{ marginTop: 0 }}>
+				<i>Sorted by relevance</i>
+			</p>
 
 			<FoldSwitcher folds={folds} />
 		</div>
