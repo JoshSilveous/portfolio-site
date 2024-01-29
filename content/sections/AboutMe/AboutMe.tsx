@@ -1,6 +1,7 @@
 import {
 	BikeIcon,
 	ControllerIcon,
+	EducationIcon,
 	ExerciseIcon,
 	GeocachingIcon,
 	HikingIcon,
@@ -44,6 +45,20 @@ export function AboutMe() {
 				</p>
 			</div>
 			<div className='col-container two'>
+				<div className='col-right'>
+					<h2>Education</h2>
+					<TextWithIcon Icon={EducationIcon} iconStyle={{ marginRight: '10px' }}>
+						<div>
+							<div>
+								<strong>Information Technology</strong>
+							</div>
+							<div style={{ fontSize: '14px' }}>Bachelor's Degree</div>
+							<div style={{ fontSize: '14px' }}>
+								<i>The University of Toledo</i>
+							</div>
+						</div>
+					</TextWithIcon>
+				</div>
 				<div className='col-left'>
 					<h2>Hobbies</h2>
 					<TextWithIcon
@@ -95,13 +110,6 @@ export function AboutMe() {
 					>
 						Geocaching
 					</TextWithIcon>
-				</div>
-				<div className='col-right'>
-					<h2>Career Goal</h2>
-					<p>
-						To solve challenging problems by creating beautiful (and intuitive)
-						applications that provide efficiency, convenience, and functionality.
-					</p>
 				</div>
 			</div>
 		</div>

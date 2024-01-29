@@ -39,6 +39,7 @@ export { default as PDFIcon } from '@/public/misc/pdf.svg'
 export { default as ImageIcon } from '@/public/misc/image.svg'
 export { default as FullscreenIcon } from '@/public/misc/fullscreen.svg'
 export { default as LoadingAnim } from '@/public/misc/loading_anim.svg'
+export { default as EducationIcon } from '@/public/misc/education.svg'
 
 export { default as BikeIcon } from '@/public/hobbies_icons/bike.svg'
 export { default as ControllerIcon } from '@/public/hobbies_icons/controller.svg'
