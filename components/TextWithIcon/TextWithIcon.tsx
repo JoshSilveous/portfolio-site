@@ -21,10 +21,10 @@ export function TextWithIcon({
 }: TextWithIconProps) {
 	if (href === undefined) {
 		return (
-			<div className={`text-with-icon ${inline ? 'inline' : ''}`} style={style}>
+			<span className={`text-with-icon ${inline ? 'inline' : ''}`} style={style}>
 				<Icon style={iconStyle} />
 				{children}
-			</div>
+			</span>
 		)
 	} else {
 		return (

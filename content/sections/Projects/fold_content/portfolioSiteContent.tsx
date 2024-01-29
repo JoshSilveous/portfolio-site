@@ -62,7 +62,7 @@ export const portfolioSiteContent = (
 			</p>
 			<h2>
 				<Code style={{ fontSize: '24px', marginTop: '30px' }}>
-					&#60;<div className='comp'>FoldSwitcher</div> /&#62;
+					&#60;<span className='comp'>FoldSwitcher</span> /&#62;
 				</Code>
 			</h2>
 			<p>
@@ -73,23 +73,23 @@ export const portfolioSiteContent = (
 				To open up one of these folds, I cannot just set the element's height to auto,
 				because CSS cannot transition between{' '}
 				<Code>
-					<div className='val'>0px</div>
+					<span className='val'>0px</span>
 				</Code>{' '}
 				and{' '}
 				<Code>
-					<div className='val'>auto</div>
+					<span className='val'>auto</span>
 				</Code>
 				. Instead, my code calculates what the{' '}
 				<Code>
-					<div className='prop'>height</div>
+					<span className='prop'>height</span>
 				</Code>{' '}
 				will be when open, sets the{' '}
 				<Code>
-					<div className='prop'>height</div>
+					<span className='prop'>height</span>
 				</Code>{' '}
 				px value to that number, then switches it to{' '}
 				<Code>
-					<div className='val'>auto</div>
+					<span className='val'>auto</span>
 				</Code>{' '}
 				afterwards to allow proper page resizing.
 			</p>
@@ -97,18 +97,18 @@ export const portfolioSiteContent = (
 				On top of that, other folds are closed when one is opened to prevent cluttering the
 				page. Also, each section is automatically opened when navigated to via{' '}
 				<Code>
-					&#60;<div className='elem'>a</div> /&#62;
+					&#60;<span className='elem'>a</span> /&#62;
 				</Code>{' '}
 				tag.
 			</p>
 			<p>
 				Also, when you navigate to a fold using an{' '}
 				<Code>
-					&#60;<div className='elem'>a</div> /&#62;
+					&#60;<span className='elem'>a</span> /&#62;
 				</Code>{' '}
 				tag, your browser scrolls to the position of the element with the matching{' '}
 				<Code>
-					<div className='prop'>id</div>
+					<span className='prop'>id</span>
 				</Code>{' '}
 				. However, since these folds open/close automatically, your browser may scroll you
 				to the position of the id <i>prior</i> to an element above it closing, causing your
@@ -117,7 +117,7 @@ export const portfolioSiteContent = (
 				To prevent this, I implemented behavior that calculates where to top of the element
 				with a matching{' '}
 				<Code>
-					<div className='prop'>id</div>
+					<span className='prop'>id</span>
 				</Code>{' '}
 				<i>will be</i>, after the animation, and it scrolls you to that position instead.
 			</p>
@@ -126,7 +126,7 @@ export const portfolioSiteContent = (
 			</p>
 			<h2>
 				<Code style={{ fontSize: '24px', marginTop: '30px' }}>
-					&#60;<div className='comp'>TextWithIcon</div> /&#62;
+					&#60;<span className='comp'>TextWithIcon</span> /&#62;
 				</Code>
 			</h2>
 			<p>
@@ -140,15 +140,15 @@ export const portfolioSiteContent = (
 				You just add the svg icon as a prop, and the text/content as children to the
 				component. You can also add a{' '}
 				<Code>
-					<div className='prop'>href</div>
+					<span className='prop'>href</span>
 				</Code>{' '}
 				property to turn it into a link, and use the{' '}
 				<Code>
-					<div className='prop'>inline</div>
+					<span className='prop'>inline</span>
 				</Code>{' '}
 				and{' '}
 				<Code>
-					<div className='prop'>newWindow</div>
+					<span className='prop'>newWindow</span>
 				</Code>{' '}
 				boolean properties to control those values.
 			</p>
@@ -166,38 +166,38 @@ export const portfolioSiteContent = (
 				<br />
 				<br />
 				<Code style={{ display: 'block', overflowX: 'auto' }}>
-					&#60;<div className='comp'>TextWithIcon</div>
+					&#60;<span className='comp'>TextWithIcon</span>
 					<br />
 					&nbsp; &nbsp;
-					<div className='prop'>Icon</div>=<div className='prop'>&#123;</div>
-					<div className='val'>LinkedInIcon</div>
-					<div className='prop'>&#125;</div>
+					<span className='prop'>Icon</span>=<span className='prop'>&#123;</span>
+					<span className='val'>LinkedInIcon</span>
+					<span className='prop'>&#125;</span>
 					<br />
 					&nbsp; &nbsp;
-					<div className='prop'>href</div>=
-					<div className='str'>'https://www.linkedin.com/in/joshua-silveous/'</div>
+					<span className='prop'>href</span>=
+					<span className='str'>'https://www.linkedin.com/in/joshua-silveous/'</span>
 					<br />
-					<div className='prop'>
+					<span className='prop'>
 						&nbsp; &nbsp;inline
 						<br />
 						&nbsp; &nbsp;newWindow
-					</div>
+					</span>
 					<br />
 					&#62;
 					<br />
 					&nbsp; &nbsp;LinkedIn
 					<br />
-					&#60;/<div className='comp'>TextWithIcon</div>&#62;
+					&#60;/<span className='comp'>TextWithIcon</span>&#62;
 				</Code>
 			</p>
 			<p style={{ marginTop: '60px' }}>
 				There are more components used in this site, like the{' '}
 				<Code>
-					&#60;<div className='comp'>TabSwitcher</div> /&#62;
+					&#60;<span className='comp'>TabSwitcher</span> /&#62;
 				</Code>{' '}
 				component and the{' '}
 				<Code>
-					&#60;<div className='comp'>Code</div> /&#62;
+					&#60;<span className='comp'>Code</span> /&#62;
 				</Code>{' '}
 				component used to style these code sections, but I don't think all of that is
 				necessary to explain here. I figured I'd just provide a couple of examples for those

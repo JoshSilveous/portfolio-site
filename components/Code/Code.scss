@@ -7,23 +7,19 @@
 	font-size: 16px;
 	text-wrap: nowrap;
 
-	div {
-		display: inline;
-
-		&.prop {
-			color: #acfaf7;
-		}
-		&.val {
-			color: #9ae020;
-		}
-		&.comp {
-			color: #3ac990;
-		}
-		&.elem {
-			color: #4a9cb3;
-		}
-		&.str {
-			color: #ce834a;
-		}
+	.prop {
+		color: #acfaf7;
+	}
+	.val {
+		color: #9ae020;
+	}
+	.comp {
+		color: #3ac990;
+	}
+	.elem {
+		color: #4a9cb3;
+	}
+	.str {
+		color: #ce834a;
 	}
 }
