@@ -21,7 +21,7 @@ export const otherContent: SkillSectionInfo[] = [
 			'Adobe Photoshop is a powerful graphics editing software used for image manipulation, design, and digital art creation.',
 		additional_content: (
 			<>
-				I have used Photoshop countless times. In regards to web development, I have used it
+				I have used Photoshop countless times. Regarding web development, I have used it
 				to place consistent graphics on images and repair minor imperfections.
 			</>
 		),
@@ -33,7 +33,7 @@ export const otherContent: SkillSectionInfo[] = [
 			'Adobe After Effects is a motion graphics and visual effects software used for creating animations, compositing, and video post-production.',
 		additional_content: (
 			<>
-				I have pretty advanced hobby experience with After Effects, such as 3D motion
+				I have advanced hobby experience with After Effects, such as 3D motion
 				tracking and compositing. In high school, I would use it with Blender to create
 				awesome CGI effects, such as this CGI Monkey animation:
 				<br />
@@ -90,7 +90,7 @@ export const otherContent: SkillSectionInfo[] = [
 			'Blender is a versatile open-source 3D computer graphics software used for modeling, animation, rendering, and creating visual effects.',
 		additional_content: (
 			<>
-				I picked up Blender animation for fun in high school, and have spent many hours
+				I picked up Blender animation for fun in high school, and I have spent many hours
 				learning to do neat things with it. Most of my time was spent learning rendering
 				techniques and photorealistic design for CGI, but I've also used blender to create
 				models for many 3D printing projects.
@@ -152,7 +152,7 @@ export const otherContent: SkillSectionInfo[] = [
 			<>
 				I took a deep dive into VBA for a few months, with the goal of creating a personal
 				finance tracker in Excel that would automatically generate new pages per interval
-				(weekly, biweekly, etc), and automatically update all formulas, so the end user
+				(weekly, biweekly, etc.), and automatically update all formulas, so the end user
 				never has to.
 				<br />
 				<br />I know how to create dialog / model popups, perform complex loops, and

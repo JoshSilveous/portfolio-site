@@ -34,13 +34,13 @@ export function AboutMe() {
 				</p>
 				<br />
 				<p style={{ marginBottom: '0px' }}>
-					<strong>So, are you a front end developer? Or are you full stack?</strong>
+					<strong>So, are you a front-end developer? Or are you full stack?</strong>
 				</p>
 				<p style={{ marginTop: '5px' }}>
-					I am a <u>front end developer with back end capabilities</u>. Much of my
-					knowledge resides in front end technologies (React, TypeScript, Sass, etc.), but
+					I am a <u>front-end developer with back-end capabilities</u>. Much of my
+					knowledge resides in front-end technologies (React, TypeScript, Sass, etc.), but
 					I also know Relational Database tech (SQL) very well. I can also create
-					type-safe APIs using Node.js and Express.js, though my backend knowledge doesn't
+					type-safe APIs using Node.js and Express.js, though my back-end knowledge doesn't
 					extend too far past that currently.
 				</p>
 			</div>

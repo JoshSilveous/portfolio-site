@@ -37,7 +37,7 @@ export const guitarVisualizerContent = (
 			<h3>The First Implementation</h3>
 			<p>
 				When COVID-19 caused a national lockdown back in 2020, I decided to teach myself to
-				play guitar. After a few months of my fingers hurting, I eventually got pretty good
+				play guitar. After a few months of my fingers hurting, I eventually got fairly good
 				at it, and started diving into music theory. I find music theory quite interesting,
 				as learning it really shows you that a ton of music concepts (scales, chords,
 				progressions) are really all based in mathematic formulas. However, I really dreaded
@@ -96,7 +96,7 @@ export const guitarVisualizerContent = (
 				certain things.
 			</p>
 			<p>
-				Eventually, I decided to axe this project. I determined it'd be better to start from
+				Eventually, I decided to axe this project. I decided it'd be better to start from
 				scratch with all the insight I'd gained throughout this project. However, if you'd
 				like to take a look, you can find the GitHub repository{' '}
 				<TextWithIcon

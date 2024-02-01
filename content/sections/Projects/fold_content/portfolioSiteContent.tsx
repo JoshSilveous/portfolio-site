@@ -70,7 +70,7 @@ export const portfolioSiteContent = (
 				<strong>Experience</strong> sections took a lot of thought to create.
 			</p>
 			<p>
-				To open up one of these folds, I cannot just set the element's height to auto,
+				To open one of these folds, I cannot just set the element's height to auto,
 				because CSS cannot transition between{' '}
 				<Code>
 					<span className='val'>0px</span>
@@ -137,7 +137,7 @@ export const portfolioSiteContent = (
 				, and I use them all over this site, so I created a component for it.
 			</p>
 			<p>
-				You just add the svg icon as a prop, and the text/content as children to the
+				You just add the SVG icon as a prop, and the text/content as children to the
 				component. You can also add a{' '}
 				<Code>
 					<span className='prop'>href</span>

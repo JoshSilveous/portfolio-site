@@ -83,7 +83,7 @@ export const gradingApplicationContent = (
 			<h3>Electron</h3>
 			<p>
 				This program was built with <strong>Electron</strong>, which allows me to build
-				fully-featured OS applications using Node.js for OS functions, such as writing data,
+				fully featured OS applications using Node.js for OS functions, such as writing data,
 				and React for building the UI. No internet connection needed.
 			</p>
 			<p>
