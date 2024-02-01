@@ -1,7 +1,3 @@
--   Change link colors
--   Check for typos
--   Make Skills Icons smaller
-
 -   Add Icons to Projects section (far right)
     by Monday, 1-15
 
@@ -32,3 +28,6 @@
     by Monday, 1-29
 -   Add Metadata
     by Monday, 1-29
+-   Change link colors
+-   Check for typos
+-   Make Skills Icons smaller
