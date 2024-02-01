@@ -56,7 +56,7 @@ export const financeTrackerContent = (
 				<TextWithIcon Icon={ProjectsIcon} href='#projects/excellent-finance-tracker' inline>
 					Excel-lent Finance Tracker
 				</TextWithIcon>{' '}
-				project). It works really well for my own needs, but I wished there was a tool with
+				project). It works quite well for my own needs, but I wished there was a tool with
 				a web interface that allowed me to track transactions in a similar style.
 				Pre-existing apps like RocketMoney never really did what I wanted, so I decided to
 				build my "dream finance tracker" app myself.

@@ -33,7 +33,7 @@ export const advancedLottieViewerContent = (
 		<div className='description'>
 			<p>
 				A few years ago, I discovered a technology called <strong>Lottie</strong>, which
-				provides a way to create lightweight vector animations using Adobe After Effects.
+				supplies a way to create lightweight vector animations using Adobe After Effects.
 				The effect is similar to a typical animated SVG, but Lottie gives you far more
 				control over the animation.
 			</p>
@@ -65,7 +65,7 @@ export const advancedLottieViewerContent = (
 			<br />
 			<p>
 				This project is <strong>really old</strong>. I created it as I was first learning
-				web development, so a lot of the code isn't exactly top notch. But, it works.
+				web development, so a lot of the code isn't exactly top notch. However, it's a prototype of an idea, and does what I need it to do successfully.
 			</p>
 			<p>
 				Check out the player{' '}

@@ -98,7 +98,7 @@ export const excellentFinanceTrackerContent = (
 			<br />
 			<br />
 			<p>
-				That's it! Now you can track your finances as you please. All of the{' '}
+				That's it! Now you can track your finances as you please. Each of the{' '}
 				<strong>Date</strong>, <strong>Category</strong>, and <strong>Account</strong> cells
 				have built-in autocomplete and drop-down menus, which makes entering information a
 				breeze. You can also generate next interval's page with the click of a button, and
@@ -119,7 +119,7 @@ export const excellentFinanceTrackerContent = (
 			<br />
 			<br />
 			<p>
-				Finally, there is also an Overview page, which graphs all of your data through the
+				Finally, there is also an Overview page, which graphs your data throughout the
 				entire sheet, giving you a better glimpse of your overall money trends.{' '}
 				<TextWithIcon
 					Icon={ImageIcon}

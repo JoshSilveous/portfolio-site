@@ -21,7 +21,7 @@ export const frontendContent: SkillSectionInfo[] = [
 		additional_content: (
 			<>
 				I have been working with HTML for years. I had mild exposure during high school,
-				when I was loosly teaching myself about Python and Django. College classes have also
+				when I was loosely teaching myself about Python and Django. College classes have also
 				taught me a lot, but much of my HTML experience comes from self-learning and project
 				experience.
 			</>
@@ -31,13 +31,13 @@ export const frontendContent: SkillSectionInfo[] = [
 		name: 'CSS',
 		icon: <CSSIcon />,
 		description:
-			"CSS (Cascading Style Sheets) is responsible for styling web pages controlling layout, and enhancing the visual appeal of websites. CSS goes hand-in-hand with HTML to create a page's UI.",
+			"CSS (Cascading Style Sheets) is responsible for styling web pages controlling layout and enhancing the visual appeal of websites. CSS goes hand-in-hand with HTML to create a page's UI.",
 		additional_content: (
 			<>
 				CSS is fairly simple to use effectively, but there is a lot of nuances you can learn
 				to create beautiful and interesting pages. I have experience with all display models
 				(block, flexbox and grid), variables, animations/transitions, responsive design
-				(media queries), and many psuedoselectors.
+				(media queries), and many pseudo-classes.
 			</>
 		),
 	},
@@ -48,10 +48,10 @@ export const frontendContent: SkillSectionInfo[] = [
 			'JavaScript is a versatile programming language that adds interactivity and dynamic behavior to web applications. JavaScript can also be used as a back-end service (using Node.js), allowing applications, APIs, and server programs to be built on JavaScript.',
 		additional_content: (
 			<>
-				JavaScript is the backbone of modern interactivity on the web, and probably the most
+				JavaScript is the backbone of modern interactivity on the web, and usually the most
 				important language in a web developer's arsenal. I have been working with JavaScript
 				for years, and have a very strong understanding of modern JavaScript principles
-				(array methods, objects, functional programming, etc).
+				(array methods, objects, functional programming, etc.).
 			</>
 		),
 	},
@@ -62,9 +62,9 @@ export const frontendContent: SkillSectionInfo[] = [
 			'TypeScript brings type safety to JavaScript, providing reliable code and developer productivity.',
 		additional_content: (
 			<>
-				I love TypeScript, and use it exclusively in my personal JavaScript projects.
+				I love TypeScript and I use it exclusively in my personal JavaScript projects.
 				Whenever I write code, I like to write as if somebody else will be using it later
-				on, making sure that my code is clean and well-documented. TypeScript supports that
+				on (making sure that my code is clean and well-documented). TypeScript supports that
 				goal, allowing me to explain functions with much more depth than vanilla JavaScript,
 				create interfaces to define object structures, and write convenient documentation
 				for my code through JSDocs, which integrates itself into most modern editors.
@@ -118,7 +118,7 @@ export const frontendContent: SkillSectionInfo[] = [
 		additional_content: (
 			<>
 				Next.js is one of the newest tools I've added to my toolbelt. I have gone through
-				tutorials and crash courses to learn how Next.js's routing and unique features work.
+				tutorials and crash courses to learn how Next's routing and unique features work.
 				<br />
 				<br />
 				This Portfolio website runs on Next.js, and I have done a bunch of little exercises
@@ -156,7 +156,7 @@ export const frontendContent: SkillSectionInfo[] = [
 				<TextWithIcon Icon={ProjectsIcon} href='#projects/advanced-lottie-viewer' inline>
 					Advanced Lottie Viewer
 				</TextWithIcon>{' '}
-				project. .
+				project.
 			</>
 		),
 	},

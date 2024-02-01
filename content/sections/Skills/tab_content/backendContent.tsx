@@ -101,7 +101,7 @@ export const backendContent: SkillSectionInfo[] = [
 					Finance Tracker
 				</TextWithIcon>{' '}
 				project, I decided to do some research and discovered Joi. This library allows you
-				to strictly enforce the format of JSON objects that hit your API, and requires very
+				to strictly enforce the format of JSON objects that hit your API and requires very
 				little code to do so. You simply create a schema, then create middleware functions
 				for your API routes that validate objects against it (and methods to handle
 				different validation outcomes).
@@ -116,7 +116,7 @@ export const backendContent: SkillSectionInfo[] = [
 		additional_content: (
 			<>
 				Electron itself has a fairly minimal learning curve if you already know how to
-				develop frontends and backends. I used Electron to create my{' '}
+				develop front-end and back-end applications. I used Electron to create my{' '}
 				<TextWithIcon Icon={ProjectsIcon} href='#projects/grading-application' inline>
 					Grading Application
 				</TextWithIcon>
