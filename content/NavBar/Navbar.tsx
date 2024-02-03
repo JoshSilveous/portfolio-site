@@ -68,9 +68,6 @@ export function Navbar() {
 			const anchorContainerNode = navbarRef.current!.childNodes[0]
 				.childNodes[2] as HTMLDivElement
 
-			console.log('splashContainerNode', splashContainerNode)
-			console.log('anchorContainerNode', anchorContainerNode)
-
 			transitionHeightClosedToOpen(splashContainerNode, 2.5, 2)
 
 			transitionHeightClosedToOpen(anchorContainerNode, 5.5, 2).then(() => {
