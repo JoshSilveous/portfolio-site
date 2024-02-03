@@ -16,7 +16,7 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 		const foldSwitcherContainer = foldSwitchContainerRef.current! as HTMLDivElement
 		const foldSwitcherTop = foldSwitcherContainer.offsetTop - 80 // offset for NavBar
 
-		// using <a id="..." /> elements causes a visual bug, where when a fold higher-on the page is closing, it offsets the scrollTo position of the <a> element
+		// using <a id="..." /> elements causes a visual bug, where when a fold higher-up the page is closing, it offsets the scrollTo position of the <a> element
 		// this method preemptively calculates where the top of the fold will be, and scrolls the user to it, regardless of open/close animation state
 		let scrollToPosition = foldSwitcherTop
 		folds.some((_fold, index) => {
@@ -29,17 +29,20 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 				return false
 			}
 		})
-		window.scrollTo(0, scrollToPosition)
+		window.scrollTo(0, scrollToPosition - 10)
 	}
 
 	// If user clicks a href that focuses on a fold section, close other folds, open the specified fold, and scroll to it's position
 	useEffect(() => {
 		const anchorsArray = folds.map((fold) => '#' + fold.anchor)
-
+		console.log('anchorArray', anchorsArray)
 		function scrollToFoldSpecifiedInURL() {
-			const indexOfURLDirectedFold = anchorsArray.indexOf(window.location.hash)
-			scrollToFold(indexOfURLDirectedFold)
-			setActiveFoldIndex(indexOfURLDirectedFold)
+			if (anchorsArray.includes(window.location.hash)) {
+				console.log('scrolling to', window.location.hash, 'anchorArray is', anchorsArray)
+				const indexOfURLDirectedFold = anchorsArray.indexOf(window.location.hash)
+				scrollToFold(indexOfURLDirectedFold)
+				setActiveFoldIndex(indexOfURLDirectedFold)
+			}
 		}
 
 		window.addEventListener('popstate', scrollToFoldSpecifiedInURL)
