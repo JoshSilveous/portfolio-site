@@ -14,6 +14,8 @@ import {
 } from '@/assets'
 
 export function Navbar() {
+	console.log("Well well, someone's curious 😉")
+
 	const paragraphRef = useRef<HTMLParagraphElement>(null)
 	const anchorContainerRef = useRef<HTMLParagraphElement>(null)
 	const navbarRef = useRef<HTMLDivElement>(null)

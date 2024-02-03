@@ -35,10 +35,8 @@ export function FoldSwitcher({ folds, defaultFoldIndex }: FoldSwitcherProps) {
 	// If user clicks a href that focuses on a fold section, close other folds, open the specified fold, and scroll to it's position
 	useEffect(() => {
 		const anchorsArray = folds.map((fold) => '#' + fold.anchor)
-		console.log('anchorArray', anchorsArray)
 		function scrollToFoldSpecifiedInURL() {
 			if (anchorsArray.includes(window.location.hash)) {
-				console.log('scrolling to', window.location.hash, 'anchorArray is', anchorsArray)
 				const indexOfURLDirectedFold = anchorsArray.indexOf(window.location.hash)
 				scrollToFold(indexOfURLDirectedFold)
 				setActiveFoldIndex(indexOfURLDirectedFold)
