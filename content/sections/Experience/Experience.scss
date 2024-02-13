@@ -10,7 +10,6 @@
 			flex-wrap: wrap;
 			gap: 15px;
 			row-gap: 0px;
-			margin-bottom: 20px;
 
 			.job-title {
 				width: 212px;
@@ -31,7 +30,13 @@
 				width: 180px;
 				justify-content: space-between;
 			}
-			@media (max-width: 838px) {
+		}
+		@media (max-width: 838px) {
+			.fold-component {
+				margin-bottom: 20px;
+			}
+
+			.title-wrapper {
 				flex-direction: column;
 				align-items: flex-start;
 				.company {
