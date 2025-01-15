@@ -1,0 +1,177 @@
+.container {
+	display: contents;
+
+	.changed {
+		color: var(--font-color-changed) !important;
+		option {
+			color: var(--font-color) !important;
+		}
+	}
+	--padding-val: 2.5px;
+	--margin-top: 10px;
+	--border-radius: 5px;
+	.cell_container {
+		width: 100%;
+		box-sizing: border-box; // have to use border-box to prevent form element overlaps
+		margin-top: var(--gap-row-height);
+
+		background-color: var(--bg-color-lighter-2);
+		padding: calc(var(--padding-val) * 2) var(--padding-val);
+		height: calc(36px + (var(--padding-val) * 4));
+		&.first_col {
+			padding-left: calc(var(--padding-val) * 2);
+			border-radius: var(--border-radius) 0 0 var(--border-radius);
+		}
+		&.last_col {
+			padding-right: calc(var(--padding-val) * 2);
+			border-radius: 0 var(--border-radius) var(--border-radius) 0;
+		}
+
+		&.row_controller,
+		&.more_controls_container {
+			min-height: 35px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			user-select: none;
+			width: 100%;
+			background-color: transparent;
+		}
+		&.more_controls_container {
+			width: 100%;
+			margin-left: calc(var(--padding-val) * 2);
+			justify-content: flex-start;
+
+			.more_controls {
+				.delete,
+				.add_item {
+					svg {
+						height: 20px;
+						width: 20px;
+					}
+				}
+			}
+		}
+
+		&.row_controller {
+			padding: 0 10px;
+			.reorder_grabber,
+			.delete_container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				button {
+					height: 26px;
+					width: 26px;
+					background-color: transparent;
+					border: none;
+					color: var(--font-color);
+					transition: scale 0.1s ease;
+					padding: 0;
+					svg {
+						height: 20px;
+						width: 20px;
+					}
+					&:hover:not(:disabled) {
+						scale: 120%;
+					}
+					&:active:not(:disabled) {
+						scale: 100%;
+					}
+					&:disabled {
+						color: var(--font-color-disabled);
+						cursor: not-allowed;
+					}
+				}
+				&.changed button {
+					color: var(--font-color-changed);
+				}
+			}
+			.reorder_grabber {
+				button {
+					cursor: grab;
+					&:active:not(:disabled) {
+						cursor: grabbing;
+					}
+				}
+			}
+			.delete_container {
+				button {
+					transition: color 0.1s ease;
+					cursor: pointer;
+					&:hover:not(:disabled) {
+						color: var(--font-color-error);
+					}
+				}
+			}
+		}
+	}
+
+	/* DELETE OVERLAY STYLES */
+	--delete-overlay-transition-time: 0.2s;
+	.delete_overlay {
+		display: contents;
+		margin-top: var(--gap-row-height);
+		box-shadow: none !important;
+
+		&:not(.visible) {
+			.blur {
+				backdrop-filter: blur(0px);
+			}
+			& > * {
+				pointer-events: none !important;
+				opacity: 0% !important;
+			}
+		}
+		& > * {
+			margin-top: inherit;
+			margin-bottom: inherit;
+		}
+		.blur {
+			grid-column: 2 / -1;
+			z-index: 1;
+			border-radius: var(--border-radius);
+			transition: backdrop-filter var(--delete-overlay-transition-time) ease;
+			backdrop-filter: blur(2px);
+		}
+		.color_overlay {
+			grid-column: 2 / -1;
+			z-index: 1;
+			border-radius: var(--border-radius);
+			transition: opacity var(--delete-overlay-transition-time) ease;
+			background-color: var(--bg-color-lighter-1);
+			opacity: 80%;
+		}
+		.text {
+			grid-column: 2 / 6;
+			z-index: 2;
+			padding-left: calc(var(--padding-val) * 8);
+			box-sizing: border-box;
+			transition: opacity var(--delete-overlay-transition-time) ease;
+			opacity: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.button_container {
+			grid-column: 6 / 7;
+			z-index: 2;
+			padding: 0 calc(var(--padding-val) * 8);
+			box-sizing: border-box;
+			transition: opacity var(--delete-overlay-transition-time) ease;
+			opacity: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+	.cell_container {
+		opacity: 100%;
+		transition: opacity var(--delete-overlay-transition-time) ease;
+		&.hidden {
+			opacity: 0%;
+			pointer-events: none;
+		}
+	}
+}

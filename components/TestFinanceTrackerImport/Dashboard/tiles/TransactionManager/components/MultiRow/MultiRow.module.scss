@@ -1,0 +1,319 @@
+.container {
+	display: contents;
+	--padding-val: 5px;
+	--margin-top: 10px;
+	--border-radius: 5px;
+	.column {
+		width: 100%;
+		padding-top: var(--padding-val);
+		padding-bottom: var(--padding-val);
+		padding-left: calc(var(--padding-val) / 2);
+		padding-right: calc(var(--padding-val) / 2);
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
+		gap: var(--padding-val);
+		margin-top: var(--gap-row-height);
+
+		.cell_container {
+			width: 100%;
+			box-sizing: border-box; // have to use border-box to prevent form element overlaps
+			background-color: var(--bg-color-lighter-2);
+		}
+		.changed {
+			color: var(--font-color-changed) !important;
+			option {
+				color: var(--font-color) !important;
+			}
+		}
+
+		&:not(.control, .more_controls) {
+			background-color: var(--bg-color-lighter-2);
+			&.date {
+				padding-left: var(--padding-val);
+				border-top-left-radius: var(--border-radius);
+				border-bottom-left-radius: var(--border-radius);
+			}
+			&.account {
+				padding-right: var(--padding-val);
+				border-top-right-radius: var(--border-radius);
+				border-bottom-right-radius: var(--border-radius);
+			}
+		}
+		&.control,
+		&.more_controls {
+			padding: var(--padding-val) 0;
+			.cell_container {
+				min-height: 36px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				user-select: none;
+				width: 100%;
+				padding: var(--padding-val) calc(var(--padding-val) * 2);
+				background-color: transparent;
+				&:not(.first_row) {
+					justify-content: flex-end;
+				}
+
+				&.more_controls_container {
+					min-height: 36px;
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					user-select: none;
+					width: 100%;
+					background-color: transparent;
+					width: 100%;
+					margin-left: var(--padding-val);
+					justify-content: flex-start;
+					padding: var(--padding-val) calc(var(--padding-val) / 2);
+
+					.more_controls {
+						.delete,
+						.add_item {
+							svg {
+								height: 20px;
+								width: 20px;
+							}
+						}
+					}
+				}
+				.pending_creation_indicator {
+					padding: 0 5px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 100%;
+					.new_text {
+						font-weight: 500;
+						font-size: 10px;
+						color: var(--font-color-changed);
+					}
+				}
+				.reorder_grabber,
+				.fold_toggle {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					button {
+						height: 26px;
+						width: 26px;
+						background-color: transparent;
+						border: none;
+						color: var(--font-color);
+						transition: scale 0.1s ease, color 0.1s ease;
+						padding: 0;
+						svg {
+							height: 20px;
+							width: 20px;
+						}
+						&:hover:not(:disabled) {
+							scale: 120%;
+						}
+						&:active:not(:disabled) {
+							scale: 100%;
+						}
+						&:disabled {
+							color: var(--font-color-disabled);
+							cursor: not-allowed;
+						}
+					}
+					&.changed button {
+						color: var(--font-color-changed);
+					}
+				}
+				.reorder_grabber {
+					button {
+						cursor: grab;
+						&:active:not(:disabled) {
+							cursor: grabbing;
+						}
+					}
+				}
+				.fold_toggle {
+					color: var(--font-color);
+					&.folded {
+						transform: rotate(0deg);
+					}
+					&:not(.folded) {
+						transform: rotate(-180deg);
+					}
+					cursor: pointer;
+					button {
+						svg {
+							height: 15px;
+							width: 15px;
+						}
+					}
+				}
+			}
+		}
+
+		/* POPPED-OUT ROW STYLES */
+		.cell_container.popped_out {
+			padding: var(--padding-val) calc(var(--padding-val) / 2);
+			display: flex;
+			position: fixed;
+			z-index: 999;
+			box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+		}
+		&.control .cell_container.popped_out {
+			background-color: transparent;
+			padding-top: calc(var(--padding-val) * 2);
+			padding-right: calc(var(--padding-val) * 2.5);
+			filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3));
+			box-shadow: none;
+		}
+		&.more_controls .cell_container.popped_out {
+			box-shadow: none;
+			padding-top: calc(var(--padding-val) * 2);
+			filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3));
+		}
+		&.date .cell_container.popped_out {
+			padding-left: var(--padding-val);
+			border-top-left-radius: var(--border-radius);
+			border-bottom-left-radius: var(--border-radius);
+		}
+		&.account .cell_container.popped_out {
+			padding-right: var(--padding-val);
+			border-top-right-radius: var(--border-radius);
+			border-bottom-right-radius: var(--border-radius);
+		}
+		&.date .cell_container.popped_out {
+			width: calc(100% + calc(var(--padding-val) * 3));
+		}
+
+		/* RE-ORDERING ROW EFFECT STYLES */
+		--margin-gap-size: calc(36px + var(--padding-val));
+		.transitions {
+			transition: margin 0.2s ease;
+		}
+		.margin_top {
+			margin-top: calc(var(--margin-gap-size) / 2);
+		}
+		.margin_bottom {
+			margin-bottom: calc(var(--margin-gap-size) / 2);
+		}
+		.margin_top_double {
+			margin-top: var(--margin-gap-size);
+		}
+		.margin_bottom_double {
+			margin-bottom: var(--margin-gap-size);
+		}
+
+		/* FOLDING / UNFOLDING EFFECT STYLES */
+		// overflow-y: hidden; moving this to foldRenderer.ts, since having this on 24/7 prevents the options menu from overlapping the content
+		--fold-animation-time: 0.5s; // set in createFoldToggleHandler.ts as well
+		&.folded {
+			.cell_container:not(.first_row) {
+				display: none;
+			}
+		}
+		.fold_toggle {
+			transition: scale 0.1s ease, color 0.1s ease,
+				transform var(--fold-animation-time) ease;
+		}
+	}
+
+	/* DELETE OVERLAY STYLES */
+	--delete-overlay-transition-time: 0.5s;
+	.delete_overlay {
+		display: contents;
+		margin-top: var(--gap-row-height);
+		box-shadow: none !important;
+
+		&:not(.visible) {
+			.blur {
+				backdrop-filter: blur(0px);
+			}
+			& > * {
+				pointer-events: none !important;
+				opacity: 0% !important;
+			}
+		}
+		& > * {
+			margin-top: inherit;
+			margin-bottom: inherit;
+		}
+		.blur {
+			grid-column: 2 / -2;
+			z-index: 1;
+			border-radius: var(--border-radius);
+			transition: backdrop-filter var(--delete-overlay-transition-time) ease;
+			backdrop-filter: blur(2px);
+		}
+		.color_overlay {
+			grid-column: 2 / -2;
+			z-index: 1;
+			border-radius: var(--border-radius);
+			transition: opacity var(--delete-overlay-transition-time) ease;
+			background-color: var(--bg-color-lighter-1);
+			opacity: 80%;
+		}
+		.text {
+			grid-column: 2 / 6;
+			z-index: 2;
+			padding: 0 calc(var(--padding-val) * 4);
+			box-sizing: border-box;
+			transition: opacity var(--delete-overlay-transition-time) ease;
+			opacity: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.button_container {
+			grid-column: 6 / 7;
+			z-index: 2;
+			padding: 0 calc(var(--padding-val) * 4);
+			box-sizing: border-box;
+			transition: opacity var(--delete-overlay-transition-time) ease;
+			opacity: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	.cell_container {
+		opacity: 100%;
+		transition: opacity var(--delete-overlay-transition-time) ease,
+			filter var(--delete-overlay-transition-time) ease;
+		button {
+			transition: opacity 0.2s ease;
+		}
+		&.transaction_pending_deletion {
+			opacity: 0%;
+			pointer-events: none;
+		}
+		&.item_pending_deletion {
+			position: relative !important;
+			&:not(.row_controls_container, .more_controls_container) {
+				filter: blur(3px);
+				opacity: 50%;
+				pointer-events: none;
+			}
+			&.row_controls_container button:not(.undo_delete_button),
+			&.more_controls_container button:not(.undo_delete_button) {
+				opacity: 0%;
+				pointer-events: none;
+			}
+			*:not(.pending_deletion_button) {
+				user-select: none;
+			}
+
+			.pending_deletion_text {
+				color: var(--font-color);
+				position: absolute;
+				width: 400px;
+				z-index: 1;
+				left: calc(100% + var(--padding-val) * 4);
+			}
+			.pending_deletion_button {
+				position: absolute;
+				width: 200px;
+				z-index: 1;
+				right: calc(100% + var(--padding-val) * 4);
+			}
+		}
+	}
+}

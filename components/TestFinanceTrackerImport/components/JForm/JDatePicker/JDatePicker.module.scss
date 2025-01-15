@@ -1,0 +1,88 @@
+.main {
+	width: 100%;
+	position: relative;
+
+	input {
+		font-family: inherit;
+		color: inherit;
+		width: 100%;
+		background-color: var(--bg-color-lighter-1);
+		height: 36px;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 8px 30px 8px 10px;
+		border-radius: 3px;
+		outline: 0px solid transparent;
+		box-shadow: inset 0 0 0 0.5px var(--input-border-color);
+		border: 0;
+		transition: box-shadow 0.15s ease, outline 0.1s ease;
+		appearance: none;
+		-webkit-appearance: none;
+		position: relative;
+		&:focus:not(:disabled),
+		&:active:not(:disabled) {
+			box-shadow: inset 0 0 0 2px var(--input-border-color);
+			outline: 2px solid var(--font-color);
+		}
+
+		// Hide custom Calendar icon if using FireFox (as of writing, no way to hide firefox's default).
+		// I promise you, I googled. Looks like there used to be a way and it stopped working.
+		@-moz-document url-prefix() {
+			padding: 8px 10px;
+		}
+
+		&::-webkit-calendar-picker-indicator {
+			opacity: 0;
+			display: block;
+			position: absolute;
+			right: 10px;
+			width: 20px;
+			height: 100%;
+			cursor: pointer;
+		}
+	}
+	.icon_container {
+		position: absolute;
+		color: inherit;
+		svg {
+			height: 15px;
+			width: 15px;
+		}
+		top: 0;
+		right: 10px;
+		height: 100%;
+
+		display: flex;
+		align-items: center;
+		pointer-events: none;
+		transition: scale 0.2s ease;
+		scale: 100%;
+
+		@-moz-document url-prefix() {
+			display: none;
+		}
+	}
+	&:focus-within .icon_container {
+		scale: 120%;
+	}
+	&.minimal_style {
+		input {
+			background-color: transparent;
+			box-shadow: none !important;
+		}
+		.icon_container {
+			display: none;
+		}
+	}
+	&.disabled {
+		input {
+			padding: 8px 10px;
+			color: var(--font-color-disabled);
+			cursor: not-allowed;
+			&:focus,
+			&:active {
+				box-shadow: inset 0 0 0 1px var(--input-border-color);
+			}
+		}
+	}
+}
