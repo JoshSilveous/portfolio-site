@@ -60,6 +60,7 @@
 
 			--scrollbar-width: 17px; // this is a "default" value, which gets overridden once the component renders with the calculated scrollbar width (since this varies between browsers).
 			.tile {
+				overflow: hidden;
 				display: flex;
 				flex-direction: column;
 				overflow: auto;
@@ -83,5 +84,8 @@
 		.submit_feedback {
 			margin-right: auto;
 		}
+	}
+	.discard {
+		margin-left: auto;
 	}
 }

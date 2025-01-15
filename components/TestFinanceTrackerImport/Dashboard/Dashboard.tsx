@@ -9,7 +9,6 @@ import { genDisplayTiles, TileData } from './tiles'
 import { fetchTileData, upsertTiles } from '@/components/TestFinanceTrackerImport/database'
 import { saveChanges } from './func/saveChanges'
 import { AddTilePopup } from './tiles/AddTilePopup/AddTilePopup'
-import { FeedbackPopup } from '@/components/TestFinanceTrackerImport/components/FeedbackPopup/FeedbackPopup'
 import { CategoryEditorPopup } from './components/CategoryEditorPopup/CategoryEditorPopup'
 import { AccountEditorPopup } from './components/AccountEditorPopup/AccountEditorPopup'
 import { JFlyoutMenu } from '@/components/TestFinanceTrackerImport/components/JFlyoutMenu/JFlyoutMenu'
@@ -197,19 +196,6 @@ export function Dashboard() {
 		popup.trigger()
 	}
 
-	const handleFeedback = () => {
-		const popup = createPopup(
-			<FeedbackPopup
-				closePopup={() => {
-					popup.close()
-				}}
-				feedbackSource='dashboard_general'
-				header='Submit Feedback'
-			/>
-		)
-		popup.trigger()
-	}
-
 	return (
 		<div className={`${s.main} ${isLoading ? s.loading : ''}`}>
 			<div className={s.loading_anim_container}>
@@ -258,13 +244,6 @@ export function Dashboard() {
 						},
 					]}
 				/>
-				<JButton
-					jstyle='invisible'
-					className={s.submit_feedback}
-					onClick={handleFeedback}
-				>
-					Submit Feedback
-				</JButton>
 				<JButton
 					jstyle='secondary'
 					className={s.discard}

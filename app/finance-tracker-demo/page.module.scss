@@ -1,0 +1,120 @@
+.main {
+	background-color: red;
+}
+/* START TEMPORARY FIX FOR FONT ISSUE ON WORK COMPUTER */
+@font-face {
+	font-family: '__Inter_36bd41';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url(/public/fonts/inter.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+		U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+		U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: '__Inter_Fallback_36bd41';
+	src: local('Arial');
+	ascent-override: 90.49%;
+	descent-override: 22.56%;
+	line-gap-override: 0%;
+	size-adjust: 107.06%;
+}
+.main {
+	font-family: '__Inter_36bd41', '__Inter_Fallback_36bd41';
+	font-style: normal;
+}
+
+/* END TEMPORARY FIX FOR FONT ISSUE ON WORK COMPUTER */
+
+/* GLOBAL VARIABLES (also defined in ./globals.ts) */
+.main {
+	--GRID_SPACING: 30px;
+}
+
+/* Sets the scrollbar width variables (for chrome), which will be overwritten with browser-specific values once setScrollbarWidth() is ran. */
+.main {
+	--scrollbar-width: 17px;
+	--scrollbar-width-thin: 11px;
+}
+.main {
+	--bg-color: #171717;
+	--bg-color-lighter-1: #222222;
+	--bg-color-lighter-2: #3d3d3d;
+	--bg-color-lighter-3: #525252;
+
+	--prim-bg: #7c3aed;
+	--prim-bg-light-1: #8f57ef;
+	--prim-bg-light-2: #a477f1;
+	--prim-bg-dark-1: #6029bf;
+	--prim-bg-dark-2: #3f1b7c;
+
+	--error-color: #c32f2f;
+
+	--font-color: #eeeeee;
+	--font-color-disabled: #bbbbbb;
+	--font-color-error: #ff8383;
+	--font-color-changed: #83ff89;
+	--font-color-changed-transparent: #83ff89ce;
+
+	--popup-backdrop-color: #00000099;
+	--popup-bg-color: var(--bg-color-lighter-2);
+	--popup-error-backdrop-color: #22000099;
+	--popup-error-bg-color: #5d0000;
+
+	--input-border-color: rgba(229, 229, 229, 0.2);
+	--delete-overlay-color: #2900006a;
+
+	background-color: var(--bg-color);
+	overflow: hidden;
+	color: var(--font-color);
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0;
+	h1 {
+		font-weight: 500;
+		font-size: 30px;
+	}
+
+	label {
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 500;
+		padding: 8px 0;
+	}
+	a {
+		color: var(--prim-bg-light-1);
+		font-weight: 700;
+		transition: color 0.15s ease;
+		cursor: pointer;
+		&:hover,
+		&:focus,
+		&:active {
+			color: var(--prim-bg-light-2);
+		}
+	}
+}
+.layout {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	--NAVBAR-HEIGHT: 60px;
+
+	.navbar_container {
+		min-height: var(--NAVBAR-HEIGHT);
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.content_container {
+		height: calc(100vh - var(--NAVBAR-HEIGHT));
+	}
+}
+
+.container {
+	height: 100%;
+}

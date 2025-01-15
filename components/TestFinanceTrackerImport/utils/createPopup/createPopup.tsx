@@ -2,6 +2,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import s from './createPopup.module.scss'
+import { Inter } from 'next/font/google'
+const inter = Inter({ subsets: ['latin'] })
 
 // const popupDomLocation = ReactDOM.createRoot(
 // 	document.getElementById('popup-root') as HTMLDivElement
@@ -27,7 +29,7 @@ export function createPopup(
 	return {
 		trigger() {
 			popupDomLocation.render(
-				<div className={`${s.popup_background} ${s[type]}`}>
+				<div className={`${s.popup_background} ${s[type]} ${inter.className}`}>
 					<div className={s.popup_container}>
 						<div
 							className={s.popup_exit}

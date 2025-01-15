@@ -276,7 +276,7 @@ export function NewTransactionForm({
 						<div className={s.multiple_toggle_container}>
 							<label htmlFor='multiple-items'>Multiple Items?</label>
 							<JCheckbox
-								bgColor='var(--popup-bg-color)'
+								bgColor='#3d3d3d'
 								id='multiple-items'
 								checked={isMultiItems}
 								onChange={(e) => setIsMultiItems(e.target.checked)}

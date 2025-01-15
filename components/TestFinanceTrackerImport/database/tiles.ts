@@ -1,68 +1,108 @@
 'use client'
-import { TileData } from '@/components/TestFinanceTrackerImport/app/p/dashboard/Dashboard/tiles'
-import {
-	createClient,
-	getUserID,
-} from '@/components/TestFinanceTrackerImport/database/supabase/client'
-
-const supabase = createClient()
+import { TileData } from '@/components/TestFinanceTrackerImport/Dashboard/tiles'
+let tilesDef: TileData[] = [
+	{
+		id: 'f3e3a40a-45d4-4cd3-8a19-e1c389d4fe7b',
+		type: 'transaction_manager',
+		zIndex: 1,
+		position: {
+			top: 30,
+			left: 30,
+		},
+		size: {
+			width: 750,
+			height: 690,
+		},
+		options: null,
+	},
+	{
+		id: '2ef54019-c9d0-4316-954d-c11050531372',
+		type: 'simple_values',
+		zIndex: 3,
+		position: {
+			top: 270,
+			left: 810,
+		},
+		size: {
+			width: 240,
+			height: 180,
+		},
+		options: {
+			show: 'accounts',
+			title: 'Account Change since Paycheck',
+			exclude: [],
+			customDay: '2024-12-29',
+			showTitle: true,
+			showDataFor: 'per_two_weeks',
+		},
+	},
+	{
+		id: 'a54aabd1-0942-437e-8d12-e6f3409a776e',
+		type: 'simple_values',
+		zIndex: 4,
+		position: {
+			top: 480,
+			left: 810,
+		},
+		size: {
+			width: 240,
+			height: 240,
+		},
+		options: {
+			show: 'categories',
+			title: 'Category Change since Paycheck',
+			exclude: [],
+			customDay: '2025-01-14',
+			showTitle: true,
+			showDataFor: 'per_two_weeks',
+		},
+	},
+	{
+		id: '189dd16c-ac4f-40f7-a158-317b8c7ef53a',
+		type: 'simple_values',
+		zIndex: 2,
+		position: {
+			top: 30,
+			left: 810,
+		},
+		size: {
+			width: 240,
+			height: 210,
+		},
+		options: {
+			show: 'accounts',
+			title: 'Current Account Values',
+			exclude: [],
+			customDay: '2025-01-14',
+			showTitle: true,
+			showDataFor: 'all_time',
+		},
+	},
+]
 
 export async function fetchTileData() {
-	const { data, error } = await supabase
-		.from('tiles')
-		.select('id, top, left, height, width, type, options, zIndex')
-
-	if (error) {
-		throw new Error(error.message)
-	}
-	const structuredData: TileData[] = data.map((tile) => ({
-		id: tile.id,
-		type: tile.type,
-		zIndex: tile.zIndex,
-		position: { top: tile.top, left: tile.left },
-		size: { width: tile.width, height: tile.height },
-		options: tile.options,
-	}))
-	return structuredData
+	return tilesDef
 }
 
 export async function upsertTiles(tiles: TileData[]) {
-	const user_id = await getUserID()
-	const tilesWithUserID = tiles.map((tile) => ({
-		id: tile.id.split('||')[0] === 'PENDING_CREATION' ? undefined : tile.id,
-		height: tile.size.height,
-		width: tile.size.width,
-		top: tile.position.top,
-		left: tile.position.left,
-		type: tile.type,
-		options: tile.options,
-		zIndex: tile.zIndex,
-		user_id: user_id,
-	}))
-
-	const { error } = await supabase.from('tiles').upsert(tilesWithUserID, {
-		defaultToNull: false,
-		onConflict: 'id',
-		ignoreDuplicates: false,
+	tiles.forEach((tile) => {
+		const curIndex = tilesDef.findIndex((ti) => ti.id === tile.id)
+		if (curIndex !== -1) {
+			tilesDef[curIndex] = structuredClone(tile)
+		} else {
+			tilesDef.push(tile)
+		}
 	})
-
-	if (error) {
-		throw new Error(error.message)
-	}
 
 	return
 }
 
 export async function deleteTiles(ids: string[]) {
-	if (!ids.length) {
-		return
-	}
-
-	const { error } = await supabase.from('tiles').delete().in('id', ids)
-
-	if (error) {
-		throw new Error(error.message)
-	}
-
+	ids.forEach((id) => {
+		const curIndex = tilesDef.findIndex((ti) => ti.id === id)
+		if (curIndex !== -1) {
+			tilesDef.splice(curIndex, 1)
+		}
+	})
 	return
 }

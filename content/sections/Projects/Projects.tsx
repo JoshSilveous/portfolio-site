@@ -33,6 +33,21 @@ export function Projects() {
 					</div>
 				</div>
 			),
+			content: sections.newFinanceTrackerContent,
+			anchor: 'projects/new-finance-tracker',
+		},
+		{
+			title: (
+				<div className='title-wrapper'>
+					<h2>Portfolio Site</h2>
+					<div className='icon-container'>
+						<NextIcon />
+						<TypeScriptIcon />
+						<ReactIcon />
+						<SassIcon />
+					</div>
+				</div>
+			),
 			content: sections.portfolioSiteContent,
 			anchor: 'projects/guitar-visualizer',
 		},

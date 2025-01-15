@@ -4,7 +4,7 @@ import { default as ResizeHandle } from '@/components/TestFinanceTrackerImport/p
 import { default as RepositionHandle } from '@/components/TestFinanceTrackerImport/public/reposition_handle.svg'
 import { default as EditIcon } from '@/components/TestFinanceTrackerImport/public/edit_icon.svg'
 import { roundToMultiple } from '@/components/TestFinanceTrackerImport/utils'
-import { GRID_SPACING } from '@/components/TestFinanceTrackerImport/app/globals'
+import { GRID_SPACING } from '../../app/globals'
 
 export interface TileProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onResize'> {
 	children: ReactNode
@@ -39,6 +39,7 @@ export function Tile({
 	className,
 	showEditButton,
 	onEditButtonClick,
+	style,
 	...rest
 }: TileProps) {
 	const wrapperRef = useRef<HTMLDivElement>(null)
@@ -149,7 +150,11 @@ export function Tile({
 				maxHeight: maxHeight !== undefined ? `${maxHeight}px` : undefined,
 			}}
 		>
-			<div className={`${s.container} ${className ? className : ''}`} {...rest}>
+			<div
+				className={`${s.container} ${className ? className : ''}`}
+				style={{ ...style, overflow: 'hidden' }}
+				{...rest}
+			>
 				{children}
 				{resizable && (
 					<div className={s.resize_grabber} onMouseDown={onResizeGrabberMouseDown}>

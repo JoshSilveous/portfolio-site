@@ -9,7 +9,6 @@ import { SetStateAction, useEffect, useLayoutEffect, useRef } from 'react'
 import { SimpleValuesSettingsPopup } from '../SimpleValues/settings_popup/SimpleValuesSettingsPopup'
 import { Data } from '../../hooks/useData/useData'
 import { TileData } from '..'
-import { FeedbackPopup } from '@/components/TestFinanceTrackerImport/components/FeedbackPopup/FeedbackPopup'
 
 interface AddTilePopupProps {
 	closePopup: () => void
@@ -43,23 +42,6 @@ export function AddTilePopup({ closePopup, setTileData, data }: AddTilePopupProp
 		)
 		popup.trigger()
 	}
-	const suggestTile = () => {
-		const popup = createPopup(
-			<FeedbackPopup
-				closePopup={() => {
-					popup.close()
-					firstFocusRef.current!.focus()
-				}}
-				feedbackSource='suggest_a_tile'
-				header='Suggest a tile'
-			/>,
-			undefined,
-			() => {
-				firstFocusRef.current!.focus()
-			}
-		)
-		popup.trigger()
-	}
 	return (
 		<div className={s.main}>
 			<h2>New Tile</h2>
@@ -80,9 +62,6 @@ export function AddTilePopup({ closePopup, setTileData, data }: AddTilePopupProp
 				</JButton>
 				<JButton jstyle='secondary' disabled onClick={handleNewSimpleValuesTile}>
 					New Pie Chart Tile (work in progress)
-				</JButton>
-				<JButton jstyle='primary' onClick={suggestTile}>
-					Suggest a Tile
 				</JButton>
 			</div>
 			<div className={s.bottom_button_container}>

@@ -1,10 +1,9 @@
 'use client'
-import {
-	createClient,
-	getUserID,
-} from '@/components/TestFinanceTrackerImport/database/supabase/client'
-import { PostgrestError } from '@supabase/supabase-js'
-const supabase = createClient()
+
+import { delay } from '../utils'
+import dummyData from './dummyData'
+const { categories, accounts, transactions } = dummyData.dummyData
+
 export interface FetchedTransaction {
 	id: string
 	date: string
@@ -12,43 +11,36 @@ export interface FetchedTransaction {
 	order_position: number
 	items: {
 		id: string
-		account_id: string | null
-		category_id: string | null
+		account_id: string
+		category_id: string
 		name: string
 		amount: number
 		order_position: number
 	}[]
 }
+
+let transactionsData = [...transactions]
+
 export async function fetchTransactionData(startingDate: string) {
-	const { data, error } = (await supabase.rpc('get_transactions_with_items', {
-		starting_date: startingDate,
-	})) as {
-		data: FetchedTransaction[]
-		error: PostgrestError | null
-	}
-
-	if (error) {
-		throw new Error(error.message)
-	}
-
-	// this should realistically never happen outside of dev, but just in case
-	const filteredData = data.filter((transaction) => transaction.items !== null)
-	return filteredData
+	await delay(200)
+	const filteredData = transactionsData.filter(
+		(transaction) => transaction.date >= startingDate
+	)
+	return filteredData.map((transaction) => ({
+		id: transaction.id,
+		date: transaction.date,
+		name: transaction.name,
+		order_position: transaction.order_position,
+		items: transaction.items,
+	}))
 }
 
 export async function getTransactionsCount(date?: string) {
-	const { count, error } =
-		date === undefined
-			? await supabase.from('transactions').select('*', { count: 'exact', head: true })
-			: await supabase
-					.from('transactions')
-					.select('*', { count: 'exact', head: true })
-					.eq('date', date)
-
-	if (error) {
-		throw new Error(error.message)
+	await delay(200)
+	if (date) {
+		return transactionsData.filter((transaction) => transaction.date === date).length
 	}
-	return count as number
+	return transactionsData.length
 }
 
 export interface InsertTransactionEntry {
@@ -61,72 +53,44 @@ export interface InsertTransactionEntry {
 		account_id: string
 	}[]
 }
+
 export async function insertTransactionAndItems(transaction: InsertTransactionEntry) {
+	await delay(200)
 	if (transaction.name.trim() === '') {
 		throw new Error('Transaction Name cannot be empty!')
 	} else if (transaction.date.trim() === '') {
 		throw new Error('Transaction Date cannot be empty!')
 	} else if (transaction.items.length === 0) {
 		throw new Error('Transaction must have at least one item!')
-	} else if (transaction.items.length === 1) {
-		if (transaction.items[0].amount.trim() === '') {
-			throw new Error(`Item amount cannot be empty!`)
-		}
-	} else if (transaction.items.length > 1) {
+	} else {
 		transaction.items.forEach((item, index) => {
 			if (item.name.trim() === '') {
-				throw new Error(`Item #${index}'s name cannot be empty!`)
+				throw new Error(`Item #${index + 1}'s name cannot be empty!`)
 			}
 			if (item.amount.trim() === '') {
-				throw new Error(`Item #${index}'s amount cannot be empty!`)
+				throw new Error(`Item #${index + 1}'s amount cannot be empty!`)
 			}
 		})
 	}
-	const user_id = await getUserID()
 
-	// get # of transactions already (for this date) to determine order_position
-	const count = await getTransactionsCount()
-
-	const newPackagedTransaction = {
+	const order_position = (await getTransactionsCount()) + 1
+	const newTransaction = {
+		id: `txn${transactionsData.length + 1}`,
 		date: transaction.date,
 		name: transaction.name,
-		user_id: user_id,
-		order_position: count,
-	}
-
-	const { data: transactionData, error: transactionError } = await supabase
-		.from('transactions')
-		.insert([newPackagedTransaction])
-		.select('id')
-
-	if (transactionError) {
-		throw new Error(transactionError.message)
-	}
-
-	const newTransactionID = transactionData[0].id
-
-	const newPackagedItems = transaction.items.map((item, index) => {
-		return {
-			name: item.name.trim() === '' ? null : item.name,
+		order_position,
+		items: transaction.items.map((item, index) => ({
+			id: `item${Math.random().toString(36).substr(2, 9)}`,
+			account_id: item.account_id,
+			category_id: item.category_id,
+			name: item.name,
 			amount: Number(item.amount),
-			category_id: item.category_id === '' ? null : item.category_id,
-			account_id: item.account_id === '' ? null : item.account_id,
-			transaction_id: newTransactionID,
-			user_id: user_id,
-			order_position: index,
-		}
-	})
-
-	const { data: itemData, error: itemError } = await supabase
-		.from('transaction_items')
-		.insert(newPackagedItems)
-		.select('id')
-
-	if (itemError) {
-		throw new Error(itemError.message)
+			order_position: index + 1,
+		})),
 	}
 
-	return
+	transactionsData.push(newTransaction)
+	return newTransaction
 }
 
 export interface UpsertTransactionEntry {
@@ -135,118 +99,104 @@ export interface UpsertTransactionEntry {
 	date: string
 	order_position?: number
 }
+
 export interface UpsertItemEntry {
 	id?: string
-	name: string | null
+	name: string
 	amount: string
-	category_id: string | null
-	account_id: string | null
+	category_id: string
+	account_id: string
 	order_position?: number
 	transaction_id: string
 }
+
 export async function upsertTransactionsAndItems(
 	transactions: UpsertTransactionEntry[],
 	items: UpsertItemEntry[]
 ) {
-	const user_id = await getUserID()
+	await delay(200)
 
-	const transactionUpdatesWithUserID = transactions.map((transaction) => {
-		return {
-			...transaction,
-			user_id: user_id,
+	transactions.forEach((transaction) => {
+		if (transaction.id) {
+			const index = transactionsData.findIndex((t) => t.id === transaction.id)
+			if (index !== -1) {
+				transactionsData[index] = {
+					...transactionsData[index],
+					...transaction,
+				}
+			}
+		} else {
+			const newTransaction = {
+				id: `txn${transactionsData.length + 1}`,
+				...transaction,
+				order_position: transactionsData.length + 1,
+				items: [],
+			}
+			transactionsData.push(newTransaction)
 		}
 	})
-	const itemUpdatesWithUserID = items.map((item) => {
-		return {
-			...item,
-			amount: Number(item.amount),
-			category_id: item.category_id ? item.category_id : null,
-			account_id: item.account_id ? item.account_id : null,
-			user_id: user_id,
+
+	items.forEach((item, index) => {
+		const transaction = transactionsData.find((t) => t.id === item.transaction_id)
+		if (transaction) {
+			if (item.id) {
+				const index = transaction.items.findIndex((i) => i.id === item.id)
+				if (index !== -1) {
+					transaction.items[index] = {
+						...transaction.items[index],
+						...item,
+						amount: Number(item.amount),
+					}
+				}
+			} else {
+				transaction.items.push({
+					id: `item${Math.random().toString(36).substr(2, 9)}`,
+					...item,
+					amount: Number(item.amount),
+					order_position: index,
+				})
+			}
 		}
 	})
-
-	const { error: transactionError } = await supabase
-		.from('transactions')
-		.upsert(transactionUpdatesWithUserID, {
-			defaultToNull: false,
-			onConflict: 'id',
-			ignoreDuplicates: false,
-		})
-	if (transactionError) {
-		console.error(transactionError)
-		throw new Error(transactionError.message)
-	}
-
-	const { error: itemError } = await supabase
-		.from('transaction_items')
-		.upsert(itemUpdatesWithUserID, {
-			defaultToNull: false,
-			onConflict: 'id',
-			ignoreDuplicates: false,
-		})
-
-	if (itemError) {
-		console.error(itemError)
-		throw new Error(itemError.message)
-	}
-
-	return
 }
 
 export interface InsertItemEntry {
-	name: string | null
+	name: string
 	amount: string
-	category_id: string | null
-	account_id: string | null
+	category_id: string
+	account_id: string
 	transaction_id: string
 	order_position?: number
 }
-export async function insertItems(items: InsertItemEntry[]) {
-	const user_id = await getUserID()
 
-	const itemUpdatesWithUserID = items.map((item) => {
-		return {
-			...item,
-			amount: Number(item.amount),
-			user_id: user_id,
+export async function insertItems(items: InsertItemEntry[]) {
+	await delay(200)
+
+	items.forEach((item) => {
+		const transaction = transactionsData.find((t) => t.id === item.transaction_id)
+		if (transaction) {
+			transaction.items.push({
+				id: `item${Math.random().toString(36).substr(2, 9)}`,
+				...item,
+				amount: Number(item.amount),
+				order_position: transaction.items.length + 1,
+			})
 		}
 	})
-
-	const { data, error } = await supabase
-		.from('transaction_items')
-		.insert(itemUpdatesWithUserID)
-	if (error) {
-		throw new Error(error.message)
-	}
-
-	return data
 }
 
 export async function deleteItems(ids: string[]) {
-	if (!ids.length) {
-		return
-	}
+	await delay(200)
 
-	const { error } = await supabase.from('transaction_items').delete().in('id', ids)
-
-	if (error) {
-		throw new Error(error.message)
-	}
-
-	return
+	transactionsData.forEach((transaction) => {
+		transaction.items = transaction.items.filter((item) => !ids.includes(item.id))
+	})
 }
 
 export async function deleteTransactions(ids: string[]) {
-	if (!ids.length) {
-		return
-	}
+	await delay(200)
 
-	const { error } = await supabase.from('transactions').delete().in('id', ids)
-
-	if (error) {
-		throw new Error(error.message)
-	}
-
-	return
+	transactionsData = transactionsData.filter(
+		(transaction) => !ids.includes(transaction.id)
+	)
 }
