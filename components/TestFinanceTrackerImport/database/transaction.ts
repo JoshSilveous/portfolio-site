@@ -1,8 +1,8 @@
 'use client'
 
-import { delay } from '../utils'
+import { delay, getDateString, parseDateString } from '../utils'
 import dummyData from './dummyData'
-const { categories, accounts, transactions } = dummyData.dummyData
+const { categories, accounts, transactions } = dummyData
 
 export interface FetchedTransaction {
 	id: string
@@ -24,7 +24,7 @@ let transactionsData = [...transactions]
 export async function fetchTransactionData(startingDate: string) {
 	await delay(200)
 	const filteredData = transactionsData.filter(
-		(transaction) => transaction.date >= startingDate
+		(transaction) => parseDateString(transaction.date) >= parseDateString(startingDate)
 	)
 	return filteredData.map((transaction) => ({
 		id: transaction.id,

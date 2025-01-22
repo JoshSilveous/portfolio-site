@@ -24,7 +24,7 @@ export function Projects() {
 		{
 			title: (
 				<div className='title-wrapper'>
-					<h2>Portfolio Site</h2>
+					<h2>Finance Tracker</h2>
 					<div className='icon-container'>
 						<NextIcon />
 						<TypeScriptIcon />

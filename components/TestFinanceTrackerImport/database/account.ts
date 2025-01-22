@@ -2,7 +2,7 @@
 
 import { delay } from '../utils'
 import dummyData from './dummyData'
-const { categories, accounts, transactions } = dummyData.dummyData
+const { categories, accounts, transactions } = dummyData
 
 export interface FetchedAccount {
 	id: string

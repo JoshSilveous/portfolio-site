@@ -19,7 +19,7 @@ export const newFinanceTrackerContent = (
 			width='100%'
 			height='600px'
 			style={{ border: 'none', borderRadius: '5px' }}
-			title='Embedded Page'
+			title='Embedded example of my Finance Tracker website'
 			loading='lazy'
 		></iframe>
 	</div>

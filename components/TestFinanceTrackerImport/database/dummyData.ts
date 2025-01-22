@@ -1,3 +1,4 @@
+import { getCurDateString } from '../utils'
 import { FetchedAccount } from './account'
 import { FetchedCategory } from './category'
 import { FetchedTransaction } from './transaction'
@@ -20,7 +21,7 @@ let accounts: FetchedAccount[] = [
 let transactions: FetchedTransaction[] = [
 	{
 		id: 'txn1',
-		date: '2025-01-01',
+		date: getCurDateString(-4),
 		name: 'Weekly Groceries',
 		order_position: 1,
 		items: [
@@ -52,7 +53,7 @@ let transactions: FetchedTransaction[] = [
 	},
 	{
 		id: 'txn2',
-		date: '2025-01-01',
+		date: getCurDateString(-4),
 		name: 'Movie Night',
 		order_position: 2,
 		items: [
@@ -84,7 +85,7 @@ let transactions: FetchedTransaction[] = [
 	},
 	{
 		id: 'txn3',
-		date: '2025-01-01',
+		date: getCurDateString(-4),
 		name: 'Pharmacy Visit',
 		order_position: 3,
 		items: [
@@ -116,7 +117,7 @@ let transactions: FetchedTransaction[] = [
 	},
 	{
 		id: 'txn4',
-		date: '2025-01-02',
+		date: getCurDateString(-3),
 		name: 'Electricity Bill',
 		order_position: 4,
 		items: [
@@ -148,7 +149,7 @@ let transactions: FetchedTransaction[] = [
 	},
 	{
 		id: 'txn5',
-		date: '2025-01-02',
+		date: getCurDateString(-3),
 		name: 'Gas Refill',
 		order_position: 5,
 		items: [
@@ -180,7 +181,7 @@ let transactions: FetchedTransaction[] = [
 	},
 	{
 		id: 'txn6',
-		date: '2025-01-03',
+		date: getCurDateString(-2),
 		name: 'Lunch Out',
 		order_position: 6,
 		items: [
@@ -212,7 +213,7 @@ let transactions: FetchedTransaction[] = [
 	},
 	{
 		id: 'txn7',
-		date: '2025-01-03',
+		date: getCurDateString(-2),
 		name: 'Online Shopping',
 		order_position: 7,
 		items: [
@@ -244,7 +245,7 @@ let transactions: FetchedTransaction[] = [
 	},
 	{
 		id: 'txn8',
-		date: '2025-01-03',
+		date: getCurDateString(-2),
 		name: 'Coffee Shop',
 		order_position: 8,
 		items: [
@@ -276,7 +277,7 @@ let transactions: FetchedTransaction[] = [
 	},
 	{
 		id: 'txn9',
-		date: '2025-01-04',
+		date: getCurDateString(-1),
 		name: 'Gym Membership',
 		order_position: 9,
 		items: [
@@ -308,7 +309,7 @@ let transactions: FetchedTransaction[] = [
 	},
 	{
 		id: 'txn10',
-		date: '2025-01-04',
+		date: getCurDateString(-1),
 		name: 'Weekend Groceries',
 		order_position: 10,
 		items: [
@@ -341,5 +342,4 @@ let transactions: FetchedTransaction[] = [
 ]
 
 const dummyData = { categories, accounts, transactions }
-const exprt = { dummyData }
-export default exprt
+export default dummyData
