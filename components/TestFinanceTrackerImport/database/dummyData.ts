@@ -341,6 +341,5 @@ let transactions: FetchedTransaction[] = [
 ]
 
 const dummyData = { categories, accounts, transactions }
-export default {
-	dummyData,
-}
+const exprt = { dummyData }
+export default exprt

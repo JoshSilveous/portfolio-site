@@ -102,7 +102,7 @@ export function Experience() {
 					<div className='job-title'>
 						<h2>Cashier</h2>
 					</div>
-					<div className='company'>Loma Linda's Mexican Restaurant</div>
+					<div className='company'>Loma Linda&apos;s Mexican Restaurant</div>
 					<div className='timeframe'>
 						<div className='start-month'>Feb 2019</div>
 						<div className='divider'>-</div>

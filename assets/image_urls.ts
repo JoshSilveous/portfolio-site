@@ -66,7 +66,7 @@ const excel_7 = excel_7_image.src
 const about_me_1_cmpr = about_me_1_cmpr_image.src
 const about_me_1_full = about_me_1_full_image.src
 
-export default {
+const urls = {
 	brochure_back_cmpr,
 	brochure_back_full,
 	brochure_front_cmpr,
@@ -101,3 +101,5 @@ export default {
 	about_me_1_cmpr,
 	about_me_1_full,
 }
+
+export default urls

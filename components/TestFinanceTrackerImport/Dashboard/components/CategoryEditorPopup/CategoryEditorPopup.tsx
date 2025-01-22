@@ -10,7 +10,6 @@ import {
 	deleteCategoryAndTransactions,
 	fetchCategoryData,
 	insertCategory,
-	reportErrorToDB,
 	upsertCategories,
 	UpsertCategoryEntry,
 } from '@/components/TestFinanceTrackerImport/database'
@@ -350,7 +349,6 @@ export function CategoryEditorPopup({
 		try {
 			await saveChanges(catData, sortOrder, deletedCategories, defSortOrder)
 		} catch (e) {
-			reportErrorToDB(e as Error)
 			if (isStandardError(e)) {
 				promptError(
 					'An unexpected error has occurred while saving your changes:',

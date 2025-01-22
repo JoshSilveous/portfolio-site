@@ -11,7 +11,6 @@ import {
 	insertAccount,
 	upsertAccounts,
 	UpsertAccountEntry,
-	reportErrorToDB,
 } from '@/components/TestFinanceTrackerImport/database'
 import {
 	JButton,
@@ -384,7 +383,6 @@ export function AccountEditorPopup({
 		try {
 			await saveChanges(actData, sortOrder, deletedAccounts, defSortOrder)
 		} catch (e) {
-			reportErrorToDB(e as Error)
 			if (isStandardError(e)) {
 				promptError(
 					'An unexpected error has occurred while propagating table layout preferences in the database:',

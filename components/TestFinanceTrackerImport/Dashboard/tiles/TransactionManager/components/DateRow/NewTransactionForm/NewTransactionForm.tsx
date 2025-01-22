@@ -20,10 +20,7 @@ import {
 	getCurDateString,
 	createFocusLoop,
 } from '@/components/TestFinanceTrackerImport/utils'
-import {
-	insertTransactionAndItems,
-	reportErrorToDB,
-} from '@/components/TestFinanceTrackerImport/database'
+import { insertTransactionAndItems } from '@/components/TestFinanceTrackerImport/database'
 import { JCheckbox } from '@/components/TestFinanceTrackerImport/components/JForm/JCheckbox/JCheckbox'
 
 export interface TransactionFormData {
@@ -223,7 +220,6 @@ export function NewTransactionForm({
 					}
 					setCreationFinished(true)
 				} catch (e) {
-					reportErrorToDB(e as Error)
 					if (isStandardError(e)) {
 						promptError(
 							'Error occurred while creating your transaction.',
