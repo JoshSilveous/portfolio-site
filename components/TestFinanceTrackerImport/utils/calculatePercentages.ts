@@ -16,7 +16,7 @@ export function calculatePercentages<T extends (number | undefined)[]>(
 	}
 
 	const result = numbers.map((num) =>
-		num === undefined ? undefined : (num / total) * 100
+		num === undefined ? undefined : (num / total!) * 100
 	)
 
 	return result as T extends number[] ? number[] : (number | undefined)[]

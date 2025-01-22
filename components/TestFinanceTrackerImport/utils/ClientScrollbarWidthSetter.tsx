@@ -23,7 +23,7 @@ export function setScrollbarWidths() {
 	thinDiv.style.width = '100px'
 	thinDiv.style.height = '100px'
 	thinDiv.style.overflow = 'scroll'
-	thinDiv.style.scrollbarWidth = 'thin'
+	;(thinDiv.style as any).scrollbarWidth = 'thin' // compiler doesn't recognize scrollbarWidth for some reason
 
 	// Append the div to the body and calculate thin scrollbar width
 	document.body.appendChild(thinDiv)

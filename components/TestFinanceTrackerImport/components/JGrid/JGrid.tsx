@@ -90,12 +90,12 @@ export function JGrid(p: JGridTypes.Props) {
 
 						if (
 							maxColWidthsPcnt[index] !== undefined &&
-							newWidth > maxColWidthsPcnt[index]
+							newWidth > (maxColWidthsPcnt[index] as number)
 						) {
 							return prevWidths
 						} else if (
 							minColWidthsPcnt[index] !== undefined &&
-							newWidth < minColWidthsPcnt[index]
+							newWidth < (maxColWidthsPcnt[index] as number)
 						) {
 							return prevWidths
 						}

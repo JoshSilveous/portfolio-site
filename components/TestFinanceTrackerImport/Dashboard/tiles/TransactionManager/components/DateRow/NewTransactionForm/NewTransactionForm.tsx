@@ -236,7 +236,7 @@ export function NewTransactionForm({
 	const handleCreateAnother = useCallback(() => {
 		setFormData({
 			name: '',
-			date: defaultDate,
+			date: defaultDate as string,
 			items: [{ name: '', amount: '', category_id: '', account_id: '' }],
 		})
 		setCreationFinished(false)

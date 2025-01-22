@@ -421,10 +421,14 @@ export function useSortOrder({
 			)
 
 			if (Array.isArray(clone[date][transactionIndex])) {
-				clone[date][transactionIndex].splice(itemInsertIndex, 0, item_id)
+				;(clone[date][transactionIndex] as string[]).splice(
+					itemInsertIndex,
+					0,
+					item_id
+				)
 			} else {
 				clone[date][transactionIndex] = [
-					clone[date][transactionIndex],
+					clone[date][transactionIndex] as string,
 					first_item_id!,
 					item_id,
 				]

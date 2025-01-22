@@ -62,7 +62,7 @@ export async function insertTransactionAndItems(transaction: InsertTransactionEn
 		throw new Error('Transaction Date cannot be empty!')
 	} else if (transaction.items.length === 0) {
 		throw new Error('Transaction must have at least one item!')
-	} else {
+	} else if (transaction.items.length !== 1) {
 		transaction.items.forEach((item, index) => {
 			if (item.name.trim() === '') {
 				throw new Error(`Item #${index + 1}'s name cannot be empty!`)
