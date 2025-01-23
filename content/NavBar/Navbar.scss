@@ -130,6 +130,8 @@
 			@media (min-width: 480px) {
 				.text {
 					display: block;
+					width: 90px;
+					text-align: center;
 				}
 				.icon {
 					display: none;
@@ -141,6 +143,68 @@
 				}
 				.icon {
 					display: block;
+				}
+			}
+		}
+		.shimmer {
+			color: white;
+			cursor: pointer;
+			user-select: none;
+			overflow: hidden;
+			animation: 1s ease-out 1 fadeDown forwards;
+			opacity: 0%;
+
+			transition: scale 0.2s ease, text-shadow 0.2s ease;
+			&:hover {
+				scale: 120%;
+			}
+			&:active {
+				scale: 110%;
+			}
+			a {
+				color: #0c0c7c;
+				text-align: center;
+				color: rgba(255, 255, 255, 0.1);
+				background: -webkit-gradient(
+					linear,
+					left top,
+					right top,
+					from(#fff),
+					to(#fff),
+					color-stop(0.2, #0c0c7c)
+				);
+				background: -moz-gradient(
+					linear,
+					left top,
+					right top,
+					from(#fff),
+					to(#fff),
+					color-stop(0.2, #0c0c7c)
+				);
+				background: gradient(
+					linear,
+					left top,
+					right top,
+					from(#fff),
+					to(#fff),
+					color-stop(0.2, #0c0c7c)
+				);
+				background-size: 400px 100%;
+				background-clip: text;
+				animation-name: shimmer;
+				animation-duration: 2s;
+				animation-iteration-count: infinite;
+				background-repeat: no-repeat;
+				background-position: 0 0;
+
+				background-color: #fff;
+				@keyframes shimmer {
+					0% {
+						background-position: bottom right;
+					}
+					100% {
+						background-position: bottom left;
+					}
 				}
 			}
 		}

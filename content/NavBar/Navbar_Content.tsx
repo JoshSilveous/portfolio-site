@@ -21,10 +21,11 @@ export function Splash() {
 			)}
 			<br />
 			{stringToSpanWordArray(
-				'I built this entire site with Next, React, TypeScript, and Sass. Take a look around!',
+				'I built this entire site with Next, React, TypeScript, and Sass. Take a look around! Or,',
 				4,
 				0.03
 			)}
+			<br />
 		</>
 	)
 }

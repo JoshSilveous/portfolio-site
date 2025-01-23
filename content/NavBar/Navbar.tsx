@@ -70,7 +70,7 @@ export function Navbar() {
 
 			transitionHeightClosedToOpen(splashContainerNode, 2.5, 2)
 
-			transitionHeightClosedToOpen(anchorContainerNode, 5.5, 2).then(() => {
+			transitionHeightClosedToOpen(anchorContainerNode, 6.5, 2).then(() => {
 				// unlock scrolling
 				document.body.style.overflow = ''
 			})
@@ -108,6 +108,9 @@ export function Navbar() {
 					<p className='text' ref={paragraphRef}>
 						<Splash />
 					</p>
+				</div>
+				<div className='shimmer'>
+					<a href='#projects/finance-tracker'>Jump straight to my proudest work</a>
 				</div>
 				<div className='anchor-container' ref={anchorContainerRef}>
 					<a className='anchor-link' href='#about-me'>
