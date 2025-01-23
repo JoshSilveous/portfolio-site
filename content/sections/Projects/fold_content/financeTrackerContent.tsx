@@ -15,6 +15,7 @@ import {
 } from '@/assets'
 import urls from '@/assets/image_urls'
 import { TextWithIcon } from '@/components'
+import { IFrameTriggerable } from '@/components/IFrameTriggerable/IFrameTriggerable'
 
 export const financeTrackerContent = (
 	<div className='fold finance-tracker'>
@@ -79,15 +80,17 @@ export const financeTrackerContent = (
 					clicking stuff!
 				</span>
 			</p>
-			<iframe
-				className='dont_show_on_mobile'
-				src='/finance-tracker-demo'
-				width='100%'
-				height='600px'
-				style={{ border: 'none', borderRadius: '5px' }}
-				title='Embedded example of my Finance Tracker website'
-				loading='lazy'
-			/>
+			<IFrameTriggerable style={{ width: '900px', height: '600px' }}>
+				<iframe
+					className='dont_show_on_mobile'
+					src='/finance-tracker-demo'
+					width='900px'
+					height='600px'
+					style={{ border: 'none', borderRadius: '5px' }}
+					title='Embedded example of my Finance Tracker website'
+					loading='lazy'
+				/>
+			</IFrameTriggerable>
 			<p className='dont_show_on_mobile' style={{ marginTop: '0', fontSize: '14px' }}>
 				Note: this demo is a roughly cloned version of the real site, using
 				pre-loaded data instead of a database. You may run into issues, and this is

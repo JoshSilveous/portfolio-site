@@ -1,0 +1,27 @@
+.container {
+	border: 2px solid white;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	.button_container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		button {
+			background-color: #8288ff;
+			color: white;
+			transition: transform 0.2s ease, background-color 0.2s ease;
+
+			&:hover,
+			&:focus {
+				transform: translateY(-3px);
+			}
+			&:active {
+				background-color: #a2a6fc;
+				transform: translateY(-1.5px);
+			}
+		}
+	}
+}
