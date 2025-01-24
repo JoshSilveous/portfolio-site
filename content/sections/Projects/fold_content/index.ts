@@ -1,6 +1,7 @@
 export { portfolioSiteContent } from './portfolioSiteContent'
 export { guitarVisualizerContent } from './guitarVisualizerContent'
-export { financeTrackerContent } from './financeTrackerContent'
+export { oldFinanceTrackerContent } from './oldFinanceTrackerContent'
 export { gradingApplicationContent } from './gradingApplicationContent'
 export { advancedLottieViewerContent } from './advancedLottieViewer/advancedLottieViewerContent'
 export { excellentFinanceTrackerContent } from './excellentFinanceTrackerContent'
+export { financeTrackerContent } from './financeTrackerContent'

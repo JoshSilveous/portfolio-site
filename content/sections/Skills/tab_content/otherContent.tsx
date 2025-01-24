@@ -21,8 +21,8 @@ export const otherContent: SkillSectionInfo[] = [
 			'Adobe Photoshop is a powerful graphics editing software used for image manipulation, design, and digital art creation.',
 		additional_content: (
 			<>
-				I have used Photoshop countless times. Regarding web development, I have used it
-				to place consistent graphics on images and repair minor imperfections.
+				I have used Photoshop countless times. Regarding web development, I have used
+				it to place consistent graphics on images and repair minor imperfections.
 			</>
 		),
 	},
@@ -34,10 +34,13 @@ export const otherContent: SkillSectionInfo[] = [
 		additional_content: (
 			<>
 				I have advanced hobby experience with After Effects, such as 3D motion
-				tracking and compositing. In high school, I would use it with Blender to create
-				awesome CGI effects, such as this CGI Monkey animation:
+				tracking and compositing. In high school, I would use it with Blender to
+				create awesome CGI effects, such as this CGI Monkey animation:
 				<br />
-				<div className='iframe-wrapper' style={{ maxWidth: '500px', margin: '20px auto' }}>
+				<div
+					className='iframe-wrapper'
+					style={{ maxWidth: '500px', margin: '20px auto' }}
+				>
 					<iframe
 						loading='lazy'
 						src='https://www.youtube.com/embed/2OkpcVEsZBo'
@@ -46,9 +49,13 @@ export const otherContent: SkillSectionInfo[] = [
 						allowFullScreen
 					/>
 				</div>
-				<br />I also use After Effects to animate Lottie SVG graphics for websites, such as
-				those shown in my{' '}
-				<TextWithIcon Icon={ProjectsIcon} href='#projects/advanced-lottie-viewer' inline>
+				<br />I also use After Effects to animate Lottie SVG graphics for websites,
+				such as those shown in my{' '}
+				<TextWithIcon
+					Icon={ProjectsIcon}
+					href='#projects/advanced-lottie-viewer'
+					inline
+				>
 					Advanced Lottie Viewer
 				</TextWithIcon>{' '}
 				project.
@@ -62,13 +69,18 @@ export const otherContent: SkillSectionInfo[] = [
 			'Adobe Illustrator is a vector graphics design software used for creating scalable and high-quality illustrations, logos, and graphics.',
 		additional_content: (
 			<>
-				I mainly use Illustrator to create and edit SVG designs, such as those shown in my{' '}
-				<TextWithIcon Icon={ProjectsIcon} href='#projects/advanced-lottie-viewer' inline>
+				I mainly use Illustrator to create and edit SVG designs, such as those shown
+				in my{' '}
+				<TextWithIcon
+					Icon={ProjectsIcon}
+					href='#projects/advanced-lottie-viewer'
+					inline
+				>
 					Advanced Lottie Viewer
 				</TextWithIcon>{' '}
 				project.
-				<br />I have also used Illustrator to create complex print designs, such as the
-				posterboard and brochures for my college capstone project:
+				<br />I have also used Illustrator to create complex print designs, such as
+				the posterboard and brochures for my college capstone project:
 				<div className='two-col-container'>
 					<div className='col'>
 						<h3>Brochure</h3>
@@ -90,18 +102,19 @@ export const otherContent: SkillSectionInfo[] = [
 			'Blender is a versatile open-source 3D computer graphics software used for modeling, animation, rendering, and creating visual effects.',
 		additional_content: (
 			<>
-				I picked up Blender animation for fun in high school, and I have spent many hours
-				learning to do neat things with it. Most of my time was spent learning rendering
-				techniques and photorealistic design for CGI, but I've also used blender to create
-				models for many 3D printing projects.
+				I picked up Blender animation for fun in high school, and I have spent many
+				hours learning to do neat things with it. Most of my time was spent learning
+				rendering techniques and photorealistic design for CGI, but I&apos;ve also
+				used blender to create models for many 3D printing projects.
 				<br />
 				<br />
-				In regards to web development, I could use this skill to create complex Three.js
-				screens or other 3D graphics for web applications. Though admittedly, I haven't
-				dabbled with it yet, but I'm sure I could learn Three.js if needed.
+				In regards to web development, I could use this skill to create complex
+				Three.js screens or other 3D graphics for web applications. Though
+				admittedly, I haven&apos;t dabbled with it yet, but I&apos;m sure I could
+				learn Three.js if needed.
 				<br />
 				<br />
-				Below are some examples of stuff I've created with Blender.
+				Below are some examples of stuff I&apos;ve created with Blender.
 				<br />
 				<div className='two-col-container'>
 					<div className='col'>
@@ -138,8 +151,9 @@ export const otherContent: SkillSectionInfo[] = [
 			'Microsoft Office is a suite of productivity software, including applications like Word, Excel, PowerPoint, and Outlook, widely used for document creation, data analysis, and communication.',
 		additional_content: (
 			<>
-				I have an advanced knowledge of Microsoft Office products, especially Excel. I have
-				used excel for many reasons, such as tracking personal finances or graphing data.
+				I have an advanced knowledge of Microsoft Office products, especially Excel.
+				I have used excel for many reasons, such as tracking personal finances or
+				graphing data.
 			</>
 		),
 	},
@@ -150,14 +164,18 @@ export const otherContent: SkillSectionInfo[] = [
 			'VBA is a programming language developed by Microsoft for automating tasks within applications like Excel, Word, and Access.',
 		additional_content: (
 			<>
-				I took a deep dive into VBA for a few months, with the goal of creating a personal
-				finance tracker in Excel that would automatically generate new pages per interval
-				(weekly, biweekly, etc.), and automatically update all formulas, so the end user
-				never has to.
+				I took a deep dive into VBA for a few months, with the goal of creating a
+				personal finance tracker in Excel that would automatically generate new pages
+				per interval (weekly, biweekly, etc.), and automatically update all formulas,
+				so the end user never has to.
 				<br />
 				<br />I know how to create dialog / model popups, perform complex loops, and
 				automate rigorous tasks within Excel using VBA. Check out my{' '}
-				<TextWithIcon Icon={ProjectsIcon} href='#projects/excellent-finance-tracker' inline>
+				<TextWithIcon
+					Icon={ProjectsIcon}
+					href='#projects/excellent-finance-tracker'
+					inline
+				>
 					Excel-lent Finance Tracker
 				</TextWithIcon>{' '}
 				project for a closer look at my VBA skills.

@@ -36,29 +36,34 @@ export const portfolioSiteContent = (
 		</div>
 		<div className='description'>
 			<p>
-				Now that I'm searching for a career in web development, I figured it'd be a good
-				idea to put together a portfolio site. The goal was to create a centralized place to
-				view all of my qualifications and experience, without having to bounce around
-				through my LinkedIn, GitHub, etc.
+				Now that I&apos;m searching for a career in web development, I figured
+				it&apos;d be a good idea to put together a portfolio site. The goal was to
+				create a centralized place to view all of my qualifications and experience,
+				without having to bounce around through my LinkedIn, GitHub, etc.
 			</p>
 			<p>
-				This site allows me to show off a bit of style, personality, and my competence with
-				UI design. Also, I managed to snag a domain that is literally just my last name
-				(silveo.us) for only $20 per year, which is awesome.
+				This site allows me to show off a bit of style, personality, and my
+				competence with UI design. Also, I managed to snag a domain that is literally
+				just my last name (silveo.us) for only $20 per year, which is awesome.
 			</p>
 			<p>
-				I also took this as an opportunity to use Next.js on a large project. This entire
-				portfolio is a single-page application, so I didn't really use Next's router too
-				much, but I got to take advantage of server-side rendering and some other Next.js
-				features.
+				I also took this as an opportunity to use Next.js on a large project. This
+				entire portfolio is a single-page application, so I didn&apos;t really use
+				Next&apos;s router too much, but I got to take advantage of server-side
+				rendering and some other Next.js features.
 			</p>
 			<p>
 				Everything on this site (besides most icons, provided by{' '}
-				<TextWithIcon Icon={LinkIcon} href='https://www.svgrepo.com/' inline newWindow>
+				<TextWithIcon
+					Icon={LinkIcon}
+					href='https://www.svgrepo.com/'
+					inline
+					newWindow
+				>
 					SVGRepo
 				</TextWithIcon>
-				), is custom code. I put a lot of thought into the components here as well. Here's a
-				couple examples of components I created for this site:
+				), is custom code. I put a lot of thought into the components here as well.
+				Here&apos;s a couple examples of components I created for this site:
 			</p>
 			<h2>
 				<Code style={{ fontSize: '24px', marginTop: '30px' }}>
@@ -70,8 +75,8 @@ export const portfolioSiteContent = (
 				<strong>Experience</strong> sections took a lot of thought to create.
 			</p>
 			<p>
-				To open one of these folds, I cannot just set the element's height to auto,
-				because CSS cannot transition between{' '}
+				To open one of these folds, I cannot just set the element&apos;s height to
+				auto, because CSS cannot transition between{' '}
 				<Code>
 					<span className='val'>0px</span>
 				</Code>{' '}
@@ -94,8 +99,9 @@ export const portfolioSiteContent = (
 				afterwards to allow proper page resizing.
 			</p>
 			<p>
-				On top of that, other folds are closed when one is opened to prevent cluttering the
-				page. Also, each section is automatically opened when navigated to via{' '}
+				On top of that, other folds are closed when one is opened to prevent
+				cluttering the page. Also, each section is automatically opened when
+				navigated to via{' '}
 				<Code>
 					&#60;<span className='elem'>a</span> /&#62;
 				</Code>{' '}
@@ -110,16 +116,17 @@ export const portfolioSiteContent = (
 				<Code>
 					<span className='prop'>id</span>
 				</Code>{' '}
-				. However, since these folds open/close automatically, your browser may scroll you
-				to the position of the id <i>prior</i> to an element above it closing, causing your
-				position to be incorrect.
+				. However, since these folds open/close automatically, your browser may
+				scroll you to the position of the id <i>prior</i> to an element above it
+				closing, causing your position to be incorrect.
 				<br />
-				To prevent this, I implemented behavior that calculates where to top of the element
-				with a matching{' '}
+				To prevent this, I implemented behavior that calculates where to top of the
+				element with a matching{' '}
 				<Code>
 					<span className='prop'>id</span>
 				</Code>{' '}
-				<i>will be</i>, after the animation, and it scrolls you to that position instead.
+				<i>will be</i>, after the animation, and it scrolls you to that position
+				instead.
 			</p>
 			<p>
 				As you can see, <i>a lot</i> of detail work went into this component.
@@ -153,7 +160,7 @@ export const portfolioSiteContent = (
 				boolean properties to control those values.
 			</p>
 			<p>
-				For example, here's the code for a link to my{' '}
+				For example, here&apos;s the code for a link to my{' '}
 				<TextWithIcon
 					Icon={LinkedInIcon}
 					href='https://www.linkedin.com/in/joshua-silveous/'
@@ -175,7 +182,9 @@ export const portfolioSiteContent = (
 					<br />
 					&nbsp; &nbsp;
 					<span className='prop'>href</span>=
-					<span className='str'>'https://www.linkedin.com/in/joshua-silveous/'</span>
+					<span className='str'>
+						&apos;https://www.linkedin.com/in/joshua-silveous/&apos;
+					</span>
 					<br />
 					<span className='prop'>
 						&nbsp; &nbsp;inline
@@ -199,9 +208,9 @@ export const portfolioSiteContent = (
 				<Code>
 					&#60;<span className='comp'>Code</span> /&#62;
 				</Code>{' '}
-				component used to style these code sections, but I don't think all of that is
-				necessary to explain here. I figured I'd just provide a couple of examples for those
-				who are curious.
+				component used to style these code sections, but I don&apos;t think all of
+				that is necessary to explain here. I figured I&apos;d just provide a couple
+				of examples for those who are curious.
 			</p>
 		</div>
 	</div>

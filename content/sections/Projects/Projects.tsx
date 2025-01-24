@@ -13,6 +13,7 @@ import {
 	ReactIcon,
 	SassIcon,
 	SQLIcon,
+	SupabaseIcon,
 	TypeScriptIcon,
 	VBAIcon,
 } from '@/assets'
@@ -21,6 +22,23 @@ import * as sections from './fold_content'
 import './Projects.scss'
 export function Projects() {
 	const folds: FoldSwitcherContent[] = [
+		{
+			title: (
+				<div className='title-wrapper'>
+					<h2>Finance Tracker</h2>
+					<div className='icon-container'>
+						<NextIcon />
+						<TypeScriptIcon />
+						<ReactIcon />
+						<SassIcon />
+						<SQLIcon />
+						<SupabaseIcon />
+					</div>
+				</div>
+			),
+			content: sections.financeTrackerContent,
+			anchor: 'projects/finance-tracker',
+		},
 		{
 			title: (
 				<div className='title-wrapper'>
@@ -50,25 +68,25 @@ export function Projects() {
 			content: sections.guitarVisualizerContent,
 			anchor: 'projects/guitar-visualizer',
 		},
-		{
-			title: (
-				<div className='title-wrapper'>
-					<h2>Finance Tracker</h2>
-					<div className='icon-container'>
-						<TypeScriptIcon />
-						<ReactIcon />
-						<SassIcon />
-						<SQLIcon />
-						<NodeIcon />
-						<ExpressIcon />
-						<JestIcon />
-						<JoiIcon />
-					</div>
-				</div>
-			),
-			content: sections.financeTrackerContent,
-			anchor: 'projects/finance-tracker',
-		},
+		// {
+		// 	title: (
+		// 		<div className='title-wrapper'>
+		// 			<h2>Old Finance Tracker</h2>
+		// 			<div className='icon-container'>
+		// 				<TypeScriptIcon />
+		// 				<ReactIcon />
+		// 				<SassIcon />
+		// 				<SQLIcon />
+		// 				<NodeIcon />
+		// 				<ExpressIcon />
+		// 				<JestIcon />
+		// 				<JoiIcon />
+		// 			</div>
+		// 		</div>
+		// 	),
+		// 	content: sections.oldFinanceTrackerContent,
+		// 	anchor: 'projects/old-finance-tracker',
+		// },
 		{
 			title: (
 				<div className='title-wrapper'>

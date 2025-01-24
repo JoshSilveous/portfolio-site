@@ -20,6 +20,7 @@ export { default as NextIcon } from '@/public/skills_icons/next.svg'
 
 export { default as NodeIcon } from '@/public/skills_icons/node.svg'
 export { default as ExpressIcon } from '@/public/skills_icons/express.svg'
+export { default as SupabaseIcon } from '@/public/skills_icons/supabase.svg'
 export { default as SQLIcon } from '@/public/skills_icons/sql.svg'
 export { default as ElectronIcon } from '@/public/skills_icons/electron.svg'
 export { default as PHPIcon } from '@/public/skills_icons/php.svg'
@@ -166,4 +167,35 @@ export const AboutMe1Image = genImageComponent(
 	urls.about_me_1_full,
 	'A picture of myself.',
 	'About Me'
+)
+export const FinanceTracker1Image = genImageComponent(
+	urls.finance_tracker_1,
+	urls.finance_tracker_1,
+	'A screenshot of a Simple Tiles configuration.',
+	'Finance Tracker Customization'
+)
+export const FinanceTracker2Image = genImageComponent(
+	urls.finance_tracker_2,
+	urls.finance_tracker_2,
+	'A screenshot of the rendered Simple Tile',
+	'Finance Tracker Customization'
+)
+export const FinanceTracker1Anim = genImageComponent(
+	urls.finance_tracker_anim_1,
+	urls.finance_tracker_anim_1,
+	'A animation of a transaction being dragged into a different position. When it is dragged, the fold collapses temporarily.',
+	'Finance Tracker Reordering Animation'
+)
+export const FinanceTracker2Anim = genImageComponent(
+	urls.finance_tracker_anim_2,
+	urls.finance_tracker_anim_2,
+	'A animation of a category being dragged into a different position.',
+	'Finance Tracker Reordering Animation'
+)
+
+export const FinanceTracker3Anim = genImageComponent(
+	urls.finance_tracker_anim_3,
+	urls.finance_tracker_anim_3,
+	'A graphic showing that changed properties are marked with green, and return to the normal font color after saving.',
+	'Finance Tracker Saving Animation'
 )

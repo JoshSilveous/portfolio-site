@@ -12,8 +12,7 @@ export function Splash() {
 	return (
 		<>
 			{stringToSpanWordArray('Welcome to my portfolio website!', 2.5, 0.03)}
-			<br />
-			<br />
+			<div style={{ height: '10px' }} />
 			{stringToSpanWordArray(
 				'This is essentially a fancy resume, with a bit more depth and personality.',
 				3.5,
@@ -21,7 +20,7 @@ export function Splash() {
 			)}
 			<br />
 			{stringToSpanWordArray(
-				'I built this entire site with Next, React, TypeScript, and Sass. Take a look around!',
+				'I built this entire site with Next, React, TypeScript, and Sass. Take a look around! Or,',
 				4,
 				0.03
 			)}

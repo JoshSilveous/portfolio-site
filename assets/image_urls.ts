@@ -31,6 +31,11 @@ import excel_6_full_image from '@/public/images/excel_6_full.png'
 import excel_7_image from '@/public/images/excel_7.png'
 import about_me_1_cmpr_image from '@/public/images/about_me_1_cmpr.jpg'
 import about_me_1_full_image from '@/public/images/about_me_1_full.jpg'
+import finance_tracker_1_image from '@/public/images/finance_tracker_1.png'
+import finance_tracker_2_image from '@/public/images/finance_tracker_2.png'
+import finance_tracker_anim_1_image from '@/public/images/finance_tracker_anim_1.gif'
+import finance_tracker_anim_2_image from '@/public/images/finance_tracker_anim_2.gif'
+import finance_tracker_anim_3_image from '@/public/images/finance_tracker_anim_3.gif'
 
 const brochure_front_cmpr = brochure_front_cmpr_image.src
 const brochure_front_full = brochure_front_full_image.src
@@ -65,8 +70,13 @@ const excel_6_full = excel_6_full_image.src
 const excel_7 = excel_7_image.src
 const about_me_1_cmpr = about_me_1_cmpr_image.src
 const about_me_1_full = about_me_1_full_image.src
+const finance_tracker_1 = finance_tracker_1_image.src
+const finance_tracker_2 = finance_tracker_2_image.src
+const finance_tracker_anim_1 = finance_tracker_anim_1_image.src
+const finance_tracker_anim_2 = finance_tracker_anim_2_image.src
+const finance_tracker_anim_3 = finance_tracker_anim_3_image.src
 
-export default {
+const urls = {
 	brochure_back_cmpr,
 	brochure_back_full,
 	brochure_front_cmpr,
@@ -100,4 +110,11 @@ export default {
 	excel_7,
 	about_me_1_cmpr,
 	about_me_1_full,
+	finance_tracker_1,
+	finance_tracker_2,
+	finance_tracker_anim_1,
+	finance_tracker_anim_2,
+	finance_tracker_anim_3,
 }
+
+export default urls

@@ -12,13 +12,16 @@ import {
 	ProjectsIcon,
 	SkillsIcon,
 } from '@/assets'
+import { delay } from '@/components/TestFinanceTrackerImport/utils'
 
 export function Navbar() {
 	console.log("Well well, someone's curious 😉")
 
 	const paragraphRef = useRef<HTMLParagraphElement>(null)
+	const splashContainerRef = useRef<HTMLParagraphElement>(null)
 	const anchorContainerRef = useRef<HTMLParagraphElement>(null)
 	const navbarRef = useRef<HTMLDivElement>(null)
+	const proudestWorkContainerRef = useRef<HTMLDivElement>(null)
 
 	// determine initial navbar state
 	useEffect(() => {
@@ -36,7 +39,6 @@ export function Navbar() {
 				'backgroundGradientLoad 4s ease-in-out 0s 1, backgroundGradientIdle 10s ease-in-out 4s infinite'
 		})
 	}, [])
-
 	// add listener for toggling NavBar
 	useEffect(() => {
 		function handleScrollY() {
@@ -65,15 +67,20 @@ export function Navbar() {
 
 			const splashContainerNode = navbarRef.current!.childNodes[0].childNodes[1]
 				.childNodes[1] as HTMLDivElement
-			const anchorContainerNode = navbarRef.current!.childNodes[0]
+			const proudestContainerNode = navbarRef.current!.childNodes[0]
 				.childNodes[2] as HTMLDivElement
+			const anchorContainerNode = navbarRef.current!.childNodes[0]
+				.childNodes[3] as HTMLDivElement
 
 			transitionHeightClosedToOpen(splashContainerNode, 2.5, 2)
 
-			transitionHeightClosedToOpen(anchorContainerNode, 5.5, 2).then(() => {
+			transitionHeightClosedToOpen(anchorContainerNode, 5, 2).then(() => {
 				// unlock scrolling
 				document.body.style.overflow = ''
 			})
+
+			transitionHeightClosedToOpen(proudestContainerNode, 5, 2)
+			proudestContainerNode.style.animation = '1s ease-out 5.5s fadeDown forwards'
 		}
 
 		// set delays for Anchor Bar based on if page loaded in fullscreen
@@ -89,14 +96,13 @@ export function Navbar() {
 			}
 		})
 	})
-
 	return (
 		<div className='navbar loading' ref={navbarRef}>
 			<div className='wrapper'>
 				<div className='loading-icon'>
 					<LoadingAnim style={{ height: '150px' }} />
 				</div>
-				<div className='splash-info'>
+				<div className='splash-info' ref={splashContainerRef}>
 					<h1 className='name'>
 						<div className='first-name'>
 							<FirstName />
@@ -105,9 +111,20 @@ export function Navbar() {
 							<LastName />
 						</div>
 					</h1>
-					<p className='text' ref={paragraphRef}>
+					<div className='text' ref={paragraphRef}>
 						<Splash />
-					</p>
+					</div>
+				</div>
+				<div
+					className='proudest-work-container'
+					ref={proudestWorkContainerRef}
+					style={{ height: '34px' }}
+				>
+					<div className='proudest-work'>
+						<a href='#projects/finance-tracker'>
+							Jump straight to my proudest work
+						</a>
+					</div>
 				</div>
 				<div className='anchor-container' ref={anchorContainerRef}>
 					<a className='anchor-link' href='#about-me'>

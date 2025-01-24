@@ -87,8 +87,10 @@
 				max-width: 700px;
 				box-sizing: border-box;
 				height: auto;
-				padding: 20px 0px;
+				padding: 20px 0 0 0;
 				text-align: center;
+				margin: 0;
+
 				span {
 					padding-right: 2.5px;
 				}
@@ -130,6 +132,8 @@
 			@media (min-width: 480px) {
 				.text {
 					display: block;
+					width: 90px;
+					text-align: center;
 				}
 				.icon {
 					display: none;
@@ -141,6 +145,70 @@
 				}
 				.icon {
 					display: block;
+				}
+			}
+		}
+		.proudest-work-container {
+			padding: 20px 20px 26px 20px;
+			opacity: 0%;
+			.proudest-work {
+				background-color: white;
+				border-radius: 5px;
+				transition: scale 0.2s ease;
+				&:hover,
+				&:focus-within {
+					scale: 110%;
+				}
+				&:active {
+					scale: 105%;
+				}
+				a {
+					padding: 5px 10px;
+					display: block;
+					color: #fff;
+					text-align: center;
+					color: rgba(255, 255, 255, 0.1);
+					background: -webkit-gradient(
+						linear,
+						left top,
+						right top,
+						from(#0c0c7c),
+						to(#0c0c7c),
+						color-stop(0.2, #fff)
+					);
+					background: -moz-gradient(
+						linear,
+						left top,
+						right top,
+						from(#0c0c7c),
+						to(#0c0c7c),
+						color-stop(0.2, #fff)
+					);
+					background: gradient(
+						linear,
+						left top,
+						right top,
+						from(#0c0c7c),
+						to(#0c0c7c),
+						color-stop(0.2, #fff)
+					);
+					background-size: 800px 100%;
+					background-clip: text;
+					animation-name: shimmer;
+					animation-duration: 3s;
+					animation-iteration-count: infinite;
+					background-repeat: no-repeat;
+					background-position: 0 0;
+
+					background-color: #0c0c7c;
+					@keyframes shimmer {
+						0% {
+							background-position: bottom right;
+						}
+						100% {
+							background-position: bottom left;
+						}
+					}
 				}
 			}
 		}

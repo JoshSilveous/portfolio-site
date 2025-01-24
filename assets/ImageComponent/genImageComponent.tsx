@@ -23,7 +23,10 @@ export function genImageComponent(
 	title: string
 ) {
 	return function (
-		props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
+		props: React.DetailedHTMLProps<
+			React.ImgHTMLAttributes<HTMLImageElement>,
+			HTMLImageElement
+		>
 	) {
 		return (
 			<div className='image-component' {...props}>

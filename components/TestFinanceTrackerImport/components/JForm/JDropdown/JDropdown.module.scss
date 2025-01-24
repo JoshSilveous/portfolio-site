@@ -1,0 +1,77 @@
+.main {
+	position: relative;
+	width: 100%;
+	height: 36px;
+
+	&.multiple {
+		height: 100%;
+	}
+
+	select {
+		appearance: none;
+		width: 100%;
+		padding: 10px 30px 10px 10px;
+		height: 100%;
+		font-size: 16px;
+		box-shadow: inset 0 0 0 1px var(--input-border-color);
+		color: inherit;
+		border: none;
+		outline: 0px solid transparent;
+		cursor: pointer;
+		transition: box-shadow 0.15s ease, outline 0.1s ease;
+		border-radius: 3px;
+		font-family: inherit;
+		font-size: 14px;
+
+		// remove default arrow
+		background: none;
+		background-color: var(--bg-color-lighter-1);
+		scrollbar-color: transparent transparent;
+		overflow: auto;
+
+		option:checked:active {
+			background-color: red;
+		}
+		&:hover {
+			scrollbar-color: var(--font-color) transparent;
+		}
+
+		&:focus:not(:disabled),
+		&:active:not(:disabled) {
+			box-shadow: inset 0 0 0 2px var(--input-border-color);
+			outline: 2px solid var(--font-color);
+		}
+	}
+	.loading {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg {
+			height: 25px;
+		}
+	}
+
+	.custom_arrow {
+		position: absolute;
+		color: inherit;
+		svg {
+			height: 10px;
+			width: 10px;
+			transition: rotate 0.2s ease;
+		}
+		top: 0;
+		right: 10px;
+		height: 100%;
+
+		display: flex;
+		align-items: center;
+		pointer-events: none;
+	}
+
+	select:focus + .custom_arrow svg {
+		rotate: -180deg;
+	}
+}
