@@ -225,12 +225,11 @@ export const financeTrackerContent = (
 				<TextWithIcon Icon={LinkIcon} href='https://supabase.com/' inline newWindow>
 					Supabase
 				</TextWithIcon>
-				. Supabase uses PostgreSQL (also referred to as Postgres) as it&apos;s
-				database language, and provides it&apos;s own OAuth integrations to make
-				setting it up a breeze. Now here&apos;s the part that I think is crazy:
-				Supabase and PostgreSQL are designed to be queried from the{' '}
-				<strong>Front End</strong>. That sentence alone might send shivers down an
-				InfoSec pro&apos;s spine.
+				. Supabase uses PostgreSQL (also referred to as Postgres) as its database
+				language, and provides its own OAuth integrations to make setting it up a
+				breeze. Now here&apos;s the part that I think is crazy: Supabase and
+				PostgreSQL are designed to be queried from the <strong>Front End</strong>.
+				That sentence alone might send shivers down an InfoSec pro&apos;s spine.
 			</p>
 			<p>
 				See, PostgreSQL has a built in feature called{' '}
