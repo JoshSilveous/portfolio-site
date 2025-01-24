@@ -18,6 +18,7 @@ export function Navbar() {
 	console.log("Well well, someone's curious 😉")
 
 	const paragraphRef = useRef<HTMLParagraphElement>(null)
+	const splashContainerRef = useRef<HTMLParagraphElement>(null)
 	const anchorContainerRef = useRef<HTMLParagraphElement>(null)
 	const navbarRef = useRef<HTMLDivElement>(null)
 	const proudestWorkContainerRef = useRef<HTMLDivElement>(null)
@@ -73,12 +74,13 @@ export function Navbar() {
 
 			transitionHeightClosedToOpen(splashContainerNode, 2.5, 2)
 
-			transitionHeightClosedToOpen(anchorContainerNode, 6.5, 2).then(() => {
+			transitionHeightClosedToOpen(anchorContainerNode, 5, 2).then(() => {
 				// unlock scrolling
 				document.body.style.overflow = ''
 			})
 
-			transitionHeightClosedToOpen(proudestContainerNode, 5.5, 1)
+			transitionHeightClosedToOpen(proudestContainerNode, 5, 2)
+			proudestContainerNode.style.animation = '1s ease-out 5.5s fadeDown forwards'
 		}
 
 		// set delays for Anchor Bar based on if page loaded in fullscreen
@@ -100,7 +102,7 @@ export function Navbar() {
 				<div className='loading-icon'>
 					<LoadingAnim style={{ height: '150px' }} />
 				</div>
-				<div className='splash-info'>
+				<div className='splash-info' ref={splashContainerRef}>
 					<h1 className='name'>
 						<div className='first-name'>
 							<FirstName />

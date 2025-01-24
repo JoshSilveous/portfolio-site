@@ -149,10 +149,8 @@
 			}
 		}
 		.proudest-work-container {
-			overflow: hidden;
-			padding: 20px;
+			padding: 20px 20px 26px 20px;
 			opacity: 0%;
-			animation: 1s ease-out 7.5s fadeDown forwards;
 			.proudest-work {
 				background-color: white;
 				border-radius: 5px;
@@ -197,7 +195,7 @@
 					background-size: 800px 100%;
 					background-clip: text;
 					animation-name: shimmer;
-					animation-duration: 2s;
+					animation-duration: 3s;
 					animation-iteration-count: infinite;
 					background-repeat: no-repeat;
 					background-position: 0 0;

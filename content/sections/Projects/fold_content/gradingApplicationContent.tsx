@@ -46,7 +46,7 @@ export const gradingApplicationContent = (
 		<div className='description'>
 			<p>
 				This application was created for my final project in my Comparative
-				Programming Languages course. This desktop application allows your to manage
+				Programming Languages course. This desktop application allows you to manage
 				grades for multiple classes with multiple students and multiple assignments.
 				There are also extra features, such as exempting assignments and extra
 				credit.

@@ -50,22 +50,23 @@ export const financeTrackerContent = (
 		<div className='description'>
 			<p>This is my proudest accomplishment in web development.</p>
 			<p>
-				If you look at my other projects, you can see that I'm <i>slightly</i>{' '}
+				If you look at my other projects, you can see that I&apos;m <i>slightly</i>{' '}
 				obsessed with creating tools to help people track their finances. This, right
 				here, is the real deal version of all of that.
 			</p>
 			<p>
 				Complete will a fully customizable dashboard, OAuth, tutorial system, and a
 				PostgreSQL database, this thing looks beautiful and has a pretty complex
-				database. I've put a ton of thought and effort into this (27,000 lines
-				non-boilerplate code!), and I've learned a ton about React throughout the
-				process.
+				database. I&apos;ve put a ton of thought and effort into this (27,000 lines
+				non-boilerplate code!), and I&apos;ve learned a ton about React throughout
+				the process.
 			</p>
 			<p>
-				I think this project speaks for itself. I've included some images and
-				description below, but I'd advise checking it out hands-on. You can create a
-				temporary account, and use the application fully without entering any
-				personal information, by using the "Sign in with Temporary Account" feature{' '}
+				I think this project speaks for itself. I&apos;ve included some images and
+				description below, but I&apos;d advise checking it out hands-on. You can
+				create a temporary account, and use the application fully without entering
+				any personal information, by using the &quot;Sign in with Temporary
+				Account&quot; feature{' '}
 				<TextWithIcon
 					Icon={LinkIcon}
 					href='https://finances.silveo.us/demo-login'
@@ -103,7 +104,7 @@ export const financeTrackerContent = (
 				>
 					Full Site
 				</TextWithIcon>{' '}
-				if you haven't checked it out yet.
+				if you haven&apos;t checked it out yet.
 			</p>
 			<h3>The Design / UI Features</h3>
 			<p>
@@ -125,18 +126,19 @@ export const financeTrackerContent = (
 				/>
 			</div>
 			<p>
-				When I'm designing the UI, I try to think of ways to break things as I go.
-				Usually that ends with me spending hours on something that I thought would
-				take 20 minutes, but the price is worth it (most of the time). I strive to
-				make things flawless.
+				When I&apos;m designing the UI, I try to think of ways to break things as I
+				go. Usually that ends with me spending hours on something that I thought
+				would take 20 minutes, but the price is worth it (most of the time). I strive
+				to make things flawless.
 			</p>
 			<p>
-				It's all in the small details for me. If the interface you're using looks
-				like a grid, you should be able to navigate vertically using Enter and Shift
-				+ Enter, instead of just tab. If there's a popup, your keyboard focus should
-				be moved to the popup, and the first and last focusable elements should exist
-				in a loop. If there's a way to drag something into a different position, it
-				should <i>feel</i> like you're actually grabbing and dragging the thing.
+				It&apos;s all in the small details for me. If the interface you&apos;re using
+				looks like a grid, you should be able to navigate vertically using Enter and
+				Shift + Enter, instead of just tab. If there&apos;s a popup, your keyboard
+				focus should be moved to the popup, and the first and last focusable elements
+				should exist in a loop. If there&apos;s a way to drag something into a
+				different position, it should <i>feel</i> like you&apos;re actually grabbing
+				and dragging the thing.
 			</p>
 			<div
 				className='two_image_container'
@@ -153,15 +155,15 @@ export const financeTrackerContent = (
 			</div>
 			<h3>Robust Saving System</h3>
 			<p>
-				Since I'm using Supabase's free tier for this project (and also because it's
-				good UX), I created a clean way to collect changes that the user makes in the
-				dashboard, and apply them once the user hits save.
+				Since I&apos;m using Supabase&apos;s free tier for this project (and also
+				because it&apos;s good UX), I created a clean way to collect changes that the
+				user makes in the dashboard, and apply them once the user hits save.
 			</p>
 			<p>
 				Unsaved changes are indicated by the{' '}
 				<span style={{ color: '#83ff89' }}>green color</span>, which applies to value
 				changes, sort order changes, and also when a user moves/resizes a tile or
-				changes it's settings. Also, notice in the graphic below that the tiles
+				changes it&apos;s settings. Also, notice in the graphic below that the tiles
 				showing account balances and category totals on the left are changing with
 				the data as well.
 			</p>
@@ -175,15 +177,16 @@ export const financeTrackerContent = (
 			</p>
 			<p>
 				The dashboard is fully customizable, and the user can add tiles and configure
-				them however they'd like. Right now, the only tile (besides the transaction
-				manager) is one called the <strong>Simple Values</strong> tile, which shows
-				current values for your categories or accounts. With these, you can exclude
-				specific categories and accounts, as well as select the date period you would
-				like the data to pull from.
+				them however they&apos;d like. Right now, the only tile (besides the
+				transaction manager) is one called the <strong>Simple Values</strong> tile,
+				which shows current values for your categories or accounts. With these, you
+				can exclude specific categories and accounts, as well as select the date
+				period you would like the data to pull from.
 			</p>
 			<p>
-				For example, the configuration below will show me how much money I'm spending
-				on each category since my last paycheck, excluding rent and car payments:
+				For example, the configuration below will show me how much money I&apos;m
+				spending on each category since my last paycheck, excluding rent and car
+				payments:
 			</p>
 			<div
 				className='two_image_container'
@@ -202,31 +205,32 @@ export const financeTrackerContent = (
 				The logic for this tile was a bit of a mental challenge, because there is a
 				two-week limit on how far into the past transactions will be loaded on the
 				client (unless the user intentionally loads more). Because of this, the tile
-				fetches the values from the database, then subtracts the "default" values
-				that the client has loaded, and adds the "current" values back. This way, the
-				tile will always be accurate, and can reflect when the user's actions in the
-				transaction manager changes those values.
+				fetches the values from the database, then subtracts the &quot;default&quot;
+				values that the client has loaded, and adds the &quot;current&quot; values
+				back. This way, the tile will always be accurate, and can reflect when the
+				user&apos;s actions in the transaction manager changes those values.
 			</p>
 			<h3>The Client Directly Queries the Database</h3>
 			<p>WHAAATT??</p>
 			<p>
-				See, I really wanted to make this app very "modern". In my previous version
-				of this idea, I built a fully functional backend myself, complete with a
-				local SQL instance, type-checking middleware for API routes, and proper HTTP
-				status codes. And while I recognize that a lot of companies like to keep
-				reliable standards in place (which I don't mind), since this project is
-				entirely new, I wanted to give bleeding-edge technology a try.
+				See, I really wanted to make this app very &quot;modern&quot;. In my previous
+				version of this idea, I built a fully functional backend myself, complete
+				with a local SQL instance, type-checking middleware for API routes, and
+				proper HTTP status codes. And while I recognize that a lot of companies like
+				to keep reliable standards in place (which I don&apos;t mind), since this
+				project is entirely new, I wanted to give bleeding-edge technology a try.
 			</p>
 			<p>
 				As for the backend, I decided to use a relatively new service called{' '}
 				<TextWithIcon Icon={LinkIcon} href='https://supabase.com/' inline newWindow>
 					Supabase
 				</TextWithIcon>
-				. Supabase uses PostgreSQL (also referred to as Postgres) as it's database
-				language, and provides it's own OAuth integrations to make setting it up a
-				breeze. Now here's the part that I think is crazy: Supabase and PostgreSQL
-				are designed to be queried from the <strong>Front End</strong>. That sentence
-				alone might send shivers down an InfoSec pro's spine.
+				. Supabase uses PostgreSQL (also referred to as Postgres) as it&apos;s
+				database language, and provides it&apos;s own OAuth integrations to make
+				setting it up a breeze. Now here&apos;s the part that I think is crazy:
+				Supabase and PostgreSQL are designed to be queried from the{' '}
+				<strong>Front End</strong>. That sentence alone might send shivers down an
+				InfoSec pro&apos;s spine.
 			</p>
 			<p>
 				See, PostgreSQL has a built in feature called{' '}
@@ -241,19 +245,20 @@ export const financeTrackerContent = (
 				server to exist between the client and the database.
 			</p>
 			<p>
-				Maybe this idea isn't that crazy or new, but I find it pretty exciting. Even
-				if a bad actor digs around into the frontend code and wants to do some
-				damage, they can't. Everything is enforced by the database, and since there's
-				no middleman, submitting and fetching data is a lightning fast process.
+				Maybe this idea isn&apos;t that crazy or new, but I find it pretty exciting.
+				Even if a bad actor digs around into the frontend code and wants to do some
+				damage, they can&apos;t. Everything is enforced by the database, and since
+				there&apos;s no middleman, submitting and fetching data is a lightning fast
+				process.
 			</p>
 			<h3>Plans for this project going forward</h3>
 			<p>
 				What I have here is really cool, but there is still a lot of features that
-				I'm working on implementing and refining.
+				I&apos;m working on implementing and refining.
 			</p>
 			<p>
 				For example, right now there is a custom history system in place that
-				overrides the browser's default undo/redo process (Control+Z and
+				overrides the browser&apos;s default undo/redo process (Control+Z and
 				Control+Alt+Z). This system keeps track of all of the changes you make within
 				the transaction manager, meaning that you can undo/redo sort order changes,
 				creating items, deleting items, as well as changing values. However, right
@@ -263,15 +268,16 @@ export const financeTrackerContent = (
 				the dashboard, including moving/resizing tiles.
 			</p>
 			<p>
-				I'm also going to add different types of tiles the users can customize, such
-				as graphs/charts that show whatever data you'd like, budgeting tools, and
-				even maybe a little AI tile that gives you tips on how to cut back spending.
+				I&apos;m also going to add different types of tiles the users can customize,
+				such as graphs/charts that show whatever data you&apos;d like, budgeting
+				tools, and even maybe a little AI tile that gives you tips on how to cut back
+				spending.
 			</p>
 			<p>
-				And of course, I'd like to refactor some of the code. A lot of the stateful
-				data and logic is abstracted into custom hooks, which is great, but those
-				hooks are packed with a lot of somewhat confusing code that I'd like to
-				organize.
+				And of course, I&apos;d like to refactor some of the code. A lot of the
+				stateful data and logic is abstracted into custom hooks, which is great, but
+				those hooks are packed with a lot of somewhat confusing code that I&apos;d
+				like to organize.
 			</p>
 			<p>
 				I would also like to add formal JSDoc descriptions to all of the parts of
