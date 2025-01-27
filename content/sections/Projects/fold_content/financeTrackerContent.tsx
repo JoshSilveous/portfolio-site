@@ -188,8 +188,7 @@ export const financeTrackerContent = (
 			</p>
 			<p>
 				For example, the configuration below will show me how much money I&apos;m
-				spending on each category since my last paycheck, excluding rent and car
-				payments:
+				spending on each category since my last paycheck, excluding car payments:
 			</p>
 			<div
 				className='two_image_container'
