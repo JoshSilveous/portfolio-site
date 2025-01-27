@@ -87,7 +87,6 @@ export function Navbar() {
 			const proudestContainerNode = navbarRef.current!.childNodes[0]
 				.childNodes[2] as HTMLDivElement
 			proudestContainerNode.classList.add('skip-animation')
-			console.log('adding skip')
 		}
 
 		// set delays for Anchor Bar based on if page loaded in fullscreen
