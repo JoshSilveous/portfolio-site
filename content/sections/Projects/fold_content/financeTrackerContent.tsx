@@ -81,7 +81,10 @@ export const financeTrackerContent = (
 					clicking stuff!
 				</span>
 			</p>
-			<IFrameTriggerable style={{ width: '900px', height: '600px' }}>
+			<IFrameTriggerable
+				style={{ width: '900px', height: '600px' }}
+				className='dont_show_on_mobile'
+			>
 				<iframe
 					className='dont_show_on_mobile'
 					src='/finance-tracker-demo'
