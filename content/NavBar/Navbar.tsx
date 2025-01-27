@@ -16,6 +16,8 @@ import { delay } from '@/components/TestFinanceTrackerImport/utils'
 
 export function Navbar() {
 	console.log("Well well, someone's curious 😉")
+	// looking back, this code kinda sucks.
+	// I'll get around to cleaning this up eventually, for now I'm focused on my finance-tracker project
 
 	const paragraphRef = useRef<HTMLParagraphElement>(null)
 	const splashContainerRef = useRef<HTMLParagraphElement>(null)
@@ -81,6 +83,11 @@ export function Navbar() {
 
 			transitionHeightClosedToOpen(proudestContainerNode, 5, 2)
 			proudestContainerNode.style.animation = '1s ease-out 5.5s fadeDown forwards'
+		} else {
+			const proudestContainerNode = navbarRef.current!.childNodes[0]
+				.childNodes[2] as HTMLDivElement
+			proudestContainerNode.classList.add('skip-animation')
+			console.log('adding skip')
 		}
 
 		// set delays for Anchor Bar based on if page loaded in fullscreen

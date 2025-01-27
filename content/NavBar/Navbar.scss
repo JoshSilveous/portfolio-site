@@ -151,6 +151,9 @@
 		.proudest-work-container {
 			padding: 20px 20px 26px 20px;
 			opacity: 0%;
+			&.skip-animation {
+				opacity: 100%;
+			}
 			.proudest-work {
 				background-color: white;
 				border-radius: 5px;
