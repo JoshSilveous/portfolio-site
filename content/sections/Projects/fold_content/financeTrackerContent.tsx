@@ -77,7 +77,10 @@ export const financeTrackerContent = (
 					clicking stuff!
 				</span>
 			</p>
-			<IFrameTriggerable style={{ width: '900px', height: '600px' }}>
+			<IFrameTriggerable
+				style={{ width: '900px', height: '600px' }}
+				className='dont_show_on_mobile'
+			>
 				<iframe
 					className='dont_show_on_mobile'
 					src='/finance-tracker-demo'
@@ -181,8 +184,7 @@ export const financeTrackerContent = (
 			</p>
 			<p>
 				For example, the configuration below will show me how much money I&apos;m
-				spending on each category since my last paycheck, excluding rent and car
-				payments:
+				spending on each category since my last paycheck, excluding car payments:
 			</p>
 			<div
 				className='two_image_container'

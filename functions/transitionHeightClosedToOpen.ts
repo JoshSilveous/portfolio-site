@@ -13,18 +13,6 @@ export async function transitionHeightClosedToOpen(
 	const initialTransition = element.style.transition
 	const initialHeight = element.style.height
 	const initialPadding = element.style.padding
-	console.log(
-		'on node',
-		element,
-		'\ncomputedHeight',
-		computedHeight,
-		'\ncomputedPadding',
-		computedPadding,
-		'\ninitialHeight',
-		initialHeight,
-		'\ninitialPadding',
-		initialPadding
-	)
 
 	element.style.transition = 'none'
 	element.style.height = '0px'
