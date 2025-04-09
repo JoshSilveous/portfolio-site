@@ -1,9 +1,9 @@
 import {
-	FinanceTracker1Anim,
-	FinanceTracker1Image,
-	FinanceTracker2Anim,
-	FinanceTracker2Image,
-	FinanceTracker3Anim,
+	LedgerBoard1Anim,
+	LedgerBoard1Image,
+	LedgerBoard2Anim,
+	LedgerBoard2Image,
+	LedgerBoard3Anim,
 	GitHubIcon,
 	LinkIcon,
 	NextIcon,
@@ -18,20 +18,16 @@ import { TextWithIcon } from '@/components'
 import { IFrameTriggerable } from '@/components/IFrameTriggerable/IFrameTriggerable'
 
 export const financeTrackerContent = (
-	<div className='fold finance-tracker'>
+	<div className='fold ledger-board'>
 		<div className='col'>
 			<div className='links'>
 				<h3>Links</h3>
-				<TextWithIcon
-					Icon={LinkIcon}
-					href='https://finances.silveo.us/login'
-					newWindow
-				>
+				<TextWithIcon Icon={LinkIcon} href='https://ledgerboard.net/login' newWindow>
 					Deployment
 				</TextWithIcon>
 				<TextWithIcon
 					Icon={GitHubIcon}
-					href='https://github.com/JoshSilveous/finance-tracker'
+					href='https://github.com/JoshSilveous/ledger-board'
 					newWindow
 				>
 					GitHub
@@ -69,7 +65,7 @@ export const financeTrackerContent = (
 				Account&quot; feature{' '}
 				<TextWithIcon
 					Icon={LinkIcon}
-					href='https://finances.silveo.us/demo-login'
+					href='https://ledgerboard.net/demo-login'
 					inline
 					newWindow
 				>
@@ -88,7 +84,7 @@ export const financeTrackerContent = (
 					width='900px'
 					height='600px'
 					style={{ border: 'none', borderRadius: '5px' }}
-					title='Embedded example of my Finance Tracker website'
+					title='Embedded example of my LedgerBoard website'
 					loading='lazy'
 				/>
 			</IFrameTriggerable>
@@ -98,7 +94,7 @@ export const financeTrackerContent = (
 				likely out-of-date. Once again I will plug the{' '}
 				<TextWithIcon
 					Icon={LinkIcon}
-					href='https://finances.silveo.us/demo-login'
+					href='https://ledgerboard.net/demo-login'
 					inline
 					newWindow
 				>
@@ -120,7 +116,7 @@ export const financeTrackerContent = (
 				<iframe
 					loading='lazy'
 					src='https://www.youtube.com/embed/IccSqE9kjvY'
-					title='Finance Tracker Tutorial Demonstration'
+					title='LedgerBoard Tutorial Demonstration'
 					allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 					allowFullScreen
 				/>
@@ -150,8 +146,8 @@ export const financeTrackerContent = (
 					gap: '20px',
 				}}
 			>
-				<FinanceTracker1Anim style={{ maxWidth: '500px' }} />
-				<FinanceTracker2Anim style={{ maxWidth: '325px' }} />
+				<LedgerBoard1Anim style={{ maxWidth: '500px' }} />
+				<LedgerBoard2Anim style={{ maxWidth: '325px' }} />
 			</div>
 			<h3>Robust Saving System</h3>
 			<p>
@@ -167,7 +163,7 @@ export const financeTrackerContent = (
 				showing account balances and category totals on the left are changing with
 				the data as well.
 			</p>
-			<FinanceTracker3Anim style={{ width: '500px', margin: '0 auto' }} />
+			<LedgerBoard3Anim style={{ width: '500px', margin: '0 auto' }} />
 			<h3>Customizability</h3>
 			<p>
 				The main goal for this project is to create something that is{' '}
@@ -198,8 +194,8 @@ export const financeTrackerContent = (
 					gap: '20px',
 				}}
 			>
-				<FinanceTracker1Image style={{ maxWidth: '300px' }} />
-				<FinanceTracker2Image style={{ maxWidth: '325px' }} />
+				<LedgerBoard1Image style={{ maxWidth: '300px' }} />
+				<LedgerBoard2Image style={{ maxWidth: '325px' }} />
 			</div>
 			<p>
 				The logic for this tile was a bit of a mental challenge, because there is a

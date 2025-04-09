@@ -106,8 +106,8 @@ export const frontendContent: SkillSectionInfo[] = [
 				</TextWithIcon>
 				) learning how React Router works, and have implemented it on a few small
 				projects for learning purposes. Also, I am currently implementing it into my{' '}
-				<TextWithIcon Icon={ProjectsIcon} href='#projects/finance-tracker' inline>
-					Finance Tracker
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/ledger-board' inline>
+					LedgerBoard
 				</TextWithIcon>{' '}
 				application.
 			</>

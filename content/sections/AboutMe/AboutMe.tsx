@@ -44,14 +44,10 @@ export function AboutMe() {
 					knowledge resides in front-end technologies (React, TypeScript, Sass,
 					etc.), but I also know Relational Database tech (SQL) very well. I can
 					also create type-safe APIs using Node.js and Express.js, though my
-					back-end knowledge doesn&apos;t extend too far past that currently. I'm
-					also using a PostgreSQL and Auth provider, Supabase, for my{' '}
-					<TextWithIcon
-						href='#projects/finance-tracker'
-						Icon={ProjectsIcon}
-						inline
-					>
-						Finance Tracker
+					back-end knowledge doesn&apos;t extend too far past that currently.
+					I&apos;m also using a PostgreSQL and Auth provider, Supabase, for my{' '}
+					<TextWithIcon href='#projects/ledger-board' Icon={ProjectsIcon} inline>
+						LedgerBoard
 					</TextWithIcon>{' '}
 					project, and I am loving it.
 				</p>

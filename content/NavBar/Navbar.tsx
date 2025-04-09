@@ -121,7 +121,7 @@ export function Navbar() {
 					style={{ height: '34px' }}
 				>
 					<div className='proudest-work'>
-						<a href='#projects/finance-tracker'>
+						<a href='#projects/ledger-board'>
 							Jump straight to my proudest work
 						</a>
 					</div>

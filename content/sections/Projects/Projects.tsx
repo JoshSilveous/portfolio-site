@@ -25,7 +25,7 @@ export function Projects() {
 		{
 			title: (
 				<div className='title-wrapper'>
-					<h2>Finance Tracker</h2>
+					<h2>LedgerBoard</h2>
 					<div className='icon-container'>
 						<NextIcon />
 						<TypeScriptIcon />
@@ -37,7 +37,7 @@ export function Projects() {
 				</div>
 			),
 			content: sections.financeTrackerContent,
-			anchor: 'projects/finance-tracker',
+			anchor: 'projects/ledger-board',
 		},
 		{
 			title: (

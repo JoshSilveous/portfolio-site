@@ -168,34 +168,34 @@ export const AboutMe1Image = genImageComponent(
 	'A picture of myself.',
 	'About Me'
 )
-export const FinanceTracker1Image = genImageComponent(
+export const LedgerBoard1Image = genImageComponent(
 	urls.finance_tracker_1,
 	urls.finance_tracker_1,
 	'A screenshot of a Simple Tiles configuration.',
-	'Finance Tracker Customization'
+	'LedgerBoard Customization'
 )
-export const FinanceTracker2Image = genImageComponent(
+export const LedgerBoard2Image = genImageComponent(
 	urls.finance_tracker_2,
 	urls.finance_tracker_2,
 	'A screenshot of the rendered Simple Tile',
-	'Finance Tracker Customization'
+	'LedgerBoard Customization'
 )
-export const FinanceTracker1Anim = genImageComponent(
+export const LedgerBoard1Anim = genImageComponent(
 	urls.finance_tracker_anim_1,
 	urls.finance_tracker_anim_1,
 	'A animation of a transaction being dragged into a different position. When it is dragged, the fold collapses temporarily.',
-	'Finance Tracker Reordering Animation'
+	'LedgerBoard Reordering Animation'
 )
-export const FinanceTracker2Anim = genImageComponent(
+export const LedgerBoard2Anim = genImageComponent(
 	urls.finance_tracker_anim_2,
 	urls.finance_tracker_anim_2,
 	'A animation of a category being dragged into a different position.',
-	'Finance Tracker Reordering Animation'
+	'LedgerBoard Reordering Animation'
 )
 
-export const FinanceTracker3Anim = genImageComponent(
+export const LedgerBoard3Anim = genImageComponent(
 	urls.finance_tracker_anim_3,
 	urls.finance_tracker_anim_3,
 	'A graphic showing that changed properties are marked with green, and return to the normal font color after saving.',
-	'Finance Tracker Saving Animation'
+	'LedgerBoard Saving Animation'
 )

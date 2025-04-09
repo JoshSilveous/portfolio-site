@@ -20,8 +20,8 @@ export const backendContent: SkillSectionInfo[] = [
 			<>
 				I have used Node.js to build processes for Electron applications, and to
 				build servers/APIs for full-stack projects, such as my{' '}
-				<TextWithIcon Icon={ProjectsIcon} href='#projects/finance-tracker' inline>
-					Finance Tracker
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/ledger-board' inline>
+					LedgerBoard
 				</TextWithIcon>{' '}
 				and{' '}
 				<TextWithIcon
@@ -44,8 +44,8 @@ export const backendContent: SkillSectionInfo[] = [
 			<>
 				I have used Express.js in most of my Node applications that involve API
 				routing, such as my{' '}
-				<TextWithIcon Icon={ProjectsIcon} href='#projects/finance-tracker' inline>
-					Finance Tracker
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/ledger-board' inline>
+					LedgerBoard
 				</TextWithIcon>{' '}
 				project.
 			</>
@@ -63,8 +63,8 @@ export const backendContent: SkillSectionInfo[] = [
 				robust database in a project, I&apos;ll usually reach for SQL solutions, such
 				as SQLite, PostgreSQL, or Oracle Database.
 				<br />I designed a SQLite database structure for my{' '}
-				<TextWithIcon Icon={ProjectsIcon} href='#projects/finance-tracker' inline>
-					Finance Tracker
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/ledger-board' inline>
+					LedgerBoard
 				</TextWithIcon>{' '}
 				and{' '}
 				<TextWithIcon
@@ -86,8 +86,8 @@ export const backendContent: SkillSectionInfo[] = [
 		additional_content: (
 			<>
 				My{' '}
-				<TextWithIcon Icon={ProjectsIcon} href='#projects/finance-tracker' inline>
-					Finance Tracker
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/ledger-board' inline>
+					LedgerBoard
 				</TextWithIcon>{' '}
 				project is the first time I&apos;ve build an API, and it&apos;s a fairly
 				complex API with a lot of endpoints. While I was building the API, I realized
@@ -106,8 +106,8 @@ export const backendContent: SkillSectionInfo[] = [
 			<>
 				After spending time trying to come up with my own data validation system for
 				my{' '}
-				<TextWithIcon Icon={ProjectsIcon} href='#projects/finance-tracker' inline>
-					Finance Tracker
+				<TextWithIcon Icon={ProjectsIcon} href='#projects/ledger-board' inline>
+					LedgerBoard
 				</TextWithIcon>{' '}
 				project, I decided to do some research and discovered Joi. This library
 				allows you to strictly enforce the format of JSON objects that hit your API
