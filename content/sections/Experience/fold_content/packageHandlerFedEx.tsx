@@ -1,4 +1,4 @@
-export const packageHandlerFedEx = (
+export const fedex = (
 	<div className='content'>
 		<ul>
 			<li>Coordinated relocation of delicate and heavy objects</li>

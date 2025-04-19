@@ -12,8 +12,9 @@
 			row-gap: 0px;
 
 			.job-title {
-				width: 212px;
+				width: 350px;
 				font-weight: 700;
+				margin: 10px 0;
 				h2 {
 					margin: 0;
 				}
@@ -31,7 +32,7 @@
 				justify-content: space-between;
 			}
 		}
-		@media (max-width: 838px) {
+		@media (max-width: 993px) {
 			.fold-component {
 				margin-bottom: 20px;
 			}

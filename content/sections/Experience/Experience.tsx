@@ -1,12 +1,5 @@
 import { FoldSwitcher } from '@/components'
-import {
-	cashierLomaLindas,
-	itSupportSwanton,
-	itSupportThermaTru,
-	packageHandlerFedEx,
-	sysAdminContractor,
-	webDevContractor,
-} from './fold_content'
+import { lomaLindas, swanton, thermatru, fedex, freelance } from './fold_content'
 import './Experience.scss'
 
 export function Experience() {
@@ -15,41 +8,7 @@ export function Experience() {
 			title: (
 				<div className='title-wrapper'>
 					<div className='job-title'>
-						<h2>Web Developer</h2>
-					</div>
-					<div className='company'>Freelance</div>
-					<div className='timeframe'>
-						<div className='start-month'>Feb 2021</div>
-						<div className='divider'>-</div>
-						<div className='end-month'>Present</div>
-					</div>
-				</div>
-			),
-			content: webDevContractor,
-			anchor: 'experience/web-developer-freelance',
-		},
-		{
-			title: (
-				<div className='title-wrapper'>
-					<div className='job-title'>
-						<h2>IT Systems Admin</h2>
-					</div>
-					<div className='company'>Freelance</div>
-					<div className='timeframe'>
-						<div className='start-month'>Dec 2023</div>
-						<div className='divider'>-</div>
-						<div className='end-month'>Present</div>
-					</div>
-				</div>
-			),
-			content: sysAdminContractor,
-			anchor: 'experience/system-admin-freelance',
-		},
-		{
-			title: (
-				<div className='title-wrapper'>
-					<div className='job-title'>
-						<h2>IT Support</h2>
+						<h2>Web Developer, IT Support Specialist</h2>
 					</div>
 					<div className='company'>Therma-Tru</div>
 					<div className='timeframe'>
@@ -59,8 +18,25 @@ export function Experience() {
 					</div>
 				</div>
 			),
-			content: itSupportThermaTru,
-			anchor: 'experience/it-support-therma-tru',
+			content: thermatru,
+			anchor: 'experience/therma-tru',
+		},
+		{
+			title: (
+				<div className='title-wrapper'>
+					<div className='job-title'>
+						<h2>Web Developer & Systems Administrator</h2>
+					</div>
+					<div className='company'>Freelance</div>
+					<div className='timeframe'>
+						<div className='start-month'>May 2022</div>
+						<div className='divider'>-</div>
+						<div className='end-month'>Present</div>
+					</div>
+				</div>
+			),
+			content: freelance,
+			anchor: 'experience/freelance',
 		},
 		{
 			title: (
@@ -76,8 +52,8 @@ export function Experience() {
 					</div>
 				</div>
 			),
-			content: itSupportSwanton,
-			anchor: 'experience/it-support-swanton-schools',
+			content: swanton,
+			anchor: 'experience/swanton-local-schools',
 		},
 		{
 			title: (
@@ -93,8 +69,8 @@ export function Experience() {
 					</div>
 				</div>
 			),
-			content: packageHandlerFedEx,
-			anchor: 'experience/package-handler-fedex',
+			content: fedex,
+			anchor: 'experience/fedex',
 		},
 		{
 			title: (
@@ -110,8 +86,8 @@ export function Experience() {
 					</div>
 				</div>
 			),
-			content: cashierLomaLindas,
-			anchor: 'experience/cashier-loma-lindas',
+			content: lomaLindas,
+			anchor: 'experience/loma-lindas',
 		},
 	]
 

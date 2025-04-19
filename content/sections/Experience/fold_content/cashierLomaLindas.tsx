@@ -1,4 +1,4 @@
-export const cashierLomaLindas = (
+export const lomaLindas = (
 	<div className='content'>
 		<ul>
 			<li>Handled multiple responsibilities in a busy environment</li>

@@ -1,12 +1,26 @@
-export const itSupportSwanton = (
+export const swanton = (
 	<div className='content'>
 		<ul>
-			<li>Upgraded hardware</li>
-			<li>Distributed software on a massive scale</li>
-			<li>Installed CAT6 networking cables</li>
-			<li>Configured Windows and ChromeOS devices for domain use</li>
-			<li>Aided faculty with miscellaneous technical issues</li>
-			<li>Worked in a team environment with others to efficiently solve problems</li>
+			<li>
+				Operated and lead day-to-day help desk ticketing and support for our school
+				district comprised of over 1100 students
+			</li>
+			<li>
+				Provisioned devices and software for students within the ecosystem provided
+				by Google Classroom
+			</li>
+			<li>
+				Manually repaired, reconfigured, and released physical hardware and IT assets
+				for student and employee reuse
+			</li>
+			<li>
+				Networked physical devices and executed programs to expand networking access
+				to students and faculty across the organization
+			</li>
+			<li>
+				Maintained excellent ticket response times, service record, and effective
+				stewardship of IT dollars and investments
+			</li>
 		</ul>
 	</div>
 )
